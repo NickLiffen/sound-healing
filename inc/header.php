@@ -11,18 +11,23 @@
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <script src="inc/inc.js"></script>
 </head>
+<div class = "page-wrap">
   <body>
 
-    <article>
-      <section>
-        <h1>Sound Healing Therapy</h1>
+   
+      <header>
+        <div id = "headerblock">
+        <h1>Insert Logo Here</h1>
           <nav>
-            <ul>
-              <li><a href="index.php">Home Page</a></li>
-              <li><a href="">About Me</a></li>
-              <li><a href="">Serives</a></li>
-              <li><a href="">Contact Me</a></li>
+            
+            <ul id ="navBtns">
+              <li><a href="index.php">Home</a></li> /
+              <li><a href="">About Me</a></li> /
+              <li><a href="">Services</a></li> / 
+              <li><a href="">Contact</a></li> 
             </ul>
+          
           </nav>
-        </section>
-    </article>
+          </div>
+        </header>
+   
