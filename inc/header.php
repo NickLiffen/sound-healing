@@ -11,23 +11,22 @@
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <script src="inc/inc.js"></script>
 </head>
-<div class = "page-wrap">
   <body>
-
-   
+    <div class = "page-wrap">
+  <!-- This is the header-->
       <header>
         <div id = "headerblock">
         <h1>Insert Logo Here</h1>
+      <!-- This is main Navagational Bar in the Header-->
           <nav>
-            
             <ul id ="navBtns">
               <li><a href="index.php">Home</a></li> /
               <li><a href="">About Me</a></li> /
-              <li><a href="">Services</a></li> / 
-              <li><a href="">Contact</a></li> 
+              <li><a href="">Services</a></li> /
+              <li><a href="">Contact</a></li>
             </ul>
-          
           </nav>
-          </div>
-        </header>
-   
+      <!---->
+        </div>
+      </header>
+    <!---->

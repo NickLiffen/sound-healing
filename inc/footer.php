@@ -1,6 +1,5 @@
-</body>
-</div>
-<footer class = "site-footer">
-
-</footer>
+        </div>
+      </body>
+    <footer class = "site-footer">
+  </footer>
 </html>
