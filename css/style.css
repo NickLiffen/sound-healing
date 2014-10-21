@@ -94,7 +94,7 @@ form
   padding-bottom:1em;
 }
 
-#myForm
+#contactForm
 {
   text-align:left;
   font-size:1.2em;
@@ -107,7 +107,7 @@ input
 
 }
 
-#Comment
+#comment
 {
   width:100%;
 }
