@@ -1,6 +1,6 @@
 <?php $title="Contact Page" ; include( "inc/header.php"); ?>
 
-                <h1>Get In Touch</h1>
+                <h1 id="contactwelcome">Get In Touch</h1>
 
                 <!-- This form send the data through multipart form data (Ajax Request),
                 and stores it in a database. It collects the inputted data from the user
@@ -10,40 +10,38 @@
                 <form enctype="multipart/form-data" id="myForm" method="post"
                 name="myForm" onsubmit="return false">
 
-                    <!-- First Name Feild -->
-                    <p>First Name:* <input id="firstname" name=
-                    "firstname" placeholder="First Name" type="text" autofocus> <span id=
+                    <!-- First Name Field -->
+                    <p>First Name<br><input id="firstname" name=
+                    "firstname" type="text" autofocus> <span id=
                     "errorfirstname"></span> <span class=
                     "error"></span></p>
 
-                    <!-- Last Name Feild -->
-                    <p>Last Name:* <input id="lastname" name=
-                    "lastname" placeholder="Last Name" type="text"> <span id=
+                    <!-- Last Name Field -->
+                    <p>Last Name <br><input id="lastname" name=
+                    "lastname" type="text"> <span id=
                     "errorlastname"></span> <span class=
                     "error"></span></p>
 
-                    <!-- Email Feild -->
-                    <p>Email* <input id="email" name=
-                    "email" placeholder="Email" type="email"> <span id=
+                    <!-- Email Field -->
+                    <p>Email<br><input id="email" name=
+                    "email"  type="email"> <span id=
                     "erroremail"></span> <span class=
                     "error"></span></p>
 
-                    <!-- Telephone Feild-->
-                    <p>Telephone *<input id=
-                    "telephone" name="telephone" placeholder="Telephone" type="number">
+                    <!-- Telephone Field-->
+                    <p>Telephone<br><input id=
+                    "telephone" name="telephone" >
                     <span id="errortelephone"></span> <span class=
                     "error"></span></p>
 
-                    <!-- Comments Feild-->
-                    <p>Comments *<textarea id=
-                    "telephone" name="telephone" rows="10" cols="30">
-                    Please Enter Your Comments Here</textarea>
-                    <span id="errortelephone"></span> <span class=
-                    "error"></span></p>
+                    <!-- Comments Field-->
+                    <p>Comments</p>
+                    <textarea id="Comment" rows="5"></textarea>
+                    <span id="errortelephone"></span> 
+                    <span class="error"></span>
 
                     <!-- Submit Button.-->
-                    <p>Everything marked with a * is a mandatory
-                    field</p><input id="submit" name="submit" type="button"
+                    <input id="submit" name="submit" type="button"
                     value="Submit Form">
 
                   </form>

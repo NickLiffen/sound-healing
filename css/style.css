@@ -22,7 +22,7 @@ html, body {
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -142px;
+  margin-bottom: -50px;
 }
 
 .page-wrap:after {
@@ -31,18 +31,19 @@ html, body {
 }
 
 .site-footer, .page-wrap:after {
-  height: 142px;
+  height: 50px;
 }
 
 .site-footer {
-  background: #430551;
+  background: #70377C;
 }
 
 header {
 	height: 125px;
-	background:#9C43D0;
+	background:#A932A9;
 	color:#FFFFFF;
 	display:block;
+  margin-bottom:2em;
 }
 
 nav {
@@ -69,10 +70,66 @@ li {
 }
 
 #headerblock {
-margin-top:5px;
 margin-right: auto;
 margin-bottom: 40px;
 margin-left: auto;
 padding-top:35px;
-width:80%;
+width:70%;
 }
+
+
+form
+{
+  margin-right:auto;
+  margin-left:auto;
+  width:75%;
+  text-align:center;
+
+}
+
+
+#contactwelcome
+{
+  text-align:center;
+  color: #70377C;
+  padding-bottom:1em;
+}
+
+#myForm
+{
+  text-align:left;
+  font-size:1.2em;
+  width:25%;
+}
+
+input
+{
+  width:100%;
+
+}
+
+#Comment
+{
+  width:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
