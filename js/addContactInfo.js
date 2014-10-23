@@ -7,7 +7,32 @@
 
 */
 
+function outputMessage(data){
 
+}
+
+function sendContactForm(){
+  //Inititiates all the varibles that we are going to use to validae the form.
+  var fname, lname, email, telephone, email, comment, formdata;
+
+  //Collectting varibles. All using my _ function that collects ID's.
+  fname = _("firstname").value;
+  lname = _("lastname").value;
+  email = _("email").value;
+  telephone = _("telephone").value;
+  comment = _("comment").value;
+
+  //FormData is a safe and easy method of posting data.
+  formdata = new FormData();
+  formdata.append("fname", fname);
+  formdata.append("lname", lname);
+  formdata.append("email", email);
+  formdata.append("telephone", telephone);
+  formdata.append("comment", comment);
+
+  //Calling the AJAX Post function that I have already created
+  ajaxPost("SQL/addConactInfoSQL.php", formdata, outputMessage, null, null);
+}
 
 //Validates the Form that allows the user to enter a product to the database.
 validateForm = function () {
@@ -67,8 +92,7 @@ validateForm = function () {
     if (errors > 0) {
         return false;
     } else {
-      console.log(errors)
-        //uploadedProduct();
+        sendContactForm();
     }
 }
 //Waits and Checks to see when the submit button has been pressed.

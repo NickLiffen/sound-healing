@@ -1,6 +1,6 @@
 <?php $title="Contact Page" ; include( "inc/header.php"); ?>
 
-       
+
               <h1 id="contactwelcome">Get In Touch</h1>
 
                 <!-- This form send the data through multipart form data (Ajax Request),
@@ -19,26 +19,26 @@
 
                     <!-- Last Name Field -->
                     <p>Last Name: <input id="lastname" name=
-                    "lastname" type="text"> <span id=
+                    "lastname" type="text" required> <span id=
                     "errorlastname"></span> <span class=
                     "error"></span></p>
 
                     <!-- Email Field -->
                     <p>Email: <input id="email" name=
-                    "email"  type="email"> <span id=
+                    "email"  type="email" required> <span id=
                     "erroremail"></span> <span class=
                     "error"></span></p>
 
                     <!-- Telephone Field-->
                     <p>Telephone: <input id=
                     "telephone" name="telephone" >
-                    <span id="errortelephone"></span> <span class=
+                    <span id="errortelephone" required></span> <span class=
                     "error"></span></p>
 
                     <!-- Comments Field-->
                     <p>Comments: </p>
                     <textarea id="comment" rows="5"></textarea>
-                    <span id="errorcomment"></span>
+                    <span id="errorcomment" required></span>
                     <span class="error"></span>
 
                     <!-- Submit Button.-->
@@ -46,7 +46,7 @@
                     value="Submit Form">
 
                   </form>
-           
+
 
     <!--This is the AJAX function that adds the contact information to the database.-->
     <script src="js/addContactInfo.js"></script>
