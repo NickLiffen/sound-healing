@@ -12,38 +12,34 @@
                 name="myForm" onsubmit="return false">
 
                     <!-- First Name Field -->
-                    <p>First Name: <input id="firstname" name=
+                    <p>Full Name </p><input id="firstname" name=
                     "firstname" type="text" autofocus> <span id=
                     "errorfirstname"></span> <span class=
-                    "error"></span></p>
-
-                    <!-- Last Name Field -->
-                    <p>Last Name: <input id="lastname" name=
-                    "lastname" type="text" required> <span id=
-                    "errorlastname"></span> <span class=
-                    "error"></span></p>
+                    "error"></span>
 
                     <!-- Email Field -->
-                    <p>Email: <input id="email" name=
+                    <p>Email Address</p> <input id="email" name=
                     "email"  type="email" required> <span id=
                     "erroremail"></span> <span class=
-                    "error"></span></p>
+                    "error"></span>
 
                     <!-- Telephone Field-->
-                    <p>Telephone: <input id=
+                    <p>Telephone </p><input id=
                     "telephone" name="telephone" >
                     <span id="errortelephone" required></span> <span class=
-                    "error"></span></p>
+                    "error"></span>
 
                     <!-- Comments Field-->
-                    <p>Comments: </p>
+                    <p>Query/Question/Comment </p>
                     <textarea id="comment" rows="5"></textarea>
                     <span id="errorcomment" required></span>
                     <span class="error"></span>
 
+                    <div id ="submitBtn">
                     <!-- Submit Button.-->
                     <input id="submit" name="submit" type="button"
-                    value="Submit Form">
+                    value="Submit">
+                    </div>
 
                   </form>
 
