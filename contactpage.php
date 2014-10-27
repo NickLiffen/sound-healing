@@ -18,20 +18,20 @@
 
                     <!-- Email Field -->
                     <p>Email Address</p> <input id="email" name=
-                    "email"  type="email" required> <span id=
+                    "email"  type="email"> <span id=
                     "erroremail"></span> <span class=
                     "error"></span>
 
                     <!-- Telephone Field-->
                     <p>Telephone </p><input id=
-                    "telephone" name="telephone" >
-                    <span id="errortelephone" required></span> <span class=
+                    "telephone" name="telephone">
+                    <span id="errortelephone"></span> <span class=
                     "error"></span>
 
                     <!-- Comments Field-->
                     <p>Query/Question/Comment </p>
                     <textarea id="comment" rows="5"></textarea>
-                    <span id="errorcomment" required></span>
+                    <span id="errorcomment"></span>
                     <span class="error"></span>
 
                     <div id ="submitBtn">
