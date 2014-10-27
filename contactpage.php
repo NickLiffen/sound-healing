@@ -1,6 +1,7 @@
 <?php $title="Contact Page" ; include( "inc/header.php"); ?>
+        
 
-              <h1 id="contactwelcome">Get In Touch</h1>
+              <h1 id="contactwelcome">Contact Me</h1>
 
                 <!-- This form send the data through multipart form data (Ajax Request),
                 and stores it in a database. It collects the inputted data from the user
@@ -43,7 +44,6 @@
                     <span id='successMessage'></span>
 
                   </form>
-
     <!--This is the AJAX function that adds the contact information to the database.-->
     <script src="js/addContactInfo.js"></script>
 

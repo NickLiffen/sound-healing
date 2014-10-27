@@ -13,10 +13,12 @@ body {
   color: black;
   font-family: sans-serif;
   font-size: 17px;
+
 }
 
 html, body {
   height: 100%;
+  
 }
 
 .page-wrap {
@@ -92,20 +94,26 @@ form
   text-align:center;
   color: #70377C;
   padding-bottom:0.5em;
+  font:30px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #contactForm
 {
   padding-bottom:3em;
   text-align:left;
-  font-size:14px;
   width:30%;
+  font:17px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
 }
 
 #contactForm p
 {
   padding-top:10px;
-  padding-bottom:7px;
+  padding-bottom:6px;
+  padding-left:5px;
+  font-style:italic;
+
+  
 }
 input
 {
@@ -120,14 +128,14 @@ input
   height: 10em;
   max-width: 100%;
   max-height:10em;
-  font-size:12px;
+  font-size:20px;
   box-shadow:none;
 }
 
-#firstname, #email, #telephone
+#fullname, #email, #telephone
 {
 
-  font-size:20px;
+  font-size:15px;
   box-shadow:none;
 }
 
@@ -142,6 +150,8 @@ input
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   box-shadow: none;
+  font: 17px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border:none;
 
 }
 
@@ -155,3 +165,4 @@ input
 {
   padding-top:1em;
 }
+
