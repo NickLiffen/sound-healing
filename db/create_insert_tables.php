@@ -12,8 +12,7 @@ if(!$result = $database->query($create_table_services)){
 $create_table_contact_form =
 				"CREATE TABLE IF NOT EXISTS contactForm (
 				id MEDIUMINT NOT NULL AUTO_INCREMENT,
-				firstname VARCHAR(35) NOT NULL,
-				lastname VARCHAR(35) NOT NULL,
+				fullname VARCHAR(35) NOT NULL,
 				email VARCHAR(500) NOT NULL,
 				telephone VARCHAR(15),
 				comment VARCHAR(15) NOT NULL,

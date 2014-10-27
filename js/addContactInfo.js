@@ -7,25 +7,37 @@
 
 */
 
+//This function clears the textboxes and ten ouputs a successMessage
 function outputMessage(data){
+      //Inititiates all the varibles that we are going to use to validae the form.
+      var fullname, email, telephone, email, comment, successMessage;
 
+      //Sets all the feilds in the Form to Blank.
+      fullname = _("fullname").value=" ";
+      email = _("email").value = " ";
+      telephone = _("telephone").value = " ";
+      comment = _("comment").value = " ";
+
+      //Ouputs the success Message.
+      successMessage = _("successMessage");
+      successMessage.innerHTML = 'Your Form has been successfull sent - Thank You :)';
+      successMessage.style.color = 'green';
 }
 
+//This function sends the data from the form to the database through AJAX request
 function sendContactForm(){
   //Inititiates all the varibles that we are going to use to validae the form.
-  var fname, lname, email, telephone, email, comment, formdata;
+  var fullname, email, telephone, email, comment, formdata;
 
   //Collectting varibles. All using my _ function that collects ID's.
-  fname = _("firstname").value;
-  lname = _("lastname").value;
+  fullname = _("fullname").value;
   email = _("email").value;
   telephone = _("telephone").value;
   comment = _("comment").value;
 
   //FormData is a safe and easy method of posting data.
   formdata = new FormData();
-  formdata.append("fname", fname);
-  formdata.append("lname", lname);
+  formdata.append("fullname", fullname);
   formdata.append("email", email);
   formdata.append("telephone", telephone);
   formdata.append("comment", comment);
@@ -38,35 +50,28 @@ function sendContactForm(){
 validateForm = function () {
 
   //Inititiates all the varibles that we are going to use to validae the form.
-  var errors, a, b, c, d, e, errorFirstName, errorLastName, errorEmail, errorTelephone, errorMessage = "";
+  var errors, a, b, c, d, e, errorFirstName, errorLastName, errorEmail, errorTelephone, errorMessage = " ";
 
   //Sets errors to 0
   errors = 0;
 
   //Checks the First Name value of the form is entered.
-    a = document.forms["contactForm"]["firstname"].value;
+    a = document.forms["contactForm"]["fullname"].value;
     if (a == null || a == "") {
-        errorFirstName = _('errorfirstname');
+        errorFirstName = _('errorfullname');
         errorFirstName.style.color ='red';
-        errorFirstName.innerHTML = "Please enter your First Name";
-        errors = errors + 1;
-    }
-
-  //Checks the Last Name value is entered.
-    b = document.forms["contactForm"]["lastname"].value;
-    if (b == null || b == "") {
-        errorLastName = _('errorlastname');
-        errorLastName.style.color = 'red';
-        errorLastName.innerHTML = "Please enter your Last Name";
+        errorFirstName.innerHTML = "Please enter your Name";
         errors = errors + 1;
     }
 
   //Checks to see if the Email has been entered.
     c = document.forms["contactForm"]["email"].value;
-    if (c == null || c == "") {
+    var atpos = c.indexOf("@");
+    var dotpos = c.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=c.length) {
         errorEmail = _('erroremail');
-        errorEmail.style.color = 'red';
-        errorEmail.innerHTML = "Please enter an Email";
+        errorEmail.style.color ='red';
+        errorEmail.innerHTML = "Please enter a valid email";
         errors = errors + 1;
     }
 
