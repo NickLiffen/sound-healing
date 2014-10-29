@@ -15,7 +15,8 @@ $create_table_contact_form =
 				fullname VARCHAR(35) NOT NULL,
 				email VARCHAR(500) NOT NULL,
 				telephone VARCHAR(15),
-				comment VARCHAR(15) NOT NULL,
+				comment VARCHAR(1000) NOT NULL,
+				currentDate DATE NOT NULL,
 
 				PRIMARY KEY(ID)
 														)";

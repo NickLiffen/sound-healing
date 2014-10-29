@@ -17,7 +17,7 @@ include("../db/connect_database.php");
       $comment = test_input($_POST['comment']);
 
       //Adds it to the database
-      $query = "INSERT INTO contactForm (fullname, email, telephone, comment) VALUES ('$fullname', '$email','$telephone','$comment')";
+      $query = "INSERT INTO contactForm (fullname, email, telephone, comment, currentDate) VALUES ('$fullname', '$email','$telephone','$comment', CURDATE())";
       $result = $database->query($query) OR die("Failed query $query");
       echo $database->error."<p>";
       echo $result;

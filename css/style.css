@@ -18,7 +18,7 @@ body {
 
 html, body {
   height: 100%;
-  
+
 }
 
 .page-wrap {
@@ -103,7 +103,7 @@ form
   text-align:left;
   width:30%;
   font:17px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  
+
 }
 
 #contactForm p
@@ -113,7 +113,7 @@ form
   padding-left:5px;
   font-style:italic;
 
-  
+
 }
 input
 {
@@ -166,3 +166,25 @@ input
   padding-top:1em;
 }
 
+
+/* This is the CSS for the Admin side of the website*/
+
+.contactID{
+  width: 31%;
+  margin-right: 2%;
+  float: left;
+  margin-bottom: 70px;
+}
+
+.contactID p{
+  margin: 0 0 0 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bold {
+  font-weight: bold;
+}
