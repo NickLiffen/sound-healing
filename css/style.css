@@ -188,3 +188,7 @@ input
 .bold {
   font-weight: bold;
 }
+
+.replyContactForm {
+    width: 5em;  height: 2em;
+}

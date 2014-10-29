@@ -16,7 +16,7 @@ function json(jsonObj, target) {
         target.innerHTML = "<div class='noResults'><p>No Contact Information where found, Sorry!<p></div>";
     }
     else {
-    //Starts the loop
+    //Starts the loop -- THIS IS HOW I OUTPUT THE DATA ON THE PAGE
     for (var i = 0; i < json_output.length; i++) {
         output = "<div id='contactID" + json_output[i].id + "' class='contactID'>" +
             "<p> Person's Name: " + json_output[i].fullname + '</p>' +
@@ -24,6 +24,7 @@ function json(jsonObj, target) {
             "<p> Person's Telephone: " + json_output[i].telephone + '</p>' +
             "<p> Product Comment: " + json_output[i].comment + '</p>' +
             "<p class='bold'> Date Form was Sent: " + json_output[i].currentDate + '</p>' +
+            "<p>Reply? <input type='button' class='replyContactForm' value='Reply'/></p>" +
             "</div>";
         target.innerHTML += output;
     }
