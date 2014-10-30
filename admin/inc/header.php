@@ -20,8 +20,8 @@
       <!-- This is main Navagational Bar in the Header-->
           <nav>
             <ul id ="navBtns">
-              <li><a href="">Home</a></li> /
-              <li><a href="">Services Information</a></li> /
+              <li><a href="index.php">Home</a></li> /
+              <li><a href="modifyServices.php">Services Information</a></li> /
               <li><a href="contactFormInfo.php">Contact Form Info</a></li>
             </ul>
           </nav>
