@@ -24,4 +24,32 @@ if(!$resultt = $database->query($create_table_contact_form)){
 		die('Could not create product table [' . $database->error . ']');
 	$resultt->close();
 }
+
+$create_table_class =
+				"CREATE TABLE IF NOT EXISTS contactForm (
+				id MEDIUMINT NOT NULL AUTO_INCREMENT,
+				classname VARCHAR(35) NOT NULL,
+				classdescription VARCHAR(500) NOT NULL,
+				classprice VARCHAR(15),
+				classdisclamer VARCHAR(1000) NOT NULL,
+
+				PRIMARY KEY(ID)
+														)";
+if(!$resultt = $database->query($create_table_class)){
+		die('Could not create product table [' . $database->error . ']');
+	$resultt->close();
+}
+
+$create_table_service =
+				"CREATE TABLE IF NOT EXISTS contactForm (
+				id MEDIUMINT NOT NULL AUTO_INCREMENT,
+				servicename VARCHAR(35) NOT NULL,
+
+				PRIMARY KEY(ID)
+														)";
+if(!$resultt = $database->query($create_table_service)){
+		die('Could not create product table [' . $database->error . ']');
+	$resultt->close();
+}
+
 ?>
