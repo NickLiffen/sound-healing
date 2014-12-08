@@ -45,12 +45,7 @@ function outputMessage(){
   successMessage.innerHTML = 'Your Class has been added :)';
   successMessage.style.color = 'green';
 
-
-
 }
-
-
-
 
 
 //Validates the Form that allows the admin to add a class to the database

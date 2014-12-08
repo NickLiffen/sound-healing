@@ -9,7 +9,7 @@
     </p>
   </form>
 </div>
-
+<div class='paddingBottom'></div>
 
 
 <section>
@@ -24,7 +24,7 @@
   </div>
   <!--This is where the results from the search bar gets printed out onto.-->
 </section>
-
+<div class='paddingBottom'></div>
 
 <section>
   <div id="collectInfo"></div>

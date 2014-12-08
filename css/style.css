@@ -235,3 +235,7 @@ input
   top: 18%;
   color: green;
 }
+
+.paddingBottom{
+  padding-bottom: 20px;
+}
