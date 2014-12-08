@@ -1,5 +1,5 @@
 
-
+//This outputs the contact information to the screen.
 function getContactInfo(){
     var target;
     target = _("outputContactInfo");
@@ -8,6 +8,9 @@ function getContactInfo(){
     ajaxGet("SQL/collectContactInfoSQL.php", json, target, null);
 
 };
+
+
+
 //Parses the JSON Object created and formats it to the way I like
 function json(jsonObj, target) {
   var json_output, output;
@@ -37,7 +40,10 @@ function json(jsonObj, target) {
 };
 
 
-//This function collects the buttons for Deleting and Modiying a product.
+
+
+
+//This function collects the buttons for Replying to the user.
 function getButton(str, target) {
   var fetchReplyButton;
   //Gets the button that says reply
@@ -61,14 +67,14 @@ function getButton(str, target) {
   }
 }
 
+//This gets the contact form information that the Admin has clicked on.
 function replyContactInfo(newID, target){
   ajaxGet("SQL/customerInfoSQL.php?id=" + newID, replyContactForm, target, newID);
 }
 
 
-
+//This outputs the Form that the Admin can Respond to.
 function replyContactForm(jsonObj, target, newID){
-
 
   var json_output, newTarget, output;
 
@@ -128,12 +134,11 @@ function sendEmail(newTarget, newID){
       updateContactTable(newTarget, newID)
 
     });
-
   }
-
 }
 
 
+//This updated the table 'contactForm' in the database. Changes the RespondedToEmail to 1
 function updateContactTable(newTarget, newID){
 
     var updateIDNew, updateRespondedToEmail, formdata;
@@ -151,13 +156,21 @@ function updateContactTable(newTarget, newID){
 
 
 
-
+//Once the Admin has replied it changes the screen back to the way it was
 function changeScreenLayout(jsonObj, newTarget){
-  console.log(jsonObj);
   var message;
   newTarget.style.display = "none";
+  messsage = _("productMessage").style.display = "block";
+  window.setTimeout(vanishText, 1000);
   getContactInfo();
 }
+
+
+//Makes Text Disapear after 1 second.
+function vanishText(str) {
+  _("productMessage").style.display = 'none';
+}
+
 
 
 //Event Listner for when the page loads.
