@@ -8,6 +8,7 @@ $create_table_contact_form =
 	telephone VARCHAR(15),
 	comment VARCHAR(1000) NOT NULL,
 	currentDate DATE NOT NULL,
+	respondedToEmail BOOL DEFAULT NULL,
 
 	PRIMARY KEY(ID)
 )";
