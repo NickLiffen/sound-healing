@@ -1,6 +1,6 @@
 <?php $title="Add a Class - Admin" ; include( "inc/header.php"); ?>
 
-    <h1>Add a Class?</h1>
+    <h1 class='center'>Add a Class?</h1>
 
     <!-- This is the form that adds a Class Under a certain Service. There
     are going to 3 different types of services apperently and this is how you

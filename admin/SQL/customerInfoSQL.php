@@ -18,6 +18,7 @@ while($row = mysqli_fetch_assoc($result))
   "telephone" => $row['telephone'],
   "comment" => $row['comment'],
   "currentDate" => $row['currentDate'],
+  "respondedToEmail" => $row['respondedToEmail'],
 
 );
 array_push($output,$contactInfo);

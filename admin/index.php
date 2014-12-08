@@ -1,6 +1,6 @@
 <?php $title="Admin Page" ; include( "inc/header.php"); ?>
 
-<h1> Staticsitcs about your website </h1>
+<h1 class='center'> Staticsitcs about your website </h1>
 
 <div class='paddingBottom'></div>
 <section>

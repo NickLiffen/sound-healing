@@ -217,6 +217,11 @@ input
   width: 5em;  height: 2em;
 }
 
+
+#backButtonPress {
+  width: 5em;  height: 2em;
+}
+
 #productDeleteShow{
   display: none;
   postion: absolute;
@@ -248,4 +253,18 @@ input
 
 .paddingBottom{
   padding-bottom: 20px;
+}
+
+.itemModal h3 {
+  text-align: center;
+  font-size: 30px;
+  font-style: bold;
+}
+.itemModal p {
+  text-align: center;
+}
+
+
+.center {
+  text-align: center;
 }

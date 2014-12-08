@@ -11,6 +11,10 @@ function getContactInfo(){
 
 
 
+
+
+
+
 //Parses the JSON Object created and formats it to the way I like
 function json(jsonObj, target) {
   var json_output, output;
@@ -21,21 +25,150 @@ function json(jsonObj, target) {
     else {
     //Starts the loop -- THIS IS HOW I OUTPUT THE DATA ON THE PAGE
     for (var i = 0; i < json_output.length; i++) {
-        output = "<div id='item" + json_output[i].id + "' class='contactID'>" +
-            "<p> Person's Name: " + json_output[i].fullname + '</p>' +
-            "<p> Person's Email: " + json_output[i].email + '</p>' +
-            "<p> Person's Telephone: " + json_output[i].telephone + '</p>' +
-            "<p> Product Comment: " + json_output[i].comment + '</p>' +
-            "<p class='bold'> Date Form was Sent: " + json_output[i].currentDate + '</p>' +
-            "<p class='bold'> Have you Responded: " + json_output[i].respondedToEmail + '</p>' +
-            "<p>Reply? <input type='button' class='replyContactForm' value='Reply'/></p>" +
-            "</div>";
-        target.innerHTML += output;
+
+
+      output = "<div id='item" + json_output[i].id + "' class='contactID'>" +
+      "<p> Person's Name: " + json_output[i].fullname + '</p>' +
+      "<p> Person's Email: " + json_output[i].email + '</p>' +
+      "<p> Person's Telephone: " + json_output[i].telephone + '</p>' +
+      "<p> Product Comment: " + json_output[i].comment + '</p>' +
+      "<p class='bold'> Date Form was Sent: " + json_output[i].currentDate + '</p>' +
+      "<p class='bold'> Have you Responded: " + json_output[i].respondedToEmail + '</p>' +
+      "</div>";
+      target.innerHTML += output;
+
 
         //Collecting te ID of the Contact Request
         var id = json_output[i].id
 
-        getButton(id,target);
+        setListeners(id,target);
+    }
+  }
+};
+
+
+
+
+
+
+
+//Whenever you click on the customer information you want to extend, this collects the ID of the information
+function setListeners(id, target) {
+  var itemsContainer, e, data;
+  itemsContainer = _("outputContactInfo");
+  itemsContainer.addEventListener("click", function (event) {
+    e = event.target;
+    while (e.id.indexOf('item') == -1) {
+      e = e.parentNode;
+    }
+    data = e.id;
+    productID = data.replace(/[^0-9.]/g, "");
+    focusAjax(productID, target);
+  }, false);
+}
+
+
+
+
+
+
+
+
+//This function fires off an AJAX request to get the information that the Admin has clicked on
+function focusAjax(newID, target){
+  ajaxGet("SQL/customerInfoSQL.php?id=" + newID, outputIndividual, target, null);
+}
+
+function outputIndividual(jsonObj, target){
+
+  var json_output, output;
+
+  json_output = JSON.parse(jsonObj);
+
+  //Loops through the parsed object.
+  for (var i = 0; i < json_output.length; i++) {
+
+    contact_id = json_output[i].id;
+
+    output = "<h3 class='center'> Contact Information! </h3>" +
+    "<div class='center'><input type='button' id='backButtonPress' value ='Back'/></div>" +
+    "<div id='item" + json_output[i].id + "' class='itemModal'>" +
+    "<p> Person's Name: " + json_output[i].fullname + '</p>' +
+    "<p> Person's Email: " + json_output[i].email + '</p>' +
+    "<p> Person's Telephone: " + json_output[i].telephone + '</p>' +
+    "<p> Product Comment: " + json_output[i].comment + '</p>' +
+    "<p class='bold'> Date Form was Sent: " + json_output[i].currentDate + '</p>' +
+    "<p class='bold'> Have you Responded: " + json_output[i].respondedToEmail + '</p>' +
+    "<p>Reply? <input type='button' class='replyContactForm' value='Reply'/></p>" +
+    "</div>" +
+    "</div>";
+
+    injectIntoFocus(contact_id, output);
+  }
+}
+
+
+//Injects product information into Modal
+function injectIntoFocus(product_id, data) {
+  var searchFeatures, oldTarget, focusTarget;
+
+  oldTarget =   _("outputContactInfo");
+  focusTarget = _("outputContactInfoFocus");
+  finalResponce = _('replyBox');
+
+  oldTarget.style.display = 'none';
+  focusTarget.style.display = 'block';
+  finalResponce.style.display = 'none';
+
+  focusTarget.innerHTML = data;
+
+  getButton(product_id, focusTarget);
+  backButton(focusTarget, oldTarget, finalResponce);
+  closeFocus(focusTarget, oldTarget, finalResponce);
+}
+
+
+
+
+
+//Closes the Focus through pressing the back button.
+function backButton(focusTarget, oldTarget, value){
+  var backButtonPressed;
+  backButtonPressed = _("backButtonPress");
+  if(backButtonPressed){
+    backButtonPressed.addEventListener("click", function() {
+
+      focusTarget.innerHTML = "";
+      focusTarget.style.display = 'none';
+
+      finalResponce.innerHTML = "";
+      finalResponce.style.display = 'none';
+
+      oldTarget.style.display = 'block';
+
+      getContactInfo();
+    });
+  }
+}
+
+
+
+
+//Closes the Focus using the ESC key
+function closeFocus(focusTarget, oldTarget, value) {
+  document.onkeydown = function (evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+
+      focusTarget.innerHTML = "";
+      focusTarget.style.display = 'none';
+
+      finalResponce.innerHTML = "";
+      finalResponce.style.display = 'none';
+
+      oldTarget.style.display = 'block';
+
+      getContactInfo();
     }
   }
 };
@@ -91,7 +224,7 @@ function replyContactForm(jsonObj, target, newID){
 
   //Starts the loop and prints out the form.
   for (var i = 0; i < json_output.length; i++) {
-    output = "<h2>Please Reply To this Customer :)</h2>" +
+    output = "<h2 class='center'>Reply Form</h2>" +
     "<form enctype='multipart/form-data' id='contactForm' method='post' name=myForm' onsubmit='return false'>" +
     "<input type = 'hidden'  id='idUpdate' value = " + json_output[i].id + " > " +
     "<p>Customer Name: </p><input id='name' name= 'fullname' type='text' value = " + json_output[i].fullname + " autofocus> <span id='errorfullname'></span> <span class='error'></span>" +
