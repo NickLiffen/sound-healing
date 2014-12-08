@@ -1,6 +1,6 @@
-<?php $title="Contact Page" ; include( "inc/header.php"); ?>
+<?php $title="Add a Class - Admin" ; include( "inc/header.php"); ?>
 
-    <h1>Services Information</h1>
+    <h1>Add a Class?</h1>
 
     <!-- This is the form that adds a Class Under a certain Service. There
     are going to 3 different types of services apperently and this is how you
@@ -46,6 +46,8 @@
       </div>
     </form>
 
+
+    <span id='successMessage'></span>
 
 <!--This is the AJAX function that adds the contact information to the database.-->
 <script src="js/addClassInfo.js"></script>

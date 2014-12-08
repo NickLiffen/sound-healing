@@ -1,4 +1,4 @@
-<?php $title="Contact Page" ; include( "inc/header.php"); ?>
+<?php $title="Contact Page - Admin" ; include( "inc/header.php"); ?>
 
     <h1>Contact Form Information</h1>
 

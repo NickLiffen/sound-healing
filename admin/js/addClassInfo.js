@@ -8,25 +8,50 @@ function sendClassForm(){
 
   //Collectting varibles. All using my _ function that collects ID's.
   classname = _("classname").value;
-  classdesciption = _("classdesciption").value;
+  classdescription = _("classdescription").value;
   classprice = _("classprice").value;
   classdisclamer = _("classdisclamer").value;
   //This gets the chosen Elemnet of the Drop Down box which chooses the services.
   dropDownServices = _("differentServices");
-  serviceChosen = dropDownServices.options[e.selectedIndex].value;
+  serviceChosen = dropDownServices.options[dropDownServices.selectedIndex].value;
 
   //FormData is a safe and easy method of posting data.
   formdata = new FormData();
-  formdata.append("classname", classname;
-  formdata.append("classdesciption", classdesciption);
+  formdata.append("classname", classname);
+  formdata.append("classdescription", classdescription);
   formdata.append("classprice", classprice);
   formdata.append("classdisclamer", classdisclamer);
   formdata.append("serviceChosen", serviceChosen);
 
   //Calling the AJAX Post function that I have already created
   ajaxPost("SQL/addClassInfoSQL.php", formdata, outputMessage, null, null);
+}
+
+
+
+function outputMessage(){
+
+  //Inititiates all the varibles that we are going to use toe empty the values of the form
+  var classname, classdescription, classprice, classdiscalmer, successMessage;
+
+  //Sets all the feilds in the Form to Blank.
+  classname = _("classname").value=" ";
+  classdescription = _("classdescription").value = " ";
+  classprice = _("classprice").value = " ";
+  classdiscalmer = _("classdisclamer").value = " ";
+
+  //Ouputs the success Message.
+  successMessage = _("successMessage");
+  successMessage.innerHTML = 'Your Class has been added :)';
+  successMessage.style.color = 'green';
+
+
 
 }
+
+
+
+
 
 //Validates the Form that allows the admin to add a class to the database
 validateForm = function () {

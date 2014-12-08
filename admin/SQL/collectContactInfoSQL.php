@@ -1,8 +1,6 @@
 <?php
   include("../../db/connect_database.php");
 
-	header('Content-Type: application/json');
-
 	$query = "SELECT * FROM contactForm ORDER BY id DESC";
 
 	$result = $database->query($query) OR die("Failed query $query");

@@ -10,6 +10,8 @@ getContactInfo = function(){
 };
 //Parses the JSON Object created and formats it to the way I like
 function json(jsonObj, target) {
+  console.log(jsonObj);
+  console.log(target);
   var json_output, output;
     json_output = JSON.parse(jsonObj);
     if (isEmpty(json_output)) {
