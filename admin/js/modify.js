@@ -4,6 +4,8 @@ function ajaxModify(productID, str, target) {
 }
 //Shows the new form that allows the user to enter in the new information.
 function updateProduct(jsonObj, target, str) {
+
+  console.log(jsonObj);
   var json_output, newTarget, output;
   json_output = JSON.parse(jsonObj);
   //Removes all other products from the page. Focuses the user on that one specific update form.

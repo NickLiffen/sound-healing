@@ -12,10 +12,10 @@
   <li>The Total amount of Classes:
     <div id='totalClasses'></div>
   </li>
-  <li>The Total amount of Email's to Respond to:
+  <li>The Total amount of Email's to Respond too:
     <div id='emailStillToAswer'></div>
   </li>
-  <li>The Total amount of Email's ypu HAVE responded to:
+  <li>The Total amount of Email's ypu HAVE responded too:
     <div id='emailAnswered'></div>
   </li>
 </ul>
