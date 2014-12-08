@@ -42,19 +42,19 @@ function totalClassesOutput(jsonObjTwo, targetTwo){
       targetTwo.innerHTML += output;
     }
   }
-  outputAllClasses();
+  emailsToRespondTo();
 }
 
 
 
 
-/*
+
 
 //Runs a function that goes and collects the procut with the most stock
 function emailsToRespondTo() {
   var targetThree;
-  targetThree = _("maxStockNew");
-  ajaxGet("SQL/maxStockSQL.php", emailsToRespondToOutput, targetThree, null);
+  targetThree = _("emailStillToAswer");
+  ajaxGet("SQL/emailsStillToAnswerSQL.php", emailsToRespondToOutput, targetThree, null);
 };
 function emailsToRespondToOutput(jsonObjThree, targetThree){
   var json_output, output;
@@ -74,13 +74,11 @@ function emailsToRespondToOutput(jsonObjThree, targetThree){
 
 
 
-
-
 //Runs and collects the products with the least amount of stock
 function emailsRespondedTo() {
   var targetFour
-  targetFour = _("minStockNew");
-  ajaxGet("SQL/minStock.php", emailsRespondedToOutput, targetFour, null);
+  targetFour = _("emailAnswered");
+  ajaxGet("SQL/emailsRespondedTo.php", emailsRespondedToOutput, targetFour, null);
 };
 function emailsRespondedToOutput(jsonObjFour, targetFour){
   var json_output, output;
@@ -97,7 +95,7 @@ function emailsRespondedToOutput(jsonObjFour, targetFour){
 }
 
 
-*/
+
 
 //This is a function that collects all different products that have 0 stock reamaining.
 function outputAllClasses() {
@@ -111,7 +109,7 @@ function outputItems(jsonObjFive, targetFive) {
   json_output = JSON.parse(jsonObjFive);
   //Checks to see if anything has come back from the search. If nothing has. Prints out message.
   if (isEmpty(json_output)) {
-    targetFive.innerHTML = "<div class='noResults'><p>No Items where found for " + str + " Sorry!<p></div>";
+    targetFive.innerHTML = "<div class='noResults'><p>You Currently have no classes :(<p></div>";
   } else {
     //Starts the loop
     for (var i = 0; i < json_output.length; i++) {

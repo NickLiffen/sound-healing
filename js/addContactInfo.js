@@ -34,7 +34,7 @@ function sendContactForm(){
   email = _("email").value;
   telephone = _("telephone").value;
   comment = _("comment").value;
-  respondedToEmail = '0';
+  respondedToEmail = 'No';
 
   //FormData is a safe and easy method of posting data.
   formdata = new FormData();

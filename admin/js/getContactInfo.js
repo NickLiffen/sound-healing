@@ -27,6 +27,7 @@ function json(jsonObj, target) {
             "<p> Person's Telephone: " + json_output[i].telephone + '</p>' +
             "<p> Product Comment: " + json_output[i].comment + '</p>' +
             "<p class='bold'> Date Form was Sent: " + json_output[i].currentDate + '</p>' +
+            "<p class='bold'> Have you Responded: " + json_output[i].respondedToEmail + '</p>' +
             "<p>Reply? <input type='button' class='replyContactForm' value='Reply'/></p>" +
             "</div>";
         target.innerHTML += output;
@@ -144,7 +145,7 @@ function updateContactTable(newTarget, newID){
     var updateIDNew, updateRespondedToEmail, formdata;
 
     updateIDNew = (newID);
-    updateRespondedToEmail = '1';
+    updateRespondedToEmail = 'Yes';
 
     //FormData is a safe and easy method of posting data.
     formdata = new FormData();
