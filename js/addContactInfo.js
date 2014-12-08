@@ -27,13 +27,14 @@ function outputMessage(data){
 //This function sends the data from the form to the database through AJAX request
 function sendContactForm(){
   //Inititiates all the varibles that we are going to use to validae the form.
-  var fullname, email, telephone, email, comment, formdata;
+  var fullname, email, telephone, email, comment, respondedToEmail, formdata;
 
   //Collectting varibles. All using my _ function that collects ID's.
   fullname = _("fullname").value;
   email = _("email").value;
   telephone = _("telephone").value;
   comment = _("comment").value;
+  respondedToEmail = '0';
 
   //FormData is a safe and easy method of posting data.
   formdata = new FormData();
@@ -41,6 +42,7 @@ function sendContactForm(){
   formdata.append("email", email);
   formdata.append("telephone", telephone);
   formdata.append("comment", comment);
+  formdata.append("respondedToEmail", respondedToEmail);
 
   //Calling the AJAX Post function that I have already created
   ajaxPost("SQL/addConactInfoSQL.php", formdata, outputMessage, null, null);

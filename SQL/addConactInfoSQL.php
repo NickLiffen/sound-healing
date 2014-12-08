@@ -15,9 +15,11 @@ include("../db/connect_database.php");
       $email = test_input($_POST['email']);
       $telephone = test_input($_POST['telephone']);
       $comment = test_input($_POST['comment']);
+      $respondedToEmail = test_input($_POST['respondedToEmail']);
+
 
       //Adds it to the database
-      $query = "INSERT INTO contactForm (fullname, email, telephone, comment, currentDate) VALUES ('$fullname', '$email','$telephone','$comment', CURDATE())";
+      $query = "INSERT INTO contactForm (fullname, email, telephone, comment, currentDate, respondedToEmail) VALUES ('$fullname', '$email','$telephone','$comment', CURDATE(), '$respondedToEmail')";
       $result = $database->query($query) OR die("Failed query $query");
       echo $database->error."<p>";
       echo $result;
