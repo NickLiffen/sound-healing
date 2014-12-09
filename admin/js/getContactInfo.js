@@ -210,10 +210,13 @@ function replyContactInfo(newID, target){
 //This outputs the Form that the Admin can Respond to.
 function replyContactForm(jsonObj, target, newID){
 
+
   var json_output, newTarget, output;
 
   //Converting to a JSON Object
   json_output = JSON.parse(jsonObj);
+
+  console.log(json_output);
 
   //Modifying what the Page Looks like
   target.innerHTML = "";
@@ -227,8 +230,8 @@ function replyContactForm(jsonObj, target, newID){
     output = "<h2 class='center'>Reply Form</h2>" +
     "<form enctype='multipart/form-data' id='contactForm' method='post' name=myForm' onsubmit='return false'>" +
     "<input type = 'hidden'  id='idUpdate' value = " + json_output[i].id + " > " +
-    "<p>Customer Name: </p><input id='name' name= 'fullname' type='text' value = " + json_output[i].fullname + " autofocus> <span id='errorfullname'></span> <span class='error'></span>" +
-    "<p>Customer Email: </p> <input id='customerEmail' name='email'  type='email' value = " + json_output[i].email + "> <span id='erroremail'></span> <span class='error'></span>" +
+    "<p>Customer Name: </p><input id='name' name= 'fullname' type='text' value = '" + json_output[i].fullname + "' autofocus> <span id='errorfullname'></span> <span class='error'></span>" +
+    "<p>Customer Email: </p> <input id='customerEmail' name='email'  type='email' value = '" + json_output[i].email + "' > <span id='erroremail'></span> <span class='error'></span>" +
     "<p>Your Email Address: </p><input id='yourEmail' name='telephone' value='Your Email will go here'><span id='errortelephone'></span> <span class='error'></span>" +
     "<p>Please Enter your Message: </p><textarea id='messsage' rows='5'></textarea><span id='errorcomment'></span><span class='error'></span>" +
     "<div id ='submitBtn'><input id='submit' name='submit' type='button' value='Submit'></div>" +

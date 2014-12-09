@@ -21,12 +21,12 @@ function updateProduct(jsonObj, target, str) {
     "<form method='post' id = 'Form' enctype='multipart/form-data' name='Form' onsubmit='return false;'>" +
     "<br />" +
     "<input type = 'hidden'  id='idUpdate' name = 'id' value = " + json_output[i].id + " > " +
-    "<p>Please Update the Class Name: *<input type='text' id='classUpdate' name='classUpdate' value = " + json_output[i].classname + " > </p>" +
-    "<p>Please Update the Class Description: *<input type='text' id='descriptionUpdate' name='descriptionUpdate' value = " + json_output[i].classdescription + " > </p>" +
-    "<p>Please Update the Class Price: £ *<input type='text' id='priceUpdate' name='priceUpdate' value = " + json_output[i].classprice + " > </p>" +
-    "<p>Please Update the Class Disclamier: *<input type='text' id='disclaimerUpdate' name='disclaimerUpdate' value = " + json_output[i].classdisclamer + " > </p>" +
+    "<p>Please Update the Class Name: *<input type='text' id='classUpdate' name='classUpdate' value = '" + json_output[i].classname + "' > </p>" +
+    "<p>Please Update the Class Description: *<input type='text' id='descriptionUpdate' name='descriptionUpdate' value = '" + json_output[i].classdescription + "' > </p>" +
+    "<p>Please Update the Class Price: £ *<input type='text' id='priceUpdate' name='priceUpdate' value = '" + json_output[i].classprice + "' > </p>" +
+    "<p>Please Update the Class Disclamier: *<input type='text' id='disclaimerUpdate' name='disclaimerUpdate' value = '" + json_output[i].classdisclamer + "' > </p>" +
     "<p>Please enter a Service:* <select id='serviceDropDown'>" +
-    "<option value=  " + json_output[i].service + " > " + json_output[i].service +  "</option>" +
+    "<option value=  '" + json_output[i].service + "' > '" + json_output[i].service +  "' </option>" +
     "<option value='ShaktySounds' id='shaktySounds'>Shakty Sounds</option>" +
     "<option value='CrystalHealing' id ='crystalHealing'>Crystal Healing</option>" +
     "<option value='Test' id='test'>Test</option>" +
