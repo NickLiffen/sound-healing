@@ -2,7 +2,7 @@
 
     <h1 class='center'>Contact Form Information</h1>
 
-
+<p> Please click on any of the contact information to bring up more information and reply to them :-) </p>
     <div class='paddingBottom'></div>
     <div id='productMessage'>
       <h3>You Have Replied</h3>

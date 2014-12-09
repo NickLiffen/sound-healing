@@ -104,7 +104,6 @@ function outputAllClasses() {
   ajaxGet("SQL/allClassesSQL.php", outputItems, targetFive, null);
 };
 function outputItems(jsonObjFive, targetFive) {
-  console.log(jsonObjFive)
   var json_output, output;
   json_output = JSON.parse(jsonObjFive);
   //Checks to see if anything has come back from the search. If nothing has. Prints out message.

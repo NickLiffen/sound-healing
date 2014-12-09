@@ -216,8 +216,6 @@ function replyContactForm(jsonObj, target, newID){
   //Converting to a JSON Object
   json_output = JSON.parse(jsonObj);
 
-  console.log(json_output);
-
   //Modifying what the Page Looks like
   target.innerHTML = "";
   newTarget = _('replyBox');
