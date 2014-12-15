@@ -1,5 +1,11 @@
 <?php
 include("../../db/connect_database.php");
+
+
+// -----------    This page gets all the classes from the database and returns them in a JSON Array.   -------------
+
+
+
 //Runs a query to find any products that have no stock
 $query = "SELECT * FROM class";
 $result = $database->query($query) OR die("Failed query $query");

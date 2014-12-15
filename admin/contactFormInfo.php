@@ -4,9 +4,13 @@
 
 <p> Please click on any of the contact information to bring up more information and reply to them :-) </p>
     <div class='paddingBottom'></div>
+
+    <!--This is where the message comes up saying that they have replied. At the moment it is set to display: none, when they reply it shows for 3 seconds-->
     <div id='productMessage'>
       <h3>You Have Replied</h3>
     </div>
+
+    <!--I use this instead of using the <br> tags. It gives a padding bottom on 10px-->
       <div class='paddingBottom'></div>
 
 

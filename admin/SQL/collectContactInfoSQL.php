@@ -1,6 +1,9 @@
 <?php
   include("../../db/connect_database.php");
 
+  // -----------   This collects all the contact forms that has been submitted and returns them in a JSON array    -------------
+
+
 	$query = "SELECT * FROM contactForm ORDER BY id DESC";
 
 	$result = $database->query($query) OR die("Failed query $query");

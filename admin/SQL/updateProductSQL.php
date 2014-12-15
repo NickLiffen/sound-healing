@@ -1,6 +1,8 @@
 <?php
 include("../../db/connect_database.php");
 
+// -----------    This collects the class that the user wants to update. then returns it in a JSON array   -------------
+
 //Finds a product based on the ID.
 $name = $_GET['id'];
 //Runs a query on that ID.

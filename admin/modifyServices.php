@@ -46,7 +46,7 @@
       </div>
     </form>
 
-
+    <!--This prints the success message once the admin has successfully added a service-->
     <span id='successMessage'></span>
 
 <!--This is the AJAX function that adds the contact information to the database.-->

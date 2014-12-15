@@ -1,5 +1,9 @@
 <?php
 include("../../db/connect_database.php");
+
+// -----------   This page collects how many emails have been responded too    -------------
+
+
 //Query that finds the total number of products that the user has added.
 $query = "SELECT Count(respondedToEmail) As countEmailYes FROM contactForm WHERE respondedToEmail ='Yes'";
 $result = $database->query($query) OR die("Failed query $query");

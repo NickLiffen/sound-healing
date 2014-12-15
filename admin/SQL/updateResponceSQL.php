@@ -2,6 +2,8 @@
 
 include("../../db/connect_database.php");
 
+// -----------   Once the admin has sent a reply this file is called and it updates the status of if the user has replied    -------------
+
 //Brings in the new quantities that the user wants to update.
 $updateIDNew = $_POST['updateIDNew'];
 $updateRespondedToEmail = $_POST['updateRespondedToEmail'];

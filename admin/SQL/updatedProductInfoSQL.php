@@ -2,6 +2,8 @@
 
 include("../../db/connect_database.php");
 
+// -----------    this is the sql that updates a class in the database   -------------
+
     //Brings in the new quantities that the user wants to update.
     $idUpdate = $_POST['idUpdate'];
     $classUpdate = $_POST['classUpdate'];

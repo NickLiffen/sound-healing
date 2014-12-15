@@ -1,6 +1,9 @@
 <?php
 include("../../db/connect_database.php");
 
+
+// -----------   This deletes a product from the database depending on the ID passed through from javascript.    -------------
+
 //Collects the ID from the AJAX request.
 $name = $_GET['id'];
 //A double check to make sure that the product is found in the database.

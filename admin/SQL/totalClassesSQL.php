@@ -1,5 +1,8 @@
 <?php
 include("../../db/connect_database.php");
+
+// -----------    This returns the total number of classes as a number   -------------
+
 //Query that finds the total number of products that the user has added.
 $query = "SELECT count(id) as 'TotalClasses' FROM class";
 $result = $database->query($query) OR die("Failed query $query");

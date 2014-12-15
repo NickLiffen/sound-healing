@@ -1,6 +1,10 @@
 <?php
 
 include("../../db/connect_database.php");
+
+// -----------    This is the SQL for the search bar, returns results depending on what the user inputs   -------------
+
+
 //Brings in the string that they have searhed for.
 $searchString = $_GET['str'];
 //Runs a query to find that product based on the string. SEARCHES UNDER NAME AND DESCRIPTION

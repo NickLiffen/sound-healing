@@ -1,5 +1,9 @@
 <?php
 include("../../db/connect_database.php");
+
+// -----------    this collects the total number of emails that the admin hasn't reponded too   -------------
+
+
 //Query that finds the total number of products that the user has added.
 $query = "SELECT Count(respondedToEmail) As countEmailNo FROM contactForm WHERE respondedToEmail ='No'";
 $result = $database->query($query) OR die("Failed query $query");

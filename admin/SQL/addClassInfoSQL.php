@@ -1,6 +1,9 @@
 <?php
 include("../../db/connect_database.php");
 
+// -----------   This Page Adds a Class to the database. this directly gets the variables from javascript then adds to database    -------------
+
+
 //Makes sure nothing bad goes into database;
 function test_input($data)
 {
