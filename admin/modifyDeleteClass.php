@@ -1,11 +1,12 @@
 <?php $title="Modify/Delete - Admin" ; include( "inc/header.php"); ?>
 
-<h2 class='center'> Modify / Delete Products here </h2>
+<h1 id='contactwelcome'> Modify / Delete Products</h2>
+  <div class='paddingBottom'></div>
 <!--Search bar thats searches for products in the database and this allows them to delete/modify products.-->
 <div id="searchbox">
   <form method="GET" name="seachForm">
-    <p>Search Box:
-      <input type="search" id="searchBox" placeholder="Search for Products" class="mytext" autofocus/>
+    <p>
+      <input type="search" id="searchBox" placeholder="Search for Products..."class="mytext" autofocus/>
     </p>
   </form>
 </div>

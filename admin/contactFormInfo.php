@@ -1,8 +1,8 @@
 <?php $title="Contact Page - Admin" ; include( "inc/header.php"); ?>
 
-    <h1 class='center'>Contact Form Information</h1>
+    <h1 id='contactwelcome'>Contact Form Information</h1>
 
-<p> Please click on any of the contact information to bring up more information and reply to them :-) </p>
+<p id="subwriting"> Please click on any of the contact information to bring up more information and reply to them</p>
     <div class='paddingBottom'></div>
 
     <!--This is where the message comes up saying that they have replied. At the moment it is set to display: none, when they reply it shows for 3 seconds-->
