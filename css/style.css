@@ -37,12 +37,13 @@ html, body {
 }
 
 .site-footer {
-  background: #70377C;
+  border-top: 5px solid #6E52CA;
+  background: #e5e5e5;
 }
 
 header {
 	height: 125px;
-	background:#A932A9;
+	background:#6E52CA;
 	color:#FFFFFF;
 	display:block;
   margin-bottom:2em;
@@ -92,7 +93,7 @@ form
 #contactwelcome
 {
   text-align:center;
-  color: #70377C;
+  color: #5936c9;
   padding-bottom:0.5em;
   font:30px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -140,13 +141,10 @@ input
 }
 
 #submit {
-  -webkit-border-radius: 10;
-  -moz-border-radius: 10;
-  border-radius: 10px;
   font-family: Arial;
   color: #ffffff;
   font-size: 15px;
-  background: #A932A9;
+  background: #6E52CA;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   box-shadow: none;
@@ -156,7 +154,7 @@ input
 }
 
 #submit:hover {
-  background: #70377C;
+  background: #5936c9;
   text-decoration: none;
   box-shadow: none;
 }
@@ -243,7 +241,7 @@ input
 
 #productMessage{
   display: none;
-  postion: absolute;
+  position: absolute;
   display: none;
   font-size: 25px;
   text-align: center;
@@ -262,6 +260,41 @@ input
 }
 .itemModal p {
   text-align: center;
+}
+#admintabs
+{
+position: relative;
+overflow: hidden;
+margin: 0 auto;
+width: 100%;
+}
+#admincontrols
+{
+  text-align:center;
+}
+
+#adminboxes
+{
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  list-style: none;
+}
+
+.tabs
+{
+  position: relative;
+z-index: 1;
+display: block;
+margin: 0 auto;
+text-align: center;
+padding:5%;
+background: #6E52CA;
+font-size: 1.3em;
+line-height:150%;
+color: white;
 }
 
 
