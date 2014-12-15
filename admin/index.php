@@ -45,6 +45,6 @@
 
 
 <!--This is the javacript file that runs this page.-->
-<script src="js/fetchInfo.js"></script>
+<script src="js/index.js"></script>
 
 <?php include( "inc/footer.php"); ?>

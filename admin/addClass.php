@@ -50,5 +50,5 @@
     <span id='successMessage'></span>
 
 <!--This is the AJAX function that adds the contact information to the database.-->
-<script src="js/addClassInfo.js"></script>
+<script src="js/addClass.js"></script>
 <?php include( "inc/footer.php"); ?>

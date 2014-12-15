@@ -56,10 +56,12 @@ function totalClassesOutput(jsonObjTwo, targetTwo){
 //Runs a function that goes and collects the procut with the most stock
 function emailsToRespondTo() {
   var targetThree;
-  targetThree = _("emailStillToAswer");
+  targetThree = _("emailStillToAnswer");
   ajaxGet("SQL/emailsStillToAnswerSQL.php", emailsToRespondToOutput, targetThree, null);
 };
 function emailsToRespondToOutput(jsonObjThree, targetThree){
+
+  console.log(jsonObjThree);
   var json_output, output;
   json_output = JSON.parse(jsonObjThree);
   if (isEmpty(json_output)) {
@@ -94,7 +96,7 @@ function emailsRespondedToOutput(jsonObjFour, targetFour){
       targetFour.innerHTML += output;
     }
   }
-  outputAllClasses();
+  //outputAllClasses();
 }
 
 

@@ -27,7 +27,7 @@
 
 
     <!--This is the script that runs the AJAX request to get the information-->
-    <script src="js/getContactInfo.js"></script>
+    <script src="js/contactForm.js"></script>
 
 
 <?php include( "inc/footer.php"); ?>

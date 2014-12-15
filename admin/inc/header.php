@@ -21,9 +21,9 @@
           <nav>
             <ul id ="navBtns">
               <li><a href="index.php">Home</a></li> /
-              <li><a href="modifyServices.php">Add Class</a></li> /
+              <li><a href="addClass.php">Add Class</a></li> /
               <li><a href="modifyDeleteClass.php">Modify - Delete Class</a></li> /
-              <li><a href="contactFormInfo.php">Contact Form Info</a></li>
+              <li><a href="contactForm.php">Contact Form Info</a></li>
             </ul>
           </nav>
       <!---->

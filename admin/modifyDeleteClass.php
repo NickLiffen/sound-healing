@@ -36,11 +36,8 @@
 
 
 <!--Script that runs the search bar.-->
-<script src="js/searchBarResults.js"></script>
-<!--Script that Modifies a product.-->
-<script src="js/modify.js"></script>
-<!--Script that deletes a product.-->
-<script src="js/delete.js"></script>
+<script src="js/modifyDeleteClass.js"></script>
+
 
 
 
