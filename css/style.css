@@ -289,16 +289,27 @@ width: 100%;
 
 .tabs
 {
-  position: relative;
+position: relative;
 z-index: 1;
 display: block;
 margin: 0 auto;
 text-align: center;
-padding:5%;
+padding:4%;
 background: #6E52CA;
 font-size: 1.3em;
-line-height:150%;
+line-height:75px;
 color: white;
+}
+
+.tabs:hover
+{
+  background:#5936c9;
+
+}
+
+#totalServices, #totalClasses, #emailStillToAnswer, #emailAnswered
+{
+  font-size:5em;
 }
 
 #addClass
