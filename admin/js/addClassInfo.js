@@ -28,7 +28,7 @@ function sendClassForm(){
 }
 
 
-
+//This function is called once the class has been added. after the ajax call. it prints a success message.
 function outputMessage(){
 
   //Inititiates all the varibles that we are going to use toe empty the values of the form

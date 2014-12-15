@@ -9,6 +9,9 @@ totalServices = function () {
   targetOne = _("totalServices");
   ajaxGet("SQL/totalServices.php", totalSerciesOutput, targetOne, null);
 };
+
+
+//This prints the total number of services in the databse.
 function totalSerciesOutput(jsonObjOne, targetOne){
   var json_output, output;
   json_output = JSON.parse(jsonObjOne);

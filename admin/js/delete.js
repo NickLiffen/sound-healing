@@ -1,3 +1,6 @@
+
+// -----------  This file is called once the delete button is pressed. It deletes a class from a database     -------------
+
 //AJAX function that sends though the DELETED ID.
 function ajaxDelete(productID, str) {
   ajaxGet("SQL/deleteProductSQL.php?id=" + productID, deleteMessage, str, null);
