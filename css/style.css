@@ -7,6 +7,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+
 }
 /* Everything inside the body of the web page has these genreal settings.*/
 body {
@@ -19,6 +20,10 @@ body {
 html, body {
   height: 100%;
 
+}
+
+input:focus {
+    outline:none;
 }
 
 .page-wrap {
@@ -188,8 +193,7 @@ input
 }
 
 .item{
-  width: 31%;
-  margin-right: 2%;
+  width: 33%;
   float: left;
   margin-bottom: 70px;
 }
@@ -328,6 +332,7 @@ input#searchBox.mytext
   height:2em;
   font-size:1.5em;
   color:#5936c9;
+
 }
 
 .noResults
