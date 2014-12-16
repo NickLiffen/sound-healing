@@ -1,4 +1,12 @@
 
+/*
+This Page Runs the addClass.php Javascript. It validates the user inputs and then sends off the form to the database and prints a success message.
+
+Things To Do:
+
+1. Make the User be able to add an image.
+2. Make the Form look a bit nicer and wow factor.
+*/
 
 //This function adds a class to the database.
 function sendClassForm(){

@@ -1,4 +1,21 @@
 
+/*
+
+This page handles the JavaScript for the contactForm.php page. It firstly prints out all the contact form information out onto the page.
+Then it allows the user to click on it to bing up more information and the reply button. When the user clicks on the reply button it prints out
+a form that the admin can reply too.
+
+Things to do:
+
+1. Make the spacing between each contact form details smaller.
+2. Make the output of the database search a bit nice.
+3. When the user clicks on a specific contact form section make that look a little better.
+
+*/
+
+
+
+
 //This outputs the contact information to the screen.
 function getContactInfo(){
     var target;
@@ -8,11 +25,6 @@ function getContactInfo(){
     ajaxGet("SQL/collectContactInfoSQL.php", json, target, null);
 
 };
-
-
-
-
-
 
 
 //Parses the JSON Object created and formats it to the way I like
@@ -47,11 +59,6 @@ function json(jsonObj, target) {
 };
 
 
-
-
-
-
-
 //Whenever you click on the customer information you want to extend, this collects the ID of the information
 function setListeners(id, target) {
   var itemsContainer, e, data;
@@ -66,12 +73,6 @@ function setListeners(id, target) {
     focusAjax(productID, target);
   }, false);
 }
-
-
-
-
-
-
 
 
 //This function fires off an AJAX request to get the information that the Admin has clicked on
@@ -128,9 +129,6 @@ function injectIntoFocus(product_id, data) {
 }
 
 
-
-
-
 //Closes the Focus through pressing the back button.
 function backButton(focusTarget, oldTarget, value){
   var backButtonPressed;
@@ -152,8 +150,6 @@ function backButton(focusTarget, oldTarget, value){
 }
 
 
-
-
 //Closes the Focus using the ESC key
 function closeFocus(focusTarget, oldTarget, value) {
   document.onkeydown = function (evt) {
@@ -172,9 +168,6 @@ function closeFocus(focusTarget, oldTarget, value) {
     }
   }
 };
-
-
-
 
 
 //This function collects the buttons for Replying to the user.
@@ -242,12 +235,6 @@ function replyContactForm(jsonObj, target, newID){
 sendEmail(newTarget, newID);
 }
 
-
-
-
-
-
-
 //This is the function that will send the email off to the customer - THIS DOESNT WORK YET AS LOCALHOST CAN'T SEND EMAILS
 function sendEmail(newTarget, newID){
 
@@ -272,7 +259,6 @@ function sendEmail(newTarget, newID){
   }
 }
 
-
 //This updated the table 'contactForm' in the database. Changes the RespondedToEmail to 1
 function updateContactTable(newTarget, newID){
 
@@ -289,8 +275,6 @@ function updateContactTable(newTarget, newID){
     ajaxPost("SQL/updateResponceSQL.php", formdata, changeScreenLayout, newTarget, null);
 }
 
-
-
 //Once the Admin has replied it changes the screen back to the way it was
 function changeScreenLayout(jsonObj, newTarget){
   var message;
@@ -305,8 +289,6 @@ function changeScreenLayout(jsonObj, newTarget){
 function vanishText(str) {
   _("productMessage").style.display = 'none';
 }
-
-
 
 //Event Listner for when the page loads.
 window.addEventListener("load", getContactInfo());

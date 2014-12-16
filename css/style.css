@@ -19,7 +19,6 @@ body {
 
 html, body {
   height: 100%;
-
 }
 
 input:focus {
@@ -42,18 +41,31 @@ input:focus {
 }
 
 .site-footer {
-  border-top: 5px solid #6E52CA;
+  border-top: 15px solid #6E52CA;
   background: #e5e5e5;
 }
 
 header {
-	height: 125px;
+	height: 150px;
 	background:#6E52CA;
 	color:#FFFFFF;
 	display:block;
   margin-bottom:2em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.mainTitle{
+  padding-left: 20px;
+  margin:0px 0px 0px 0px;
+}
+
+img{
+  float: left;
+  text-align:left;
+  height: 100px;
+  width: 100;
+}
+
 
 nav {
 	float:right;

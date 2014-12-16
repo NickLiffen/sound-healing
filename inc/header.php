@@ -16,7 +16,7 @@
   <!-- This is the header-->
       <header>
         <div id = "headerblock">
-          <h1>Shakty Sounds - Sound Healing</h1>
+          <h1 class="mainTitle">Shakty Sounds - Sound Healing</h1>
 
       <!-- This is main Navagational Bar in the Header-->
           <nav>

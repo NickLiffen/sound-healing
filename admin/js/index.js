@@ -1,7 +1,17 @@
+
+/*
+
+This page handles the JavaScript for the index.php page. It prints out statictis about the website itself such as classes and servies and contact form information.
+
+Things to do:
+
+1. Is there any more statictics we can think of to add to the website? Make add the AJAX to a timer so it runs every 30 seconds.
+
+*/
+
+
+
 var totalServices;
-
-
-
 
 //Runs a function that goes and collects the total number of products in the database
 totalServices = function () {
