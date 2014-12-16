@@ -8,7 +8,7 @@
 <meta name="author" content="Nick Liffen, Lewis Wrightson">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <link rel="stylesheet" type="text/css" href="../css/style.css">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 <script src="inc/inc.js"></script>
 </head>
   <body>
@@ -16,7 +16,7 @@
   <!-- This is the header-->
       <header>
         <div id = "headerblock">
-        <h1>Insert Logo Here</h1>
+          <img src="../img/logo.png" alt="Sound Healing Logo" height="80" width="80">
       <!-- This is main Navagational Bar in the Header-->
           <nav>
             <ul id ="navBtns">
