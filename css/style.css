@@ -170,6 +170,7 @@ input
   box-shadow: none;
   font: 17px "Helvetica Neue", Helvetica, Arial, sans-serif;
   border:none;
+  width:75%;
 
 }
 
@@ -331,20 +332,7 @@ color: white;
 #addClass
 {
   padding-bottom:3em;
-  text-align:left;
-  width:30%;
   font:17px "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-
-input#searchBox.mytext
-{
-  -webkit-appearance:none;
-  width:50%;
-  height:2em;
-  font-size:1.5em;
-  color:#5936c9;
-
 }
 
 .noResults
@@ -361,3 +349,36 @@ input#searchBox.mytext
   color: #6E52CA;
   text-align: center;
 }
+
+
+#classname, #classdescription, #classprice, #classdisclamer, #differentservices
+{
+  width:75%;
+  font-size: 1.3em;
+  padding: 10px 10px 10px 10px;
+}
+
+#classname:focus, #classdescription:focus, #classprice:focus, #classdisclamer:focus
+{
+    box-shadow: 0 0 5px #6E52CA;
+    border: 1px solid #6E52CA;
+}
+.adminForm
+{
+  padding-bottom:1em;
+}
+
+#differentServices
+{
+  
+  font-size:1.3em;
+  width:75%;
+  -webkit-appearance: menulist-button;
+  padding:10px 10px 10px 10px;
+  color:#A1A1A1;
+  background:white;
+  border-radius:0;
+}
+
+
+

@@ -7,7 +7,7 @@
                 and stores it in a database. It collects the inputted data from the user
                 through the ID's of each section. If there is an error it prints it out
                 in the error* part of that section E.G errorfirstname.-->
-
+<p>
                 <form enctype="multipart/form-data" id="contactForm" method="post"
                 name="myForm" onsubmit="return false">
 
@@ -44,6 +44,7 @@
                     <span id='successMessage'></span>
 
                   </form>
+</p>
     <!--This is the AJAX function that adds the contact information to the database.-->
     <script src="js/addContactInfo.js"></script>
 
