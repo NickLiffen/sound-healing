@@ -99,7 +99,7 @@ function outputIndividual(jsonObj, target){
     "<p> Product Comment: " + json_output[i].comment + '</p>' +
     "<p class='bold'> Date Form was Sent: " + json_output[i].currentDate + '</p>' +
     "<p class='bold'> Have you Responded: " + json_output[i].respondedToEmail + '</p>' +
-    "<div id='emailBtn'><p><input type='button' class='replyContactForm' value='Reply'/></p><p><input type='button' id='backButtonPress' value ='Back'/></p></div>" +
+    "<div id='emailBtn'><input type='button' class='replyContactForm' value='Reply'/><div id ='divider'></div><input type='button' id='backButtonPress' value ='Back'/></div>" +
     "</div>" +
     "</div>";
 

@@ -357,9 +357,9 @@ color: white;
   margin: 0 auto;
 }
 
-#itemModal
+.itemModal
 {
-  text-align: left;
+  text-align: center;
 }
 
 .replyContactForm, #backButtonPress{
@@ -376,6 +376,13 @@ color: white;
   background: #5936c9;
 }
 
+#divider
+{
+  width:10%;
+  height:auto;
+  display:inline-block;
+}
+
 #classname, #classdescription, #classprice, #classdisclamer, #differentservices
 {
   width:75%;
@@ -388,12 +395,14 @@ color: white;
     box-shadow: 0 0 5px #6E52CA;
     border: 1px solid #6E52CA;
 }
-#emailBtn{
-  color:#6E52CA;
-  display:inline;
-  margin:auto 0;
-}
 
+
+#emailBtn input{
+  display:inline;
+}
+#emailBtn{
+  padding-top:5%;
+}
 .adminForm
 {
   padding-bottom:1em;
@@ -504,3 +513,9 @@ width:100%
   background:#d60303;
 }
 
+#contactForm textarea
+{
+  max-width:100%;
+  min-width:100%;
+  resize:none;
+}
