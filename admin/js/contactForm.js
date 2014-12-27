@@ -32,7 +32,7 @@ function json(jsonObj, target) {
   var json_output, output;
     json_output = JSON.parse(jsonObj);
     if (isEmpty(json_output)) {
-        target.innerHTML = "<div class='noResults'><p>No Contact Information where found, Sorry!<p></div>";
+        target.innerHTML = "<div class='noResults'><p>No Contact Information<p></div>";
     }
     else {
     //Starts the loop -- THIS IS HOW I OUTPUT THE DATA ON THE PAGE
@@ -91,8 +91,7 @@ function outputIndividual(jsonObj, target){
 
     contact_id = json_output[i].id;
 
-    output = "<h3 class='center'> Contact Information! </h3>" +
-    "<div class='center'><input type='button' id='backButtonPress' value ='Back'/></div>" +
+    output = "<h3 class='center'> Email Message </h3>" +
     "<div id='item" + json_output[i].id + "' class='itemModal'>" +
     "<p> Person's Name: " + json_output[i].fullname + '</p>' +
     "<p> Person's Email: " + json_output[i].email + '</p>' +
@@ -100,7 +99,7 @@ function outputIndividual(jsonObj, target){
     "<p> Product Comment: " + json_output[i].comment + '</p>' +
     "<p class='bold'> Date Form was Sent: " + json_output[i].currentDate + '</p>' +
     "<p class='bold'> Have you Responded: " + json_output[i].respondedToEmail + '</p>' +
-    "<p>Reply? <input type='button' class='replyContactForm' value='Reply'/></p>" +
+    "<div id='emailBtn'><p><input type='button' class='replyContactForm' value='Reply'/></p><p><input type='button' id='backButtonPress' value ='Back'/></p></div>" +
     "</div>" +
     "</div>";
 

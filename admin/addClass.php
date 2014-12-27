@@ -46,7 +46,7 @@
     </select>
     </p>
     <!-- Submit Button -->
-    <div id ="submitBtn">
+    <div id ="submitBtnAdmin">
       <input id="submit" name="submit" type="button" value="Submit">
     </div>
   </div>

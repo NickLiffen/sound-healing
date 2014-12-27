@@ -163,14 +163,13 @@ input
 #submit {
   font-family: Arial;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 1.3em;
   background: #6E52CA;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   box-shadow: none;
-  font: 17px "Helvetica Neue", Helvetica, Arial, sans-serif;
   border:none;
-  width:75%;
+  width:100%;
 
 }
 
@@ -178,6 +177,13 @@ input
   background: #5936c9;
   text-decoration: none;
   box-shadow: none;
+}
+
+#submitBtnAdmin
+{
+  width:75%;
+  margin: 0 auto;
+  padding-top:1em;
 }
 
 #submitBtn
@@ -189,11 +195,9 @@ input
 /* This is the CSS for the Admin side of the website*/
 
 .contactID{
-  width: 31%;
-  margin-right: 2%;
-  float: left;
+  width: 33%;
   padding: 5%;
-  margin-bottom: 70px;
+  display:inline-block;
 }
 
 .contactID p{
@@ -203,21 +207,22 @@ input
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
 }
 
 .item{
   width: 33%;
-  float: left;
-  margin-bottom: 70px;
+  padding:5%;
+  display:inline-block;
 }
 
 .item p{
   margin: 0 0 0 0;
   padding: 0;
-  text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  
 }
 
 .bold {
@@ -228,14 +233,6 @@ input
     width: 5em;  height: 2em;
 }
 
-.delete {
-  width: 5em;  height: 2em;
-}
-
-.modify {
-  width: 5em;  height: 2em;
-}
-
 
 #backButtonPress {
   width: 5em;  height: 2em;
@@ -243,7 +240,7 @@ input
 
 #productDeleteShow{
   display: none;
-  postion: absolute;
+  position: absolute;
   display: none;
   font-size: 25px;
   text-align: center;
@@ -252,7 +249,7 @@ input
 }
 #productModifyShow{
   display: none;
-  postion: absolute;
+  position: absolute;
   display: none;
   font-size: 25px;
   text-align: center;
@@ -278,9 +275,6 @@ input
   text-align: center;
   font-size: 30px;
   font-style: bold;
-}
-.itemModal p {
-  text-align: center;
 }
 #admintabs
 {
@@ -335,6 +329,12 @@ color: white;
   font:17px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+#Form
+{
+  padding-bottom:3em;
+  font:17px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .noResults
 {
   text-align:center;
@@ -342,14 +342,39 @@ color: white;
 }
 .center {
   text-align: center;
+  color:#6E52CA;
 }
 
 #subwriting
 {
   color: #6E52CA;
-  text-align: center;
+  text-align:center;
 }
 
+#outputContactInfoFocus
+{
+  width: 75%;
+  margin: 0 auto;
+}
+
+#itemModal
+{
+  text-align: left;
+}
+
+.replyContactForm, #backButtonPress{
+  background: #6E52CA;
+  text-decoration: none;
+  box-shadow:none;
+  width:40%;
+  color: #ffffff;
+  font-size:1em;
+  border:none;
+}
+
+.replyContactForm:hover, #backButtonPress:hover{
+  background: #5936c9;
+}
 
 #classname, #classdescription, #classprice, #classdisclamer, #differentservices
 {
@@ -363,6 +388,12 @@ color: white;
     box-shadow: 0 0 5px #6E52CA;
     border: 1px solid #6E52CA;
 }
+#emailBtn{
+  color:#6E52CA;
+  display:inline;
+  margin:auto 0;
+}
+
 .adminForm
 {
   padding-bottom:1em;
@@ -380,5 +411,96 @@ color: white;
   border-radius:0;
 }
 
+#searchBox
+{
+  width:75%;
+  font-size:1.3em;
+  -webkit-appearance:textfield;
+  box-sizing: content-box;
+  padding:10px 10px 10px 10px;
+}
 
+#classUpdate, #descriptionUpdate, #priceUpdate, #disclaimerUpdate, #serviceDropDown
+{
+  width:75%;
+  font-size: 1.3em;
+  padding: 10px 10px 10px 10px;
+}
+
+#classUpdate:focus, #descriptionUpdate:focus, #priceUpdate:focus, #disclaimerUpdate:focus
+{
+    box-shadow: 0 0 5px #6E52CA;
+    border: 1px solid #6E52CA;
+}
+
+.updateName
+{
+width:100%
+}
+
+
+#submitNew {
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1.3em;
+  background: #6E52CA;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  box-shadow: none;
+  border:none;
+  width:75%;
+
+}
+
+#submitNew:hover {
+  background: #5936c9;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+#serviceDropDown
+{
+  
+  font-size:1.3em;
+  width:75%;
+  -webkit-appearance: menulist-button;
+  padding:10px 10px 10px 10px;
+  color:#A1A1A1;
+  background:white;
+  border-radius:0;
+}
+
+.itemBoxes
+{
+  width:75%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.modify, .delete 
+{
+  text-decoration: none;
+  box-shadow:none;
+  width:100%;
+  color: #ffffff;
+  font-size:1em;
+  padding: 10px 20px 10px 20px;
+  border:none;
+}
+
+.modify{
+  background: #6E52CA;
+}
+
+.modify:hover{
+  background: #5936c9;
+}
+
+.delete{
+  background: #ed4242
+}
+
+.delete:hover{
+  background:#d60303;
+}
 

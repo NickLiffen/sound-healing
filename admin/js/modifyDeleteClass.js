@@ -44,13 +44,15 @@ function json(jsonObj, target, str) {
     //Starts the loop
     for (var i = 0; i < json_output.length; i++) {
       output = "<div id='item" + json_output[i].id + "' class='item'>" +
+      "<div class = 'itemBoxes'>"+
       '<p> Class Name: ' + json_output[i].classname + '</p>' +
       '<p> Class Description: ' + json_output[i].classdescription + '</p>' +
       '<p> Class Price: £ ' + json_output[i].classprice + '</p>' +
-      '<p> Class Disclamer: ' + json_output[i].classdisclamer + '</p>' +
+      '<p> Class Disclaimer: ' + json_output[i].classdisclamer + '</p>' +
       '<p> Service Name: ' + json_output[i].service + '</p>' +
-      "<p> Delete Product? <input type='button' class='delete' value='Delete'/> </p>" +
-      "<p> Update Product? <input type='button' class='modify' value='Modify'/> </p>" +
+      "<p> <input type='button' class='modify' value='Modify'/> </p>" +
+      "<p> <input type='button' class='delete' value='Delete'/> </p>" +
+      "</div>" +
       "</div>";
 
       //This outputs the array
@@ -126,22 +128,24 @@ function updateProduct(jsonObj, target, str) {
 
   //Starts the loop and prints out the form.
   for (var i = 0; i < json_output.length; i++) {
-    output = "<h2>Would you like to Update a product?</h2>" +
+    output = "<h1 id ='contactwelcome'>Update Class : " + json_output[i].classname + "</h1>" +
     "<form method='post' id = 'Form' enctype='multipart/form-data' name='Form' onsubmit='return false;'>" +
     "<br />" +
     "<input type = 'hidden'  id='idUpdate' name = 'id' value = " + json_output[i].id + " > " +
-    "<p>Please Update the Class Name: *<input type='text' id='classUpdate' name='classUpdate' value = '" + json_output[i].classname + "' > </p>" +
-    "<p>Please Update the Class Description: *<input type='text' id='descriptionUpdate' name='descriptionUpdate' value = '" + json_output[i].classdescription + "' > </p>" +
-    "<p>Please Update the Class Price: £ *<input type='text' id='priceUpdate' name='priceUpdate' value = '" + json_output[i].classprice + "' > </p>" +
-    "<p>Please Update the Class Disclamier: *<input type='text' id='disclaimerUpdate' name='disclaimerUpdate' value = '" + json_output[i].classdisclamer + "' > </p>" +
-    "<p>Please enter a Service:* <select id='serviceDropDown'>" +
+    "<p>Update the Class Name:<br/><input type='text' id='classUpdate' name='classUpdate' value = '" + json_output[i].classname + "' > </p>" +
+    "<p>Update the Class Description:<br/><input type='text' id='descriptionUpdate' name='descriptionUpdate' value = '" + json_output[i].classdescription + "' > </p>" +
+    "<p>Update the Class Price:<br/><input type='text' id='priceUpdate' name='priceUpdate' value = '" + json_output[i].classprice + "' > </p>" +
+    "<p>Update the Class Disclaimer:<br/><input type='text' id='disclaimerUpdate' name='disclaimerUpdate' value = '" + json_output[i].classdisclamer + "' > </p>" +
+    "<p>Enter a Service:<br/><select id='serviceDropDown'>" +
     "<option value=  '" + json_output[i].service + "' > '" + json_output[i].service +  "' </option>" +
     "<option value='ShaktySounds' id='shaktySounds'>Shakty Sounds</option>" +
     "<option value='CrystalHealing' id ='crystalHealing'>Crystal Healing</option>" +
     "<option value='Test' id='test'>Test</option>" +
     "</select></p>" +
     "<br />" +
+    "<div id ='submitBtn'>" +
     "<input name='submitNew' id='submitNew' type='button' value='Update Class'/>" +
+    "</div>" +
     "</form>" +
     "<div id='statusUpdate'></div>";
     //This outputs the array
