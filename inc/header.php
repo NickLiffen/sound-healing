@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <script src="inc/inc.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
   <body>
     <div class = "page-wrap">

@@ -1,4 +1,3 @@
-
 //This function loads when the page is first loaded and it collects what services are avaible
 function pageLoaded(){
 	var target;
@@ -9,9 +8,9 @@ function pageLoaded(){
 
 
 function output(jsonObj, target){
-
 	var json_output, output;
     json_output = JSON.parse(jsonObj);
+
     if (isEmpty(json_output)) {
         target.innerHTML = "<div class='noResults'><p>No classes are available at the moment - please check again soon<p></div>";
     }
@@ -100,12 +99,11 @@ var json_output, output, target;
       "<div class = 'itemBoxes'>"+
       "<fieldset>" +
       "<legend><span>" +json_output[i].classname + "</span></legend>" +
-      '<p> Class Description: ' + json_output[i].classdescription + '</p>' +
-      '<p> Class Price: £ ' + json_output[i].classprice + '</p>' +
-      '<p> Class Start Time: ' + json_output[i].classstarttime + '</p>' +
-      '<p> Class End Time: ' + json_output[i].classendtime + '</p>' +
-      '<p> Class Partisicpants: ' + json_output[i].classparticipants + '</p>' +
-      '<p> Class Disclaimer: ' + json_output[i].classdisclamer + '</p>' +
+      "<p><span class='bold'> Class Description: </span>" + json_output[i].classdescription + '</p>' +
+      "<p><span class='bold'> Class Price: £ </span>" + json_output[i].classprice + '</p>' +
+      "<p><span class='bold'> Class Start & End Time: </span>" + json_output[i].classstarttime + ' - ' + json_output[i].classendtime + '</p>' +
+      "<p><span class='bold'> Number of spaces left: </span>" + json_output[i].classparticipants + '</p>' +
+      "<p><span class='bold'> Class Disclaimer: </span>" + json_output[i].classdisclamer + '</p>' +
       "<p> <input type='button' class='modify' value='Find Out More'/> </p>" +
       "</fieldset>" +
       "</div>" +
