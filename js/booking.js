@@ -22,17 +22,16 @@ function output(jsonObj, target){
       "<button type='button' class='replyContactForm'  >" + json_output[i].servicename + "</button>" +
       "</div>";
       target.innerHTML += output;
-
         //Collecting te ID of the Contact Request
         var id = json_output[i].id
 
-        outputServiceInformation(id, target);
+        outputServiceInformation(id);
     }
   }
 }
 
 //This function will collect the ID of the service choosen as there can be many services.
-function outputServiceInformation(id, target){
+function outputServiceInformation(id){
   var itemsContainer, e, data;
 
   itemsContainer = _("servicesOptions");
@@ -45,22 +44,22 @@ function outputServiceInformation(id, target){
     productID = data.replace(/[^0-9.]/g, "");
 
     //This function prints out the description - pass through the ID for the AJAX Request, the target for display purposes later on, and the ID for any futher requests.
-    collectInfo(productID, target, productID);
+    collectInfo(productID, productID);
   }, false);
 }
 
 //Sends off an AJAX request to collect the information about the service choosen
-function collectInfo(newID, target, productID){
-	ajaxGet("SQL/serviceInfoSQL.php?id=" + newID, outputInfo, target, productID);
+function collectInfo(newID, productID){
+	ajaxGet("SQL/serviceInfoSQL.php?id=" + newID, outputInfo, productID, null);
 }
 
 //Outputs the information onto the page.
-function outputInfo(jsonObj, target, id){
+function outputInfo(jsonObj, id){
 	var json_output, output, display, serviceInformation;
 
 	display = _('changeDisplay').style.display = 'block';
 
-    json_output = JSON.parse(jsonObj);
+  json_output = JSON.parse(jsonObj);
 
 	newTarget = _('serviceInformation');
 	newTarget.innerHTML = " ";
@@ -71,14 +70,63 @@ function outputInfo(jsonObj, target, id){
       "<p>" + json_output[i].servicedescription + '</p>' +
       "</div>";
       newTarget.innerHTML += output;
+
+      var serviceName = json_output[i].servicename;
     }
 
-    collectClasses(target, newTarget, id);
+    collectClasses(serviceName);
 }
 
-function collectClasses(target, newTarget, id){
+//This function goes and collects the classes avaible for the service
+function collectClasses(serviceName){
+  ajaxGet("SQL/serviceClassInfoSQL.php?id=" + serviceName, outputClassInfo, null, null);
 }
 
+
+function outputClassInfo(jsonObj){
+
+var json_output, output, target;
+  //Sets the page content to nothing so we don't see multiple of the same products on screen.
+  target = _("classesAvailble");
+  target.innerHTML = "";
+  json_output = JSON.parse(jsonObj);
+  //Checks to see if anything has come back from the search. If nothing has. Prints out message.
+  if (isEmpty(json_output)) {
+    target.innerHTML = "<div class='noResults'><p>FUCK somethings gone wrong!<p></div>";
+  } else {
+    //Starts the loop
+    for (var i = 0; i < json_output.length; i++) {
+      output = "<div id='item" + json_output[i].id + "'>" +
+      "<table style='width:100%'>" +
+        "<tr>" +
+          "<th>Class Name</th>" +
+          "<th>Class Description</th>" +
+          "<th>Class Price</th>" +
+          "<th>Class Start Time</th>" +
+          "<th>Class End Time</th>" +
+          "<th>Places Left</th>" +
+          "<th>Class Discalimer</th>" +
+          "<th>Further Info + Book</th>" +
+        "</tr>" +
+        "<tr>" +
+          "<td>" + json_output[i].classname + "</td>" +
+          "<td>" + json_output[i].classdescription+ "</td>" +
+          "<td>" + json_output[i].classprice + "</td>" +
+          "<td>" + json_output[i].classstarttime + "</td>" +
+          "<td>" + json_output[i].classendtime + "</td>" +
+          "<td>" + json_output[i].classparticipants + "</td>" +
+          "<td>" + json_output[i].classdisclamer + "</td>" +
+          "<td> <button type='button'>Click</button> </td>" +
+        "</tr>" +
+        "<div class = 'paddingBottom'></div>" +
+      "</table>" +
+      "</div>";
+      //This outputs the array
+      target.innerHTML += output;
+    }
+  }
+
+}
 
 //Event Listner for when the page loads.
 window.addEventListener("load", pageLoaded);

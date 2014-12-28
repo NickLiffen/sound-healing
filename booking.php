@@ -10,11 +10,13 @@
 <!-- Everything in this DIV will be hidden intill the Service is choosen -->
 <div id ='changeDisplay' class="displayNone">
 	<!-- This is going to print out information about the Service Choosen. -->
-	<h2>Description</h2>
+	<div class = "paddingBottom"></div>
+	<h2 class="center">Description</h2>
+	<div class = "paddingBottom"></div>
 	<div id="serviceInformation"></div>
-
-	<h2>Classes Avaible:</h2>
-
+	<div class = "paddingBottom"></div>
+	<h2 class="center">Classes Avaible:</h2>
+	<div class = "paddingBottom"></div>
 	<!-- This is going to print out the number of classes avaible under a Service -->
 	<div id="classesAvailble"></div>
 </div>

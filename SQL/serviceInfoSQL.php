@@ -8,7 +8,7 @@ include("../db/connect_database.php");
 //Finds a product based on the ID.
 $name = $_GET['id'];
 
-$query = "SELECT id, servicedescription FROM service WHERE id = '$name'";
+$query = "SELECT id, servicename, servicedescription FROM service WHERE id = '$name'";
 
 $result = $database->query($query) OR die("Failed query $query");
 echo $database->error;
@@ -17,6 +17,7 @@ $output = array();
 while($row = mysqli_fetch_assoc($result))
 {
   $contactInfo = array  (	"id" => $row['id'],
+   "servicename" => $row['servicename'],
   "servicedescription" => $row['servicedescription']
 
 );
