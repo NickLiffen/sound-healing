@@ -13,7 +13,7 @@ function output(jsonObj, target){
 	var json_output, output;
     json_output = JSON.parse(jsonObj);
     if (isEmpty(json_output)) {
-        target.innerHTML = "<div class='noResults'><p>No classes are availble at the moment - please check again soon<p></div>";
+        target.innerHTML = "<div class='noResults'><p>No classes are available at the moment - please check again soon<p></div>";
     }
     else {
     //Starts the loop -- THIS IS HOW I OUTPUT THE DATA ON THE PAGE

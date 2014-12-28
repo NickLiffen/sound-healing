@@ -1,7 +1,8 @@
 <?php $title="Book A Class" ; include( "inc/header.php"); ?>
 
 
-<h1 class='middle'> Please Choose a Service </h1>
+<h1 id='contactwelcome'> Please Choose a Service </h1>
+<div class = "paddingBottom"></div>
 
 <!-- This is going to print out the different services. E.G Sound Healing or Crystal Healing. In a button format -->
 <div id="servicesOptions"></div>
