@@ -96,32 +96,18 @@ var json_output, output, target;
   } else {
     //Starts the loop
     for (var i = 0; i < json_output.length; i++) {
-      output = "<div id='item" + json_output[i].id + "'>" +
-      "<table style='width:100%'>" +
-        "<tr>" +
-          "<th>Class Name</th>" +
-          "<th>Class Description</th>" +
-          "<th>Class Price</th>" +
-          "<th>Class Start Time</th>" +
-          "<th>Class End Time</th>" +
-          "<th>Places Left</th>" +
-          "<th>Class Discalimer</th>" +
-          "<th>Further Info + Book</th>" +
-        "</tr>" +
-        "<tr>" +
-          "<td>" + json_output[i].classname + "</td>" +
-          "<td>" + json_output[i].classdescription+ "</td>" +
-          "<td>" + json_output[i].classprice + "</td>" +
-          "<td>" + json_output[i].classstarttime + "</td>" +
-          "<td>" + json_output[i].classendtime + "</td>" +
-          "<td>" + json_output[i].classparticipants + "</td>" +
-          "<td>" + json_output[i].classdisclamer + "</td>" +
-          "<td> <button type='button'>Click</button> </td>" +
-        "</tr>" +
-        "<div class = 'paddingBottom'></div>" +
-      "</table>" +
+      output = "<div id='item" + json_output[i].id + "' class='item'>" +
+      "<div class = 'itemBoxes'>"+
+      '<h2> Class Name: ' + json_output[i].classname + '</h2>' +
+      '<p> Class Description: ' + json_output[i].classdescription + '</p>' +
+      '<p> Class Price: £ ' + json_output[i].classprice + '</p>' +
+      '<p> Class Start Time: ' + json_output[i].classstarttime + '</p>' +
+      '<p> Class End Time: ' + json_output[i].classendtime + '</p>' +
+      '<p> Class Partisicpants: ' + json_output[i].classparticipants + '</p>' +
+      '<p> Class Disclaimer: ' + json_output[i].classdisclamer + '</p>' +
+      "<p> <input type='button' class='modify' value='Find Out More'/> </p>" +
+      "</div>" +
       "</div>";
-      //This outputs the array
       target.innerHTML += output;
     }
   }
