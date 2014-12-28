@@ -96,9 +96,10 @@ var json_output, output, target;
   } else {
     //Starts the loop
     for (var i = 0; i < json_output.length; i++) {
-      output = "<div id='item" + json_output[i].id + "' class='item'>" +
+      output = "<div id='item" + json_output[i].id + "'>" +
       "<div class = 'itemBoxes'>"+
-      '<h2> Class Name: ' + json_output[i].classname + '</h2>' +
+      "<fieldset>" +
+      "<legend><span>" +json_output[i].classname + "</span></legend>" +
       '<p> Class Description: ' + json_output[i].classdescription + '</p>' +
       '<p> Class Price: £ ' + json_output[i].classprice + '</p>' +
       '<p> Class Start Time: ' + json_output[i].classstarttime + '</p>' +
@@ -106,6 +107,7 @@ var json_output, output, target;
       '<p> Class Partisicpants: ' + json_output[i].classparticipants + '</p>' +
       '<p> Class Disclaimer: ' + json_output[i].classdisclamer + '</p>' +
       "<p> <input type='button' class='modify' value='Find Out More'/> </p>" +
+      "</fieldset>" +
       "</div>" +
       "</div>";
       target.innerHTML += output;
