@@ -10,12 +10,15 @@ include("../../db/connect_database.php");
     $descriptionUpdate = $_POST['descriptionUpdate'];
     $priceUpdate = $_POST['priceUpdate'];
     $disclaimerUpdate = $_POST['disclaimerUpdate'];
+    $startTimeUpdate = $_POST['startTimeUpdate'];
+    $endTimeUpdate = $_POST['endTimeUpdate'];
+    $participantsUpdate = $_POST['participantsUpdate'];
     $serviceUpdate = $_POST['serviceUpdate'];
 
 
 
     //Runs a query that updates the product.
-    $data = "UPDATE class SET classname ='$classUpdate', classdescription = '$descriptionUpdate', classprice = '$priceUpdate', classdisclamer = '$disclaimerUpdate', service = '$serviceUpdate' WHERE id = '$idUpdate'";
+    $data = "UPDATE class SET classname ='$classUpdate', classdescription = '$descriptionUpdate', classprice = '$priceUpdate', classstarttime = '$startTimeUpdate', classendtime = '$endTimeUpdate', classparticipants = '$participantsUpdate', classdisclamer = '$disclaimerUpdate', service = '$serviceUpdate' WHERE id = '$idUpdate'";
     $result = $database->query($data) OR die("Failed query $query");
     echo $database->error."<p>";
 ?>

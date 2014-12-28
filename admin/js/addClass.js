@@ -12,12 +12,15 @@ Things To Do:
 function sendClassForm(){
 
   //Inititiates all the varibles that we are going to use to validae the form.
-  var classname, classdescription, classprice, classdiscalmer, dropDownServices, serviceChosen, formdata;
+  var classname, classdescription, classprice, classstarttime, classendtime, classparticipants, classdiscalmer, dropDownServices, serviceChosen, formdata;
 
   //Collectting varibles. All using my _ function that collects ID's.
   classname = _("classname").value;
   classdescription = _("classdescription").value;
   classprice = _("classprice").value;
+  classstarttime = _("classstarttime").value;
+  classendtime = _("classendtime").value;
+  classparticipants = _("classparticipants").value;
   classdisclamer = _("classdisclamer").value;
   //This gets the chosen Elemnet of the Drop Down box which chooses the services.
   dropDownServices = _("differentServices");
@@ -30,6 +33,9 @@ function sendClassForm(){
   formdata.append("classprice", classprice);
   formdata.append("classdisclamer", classdisclamer);
   formdata.append("serviceChosen", serviceChosen);
+  formdata.append("classstarttime", classstarttime);
+  formdata.append("classendtime", classendtime);
+  formdata.append("classparticipants", classparticipants);
 
   //Calling the AJAX Post function that I have already created
   ajaxPost("SQL/addClassInfoSQL.php", formdata, outputMessage, null, null);
@@ -40,12 +46,15 @@ function sendClassForm(){
 function outputMessage(){
 
   //Inititiates all the varibles that we are going to use toe empty the values of the form
-  var classname, classdescription, classprice, classdiscalmer, successMessage;
+  var classname, classdescription, classprice, classdiscalmer, classstarttime, classendtime, classparticipants, successMessage;
 
   //Sets all the feilds in the Form to Blank.
-  classname = _("classname").value=" ";
+  classname = _("classname").value = " ";
   classdescription = _("classdescription").value = " ";
   classprice = _("classprice").value = " ";
+  classstarttime = _("classstarttime").value = " ";
+  classendtime = _("classendtime").value = " ";
+  classparticipants = _("classparticipants").value = " ";
   classdiscalmer = _("classdisclamer").value = " ";
 
   //Ouputs the success Message.
@@ -60,7 +69,7 @@ function outputMessage(){
 validateForm = function () {
 
   //Inititiates all the varibles that we are going to use to validae the form.
-  var errors, a, b, c, d, e, errorClassName, errorClassDescription, errorcClassPrice, errorClassDisclamer = "";
+  var errors, a, b, c, d, e, f, g, h, errorClassName, errorClassDescription, errorcClassPrice, errorClassDisclamer, errorClassStartTime, errorClassEndTime, errorClassParticipants;
 
   //Sets errors to 0
   errors = 0;
@@ -95,9 +104,36 @@ validateForm = function () {
   //Checks the Class Disclamer of the form is entered
     e = document.forms["addClass"]["classdisclamer"].value;
     if (e == null || e == "") {
-        errorClassDisclamer = _('errorclassdisclamer');
+        errorClassDisclamer = _('errorclassdisclaimer');
         errorClassDisclamer.style.color = 'red';
         errorClassDisclamer.innerHTML = "Please enter a Disclamer";
+        errors = errors + 1;
+      }
+
+      //Checks the Class Start Time of the form is entered
+    f = document.forms["addClass"]["classstarttime"].value;
+    if (f == null || f == "") {
+        errorClassStartTime = _('errorclassstarttime');
+        errorClassStartTime.style.color = 'red';
+        errorClassStartTime.innerHTML = "Please enter a Start Time";
+        errors = errors + 1;
+      }
+
+      //Checks the Class Start Time of the form is entered
+    g = document.forms["addClass"]["classendtime"].value;
+    if (g == null || g == "") {
+        errorClassEndTime = _('errorclassendtime');
+        errorClassEndTime.style.color = 'red';
+        errorClassEndTime.innerHTML = "Please enter a End Time";
+        errors = errors + 1;
+      }
+
+      //Checks the Class Partisipants has been entered
+    h = document.forms["addClass"]["classparticipants"].value;
+    if (h == null || h == "") {
+        errorClassDisclamer = _('errorclassparticipants');
+        errorClassDisclamer.style.color = 'red';
+        errorClassDisclamer.innerHTML = "Please enter a Max Num of People";
         errors = errors + 1;
       }
 

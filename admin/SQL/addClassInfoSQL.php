@@ -19,9 +19,12 @@ $classdescription = test_input($_POST['classdescription']);
 $classprice = test_input($_POST['classprice']);
 $classdisclamer = test_input($_POST['classdisclamer']);
 $serviceChosen = test_input($_POST['serviceChosen']);
+$classstarttime = test_input($_POST['classstarttime']);
+$classendtime = test_input($_POST['classendtime']);
+$classparticipants = test_input($_POST['classparticipants']);
 
 //Adds it to the database
-$query = "INSERT INTO class (classname, classdescription, classprice, classdisclamer, service) VALUES ('$classname', '$classdescription','$classprice','$classdisclamer', '$serviceChosen')";
+$query = "INSERT INTO class (classname, classdescription, classprice, classstarttime, classendtime, classparticipants, classdisclamer, service) VALUES ('$classname', '$classdescription','$classprice', '$classstarttime', '$classendtime','$classparticipants','$classdisclamer', '$serviceChosen')";
 $result = $database->query($query) OR die("Failed query $query");
 echo $database->error."<p>";
 echo $result;

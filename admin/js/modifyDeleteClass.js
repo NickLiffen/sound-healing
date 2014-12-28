@@ -48,6 +48,9 @@ function json(jsonObj, target, str) {
       '<p> Class Name: ' + json_output[i].classname + '</p>' +
       '<p> Class Description: ' + json_output[i].classdescription + '</p>' +
       '<p> Class Price: £ ' + json_output[i].classprice + '</p>' +
+      '<p> Class Start Time: ' + json_output[i].classstarttime + '</p>' +
+      '<p> Class End Time: ' + json_output[i].classendtime + '</p>' +
+      '<p> Class Partisicpants: ' + json_output[i].classparticipants + '</p>' +
       '<p> Class Disclaimer: ' + json_output[i].classdisclamer + '</p>' +
       '<p> Service Name: ' + json_output[i].service + '</p>' +
       "<p> <input type='button' class='modify' value='Modify'/> </p>" +
@@ -134,13 +137,15 @@ function updateProduct(jsonObj, target, str) {
     "<input type = 'hidden'  id='idUpdate' name = 'id' value = " + json_output[i].id + " > " +
     "<p>Update the Class Name:<br/><input type='text' id='classUpdate' name='classUpdate' value = '" + json_output[i].classname + "' > </p>" +
     "<p>Update the Class Description:<br/><input type='text' id='descriptionUpdate' name='descriptionUpdate' value = '" + json_output[i].classdescription + "' > </p>" +
+    "<p>Update the Class Start Time:<br/><input type='text' id='startTimeUpdate' name='startTimeUpdate' value = '" + json_output[i].classstarttime + "' > </p>" +
+    "<p>Update the Class End Time:<br/><input type='text' id='endTimeUpdate' name='endTimeUpdate' value = '" + json_output[i].classendtime+ "' > </p>" +
+    "<p>Update the Class Participants:<br/><input type='text' id='participantsUpdate' name='participantsUpdate' value = '" + json_output[i].classparticipants + "' > </p>" +
     "<p>Update the Class Price:<br/><input type='text' id='priceUpdate' name='priceUpdate' value = '" + json_output[i].classprice + "' > </p>" +
     "<p>Update the Class Disclaimer:<br/><input type='text' id='disclaimerUpdate' name='disclaimerUpdate' value = '" + json_output[i].classdisclamer + "' > </p>" +
     "<p>Enter a Service:<br/><select id='serviceDropDown'>" +
     "<option value=  '" + json_output[i].service + "' > '" + json_output[i].service +  "' </option>" +
     "<option value='ShaktySounds' id='shaktySounds'>Shakty Sounds</option>" +
     "<option value='CrystalHealing' id ='crystalHealing'>Crystal Healing</option>" +
-    "<option value='Test' id='test'>Test</option>" +
     "</select></p>" +
     "<br />" +
     "<div id ='submitBtn'>" +
@@ -160,7 +165,7 @@ function finalUpdate(str, newTarget) {
   if (fetchSubmitButton) {
     fetchSubmitButton.addEventListener("click", function () {
       //Creates Varaibles.
-      var idUpdate, classUpdate, descriptionUpdate, priceUpdate, serviceUpdate, serivceText, disclaimerUpdate, formData;
+      var idUpdate, classUpdate, descriptionUpdate, priceUpdate, startTimeUpdate, endTimeUpdate, participantsUpdate, serviceUpdate, serivceText, disclaimerUpdate, formData;
 
 
       //All the files brought in from the form.
@@ -168,6 +173,9 @@ function finalUpdate(str, newTarget) {
       classUpdate = _("classUpdate").value;
       descriptionUpdate = _("descriptionUpdate").value;
       priceUpdate = _("priceUpdate").value;
+      startTimeUpdate = _("startTimeUpdate").value;
+      endTimeUpdate = _("endTimeUpdate").value;
+      participantsUpdate = _("participantsUpdate").value;
       disclaimerUpdate = _("disclaimerUpdate").value;
       serivceText = _("serviceDropDown");
       serviceUpdate = serivceText.options[serivceText.selectedIndex].value;
@@ -179,6 +187,9 @@ function finalUpdate(str, newTarget) {
       formdata.append("classUpdate", classUpdate);
       formdata.append("descriptionUpdate", descriptionUpdate);
       formdata.append("priceUpdate", priceUpdate);
+      formdata.append("startTimeUpdate", startTimeUpdate);
+      formdata.append("endTimeUpdate", endTimeUpdate);
+      formdata.append("participantsUpdate", participantsUpdate);
       formdata.append("disclaimerUpdate", disclaimerUpdate);
       formdata.append("serviceUpdate", serviceUpdate);
       //Calling the AJAX Post function that I have already created

@@ -124,7 +124,7 @@ function injectIntoFocus(product_id, data) {
 
   getButton(product_id, focusTarget);
   backButton(focusTarget, oldTarget, finalResponce);
-  closeFocus(focusTarget, oldTarget, finalResponce);
+  //closeFocus(focusTarget, oldTarget, finalResponce);
 }
 
 
@@ -148,7 +148,7 @@ function backButton(focusTarget, oldTarget, value){
   }
 }
 
-
+/*
 //Closes the Focus using the ESC key
 function closeFocus(focusTarget, oldTarget, value) {
   document.onkeydown = function (evt) {
@@ -167,7 +167,7 @@ function closeFocus(focusTarget, oldTarget, value) {
     }
   }
 };
-
+*/
 
 //This function collects the buttons for Replying to the user.
 function getButton(str, target) {

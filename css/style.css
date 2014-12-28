@@ -383,14 +383,14 @@ color: white;
   display:inline-block;
 }
 
-#classname, #classdescription, #classprice, #classdisclamer, #differentservices
+#classname, #classdescription, #classprice, #classdisclamer, #differentservices, #classstarttime, #classendtime, #classparticipants
 {
   width:75%;
   font-size: 1.3em;
   padding: 10px 10px 10px 10px;
 }
 
-#classname:focus, #classdescription:focus, #classprice:focus, #classdisclamer:focus
+#classname:focus, #classdescription:focus, #classprice:focus, #classdisclamer:focus, #classstarttime:focus, #classendtime:focus, #classparticipants:focus
 {
     box-shadow: 0 0 5px #6E52CA;
     border: 1px solid #6E52CA;
@@ -429,14 +429,14 @@ color: white;
   padding:10px 10px 10px 10px;
 }
 
-#classUpdate, #descriptionUpdate, #priceUpdate, #disclaimerUpdate, #serviceDropDown
+#classUpdate, #descriptionUpdate, #priceUpdate, #startTimeUpdate, #endTimeUpdate, #participantsUpdate, #disclaimerUpdate, #serviceDropDown
 {
   width:75%;
   font-size: 1.3em;
   padding: 10px 10px 10px 10px;
 }
 
-#classUpdate:focus, #descriptionUpdate:focus, #priceUpdate:focus, #disclaimerUpdate:focus
+#classUpdate:focus, #descriptionUpdate:focus, #priceUpdate:focus, #startTimeUpdate:focus, #endTimeUpdate:focus, #participantsUpdate:focus, #disclaimerUpdate:focus
 {
     box-shadow: 0 0 5px #6E52CA;
     border: 1px solid #6E52CA;

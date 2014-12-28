@@ -13,7 +13,7 @@
     <input id="classname" name="classname" placeholder="Class Name" type="text" autofocus> 
     <span id="errorclassname"></span> 
     <span class="error"></span>
-</p>
+    </p>
 
     <!-- Class Description Field -->
     <p class = "adminForm">
@@ -29,6 +29,27 @@
     <span class="error"></span>
     </p>
 
+    <!-- Class Start Time -->
+    <p class = "adminForm">
+    <input id="classstarttime" name="classstarttime" placeholder="Class Start Time" type="text"> 
+    <span id= "errorclassstarttime"></span> 
+    <span class="error"></span>
+    </p>
+
+    <!-- Class End Time-->
+    <p class = "adminForm">
+    <input id="classendtime" name="classendtime" placeholder="Class End Time" type="text"> 
+    <span id= "errorclassendtime"></span> 
+    <span class="error"></span>
+    </p>
+
+    <!-- Class Number of Partisipants-->
+    <p class = "adminForm">
+    <input id="classparticipants" name="classparticipants" placeholder="Number of Participants" type="text"> 
+    <span id= "errorclassparticipants"></span> 
+    <span class="error"></span>
+    </p>
+
     <!-- Class Disclamer Fld-->
     <p class = "adminForm">
     <input id="classdisclamer" name="classdisclamer" placeholder="Class Disclaimer" type="text"> 
@@ -39,10 +60,8 @@
     <!-- Choose a service for the class to fal under-->
     <p class = "adminForm">
     <select name="differentServices" id="differentServices">
-      <option value ="Service Class"> Service Class </option>  
       <option value="ShaktySounds" id="shaktySounds">Shakty Sounds</option>
       <option value="CrystalHealing" id ="crystalHealing">Crystal Healing</option>
-      <option value="Test" id="test">Test</option>
     </select>
     </p>
     <!-- Submit Button -->
