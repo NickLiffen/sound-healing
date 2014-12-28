@@ -39,4 +39,18 @@ if(!$result = $database->query($create_table_class)){
 	$table->close();
 }
 
+
+$create_table_service =
+"CREATE TABLE IF NOT EXISTS service (
+	id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	servicename VARCHAR(35) NOT NULL,
+	servicedescription VARCHAR(500) NOT NULL,
+
+	PRIMARY KEY(ID)
+)";
+if(!$result = $database->query($create_table_service)){
+	die('Could not create class table [' . $databasee->error . ']');
+	$table->close();
+}
+
 ?>

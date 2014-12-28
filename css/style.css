@@ -92,6 +92,10 @@ li {
 
 }
 
+.middle {
+  text-align: center;
+}
+
 #headerblock {
 margin-right: auto;
 margin-bottom: 40px;
@@ -265,6 +269,10 @@ input
   text-align: center;
   top: 18%;
   color: green;
+}
+
+.displayNone {
+  display: none;
 }
 
 .paddingBottom{
