@@ -7,8 +7,9 @@
 <div id="servicesOptions"></div>
 
 <!-- Everything in this DIV will be hidden intill the Service is choosen -->
-<div class="displayNone">
+<div id ='changeDisplay' class="displayNone">
 	<!-- This is going to print out information about the Service Choosen. -->
+	<h2>Description</h2>
 	<div id="serviceInformation"></div>
 
 	<h2>Classes Avaible:</h2>
@@ -17,6 +18,6 @@
 	<div id="classesAvailble"></div>
 </div>
 
-
+<script src="js/booking.js"></script>
 
 <?php include( "inc/footer.php"); ?>
