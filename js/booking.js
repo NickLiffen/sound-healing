@@ -195,6 +195,9 @@ function outputForm(jsonObj, IDtoUpdate){
 
 function saveToDatabase(IDtoUpdate){
 
+  _('className').readOnly = true;
+  _('classPrice').readOnly = true;
+
   var fetchSubmitButton;
 
   fetchSubmitButton = _("submit");
