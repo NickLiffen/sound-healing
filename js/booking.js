@@ -104,15 +104,144 @@ var json_output, output, target;
       "<p><span class='bold'> Class Start & End Time: </span>" + json_output[i].classstarttime + ' - ' + json_output[i].classendtime + '</p>' +
       "<p><span class='bold'> Number of spaces left: </span>" + json_output[i].classparticipants + '</p>' +
       "<p><span class='bold'> Class Disclaimer: </span>" + json_output[i].classdisclamer + '</p>' +
-      "<p> <input type='button' class='modify' value='Find Out More'/> </p>" +
+      "<p> <input type='button' class='modify' value='Book Now'/> </p>" +
       "</fieldset>" +
       "</div>" +
       "</div>";
       target.innerHTML += output;
+
+      getID();
     }
   }
-
 }
+
+//This gets the ID of the class
+function getID(){
+var fetchModifyButton;
+    //Gets the button that says 'Modify'
+    fetchModifyButton = _c("modify");
+    //Remove Button.
+    for (var i = 0, j = fetchModifyButton.length; i < j; i++) {
+        fetchModifyButton[i].addEventListener("click", function () {
+          var e, productID, newID;
+            //Bubbles up and finds the ID of the product they want to modify
+            e = event.target;
+            while (e.id.indexOf('item') == -1) {
+                e = e.parentNode;
+            }
+            productID = e.id;
+            //Removes everything but the numbers.
+            newID = productID.replace(/[^0-9.]/g, "");
+            getClassInfoForBooking(newID);
+        });
+    }
+}
+
+function getClassInfoForBooking(newID){
+    ajaxGet("SQL/classInfoForBooking.php?id=" + newID, outputForm, null, null);
+}
+
+function outputForm(jsonObj){
+  var json_output, output, target;
+  //Sets the page content to nothing so we don't see multiple of the same products on screen.
+  target = _("contactForm");
+  target.innerHTML = "";
+  target.style.display="block";
+  json_output = JSON.parse(jsonObj);
+  //Checks to see if anything has come back from the search. If nothing has. Prints out message.
+  if (isEmpty(json_output)) {
+    target.innerHTML = "<div class='noResults'><p>FUCK somethings gone wrong!<p></div>";
+  } else {
+    //Starts the loop
+    for (var i = 0; i < json_output.length; i++) {
+      output = 
+
+      "<h2> Booking Form </h2>" +
+
+      "<div id='item" + json_output[i].id + "'>" +
+      
+      "<form enctype='multipart/form-data' id='contactFormPost' method='post' name='myForm' onsubmit='return false'>" +
+                  
+      "<p>Class Name Your Booking: </p><input id='className' name='className' type='text' value = '" + json_output[i].classname + "'>" +
+              
+      "<p>To Confirm, the Price: </p><input id='classPrice' name='classPrice' type='text' value = '" + json_output[i].classprice + "'>" +
+
+      "<p>Your Name: </p><input id='customerName' name='name'><span id='errorname'></span><span class='error'></span>" +
+
+      "<p>Your Email: </p><input id='customerEmail' name='email'><span id='erroremail'></span><span class='error'></span>" +
+
+      "<p>Telephone: </p><input id='customerTelephone' name='telephone'><span id='errortelephone'></span><span class='error'></span>" +
+
+      "<p>Any Comments: </p><textarea id='comment' rows='5'></textarea><span id='errorcomment'></span><span class='error'></span>" +
+
+      "<p> Any price will be payed in cash/cheque on the day of the class. We will send you a confirmation email to confirm you have been booked on. If you do not receve this please contact us through the contact form section on this website - thank you.</p>" +
+
+      "<div id ='submitBtn'><input id='submit' name='submit' type='button' value='Submit'></div>" +
+
+      "</form>" +
+
+      "</div>";
+      target.innerHTML += output;
+
+      //This scrolls down to the part where the contact form is printed out.
+      $('html,body').animate({
+        scrollTop: $("#contactForm").offset().top
+        });
+
+      saveToDatabase();
+    }
+  }
+}
+
+function saveToDatabase(){
+
+  var fetchSubmitButton;
+
+  fetchSubmitButton = _("submit");
+  if(fetchSubmitButton){
+    fetchSubmitButton.addEventListener("click", function(){
+
+      var name, customerEmail, price, customerName, customerTelephone, comment, formdata;
+
+      name = _('className').value;
+      price = _('classPrice').value;
+      customerName= _('customerName').value;
+      customerEmail = _('customerEmail').value;
+      customerTelephone = _('customerTelephone').value;
+      comment = _('comment').value;
+
+      //FormData is a safe and easy method of posting data.
+      formdata = new FormData();
+      formdata.append("name", name);
+      formdata.append("price", price);
+      formdata.append("customerName", customerName);
+      formdata.append("customerEmail", customerEmail);
+      formdata.append("customerTelephone", customerTelephone);
+      formdata.append("comment", comment);
+
+      changeScreenLayout();
+
+      //ajaxPost("SQL/finalBookingSQL.php", formdata, changeScreenLayout, null, null);
+    });
+  }
+}
+
+function changeScreenLayout(jsonObj){
+  var message, display, contactForm;
+  messsage = _("successMessage").style.display = "block";
+  display = _('changeDisplay').style.display = 'none';
+  contactForm = _("contactForm").style.display = "none";
+  window.setTimeout(vanishText, 5000);
+  //This scrolls down to the part where the contact form is printed out.
+      $('html,body').animate({
+        scrollTop: $("#bookAClass").offset().top
+        });
+}
+//Makes both the display of Modify and Delete Messages none.
+function vanishText() {
+  _("successMessage").style.display = 'none';
+}
+
 
 //Event Listner for when the page loads.
 window.addEventListener("load", pageLoaded);

@@ -23,7 +23,7 @@
           <nav>
             <ul id ="navBtns">
               <li><a href="/soundhealing/">Home</a></li> /
-              <li><a href="/soundhealing/booking.php">Book A Class</a></li> /
+              <li><a id ='bookAClass' href="/soundhealing/booking.php">Book A Class</a></li> /
               <li><a href="/soundhealing/contactpage.php">Contact Us</a></li>
             </ul>
           </nav>

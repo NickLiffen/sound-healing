@@ -53,4 +53,32 @@ if(!$result = $database->query($create_table_service)){
 	$table->close();
 }
 
+
+$create_table_bookings =
+"CREATE TABLE IF NOT EXISTS bookings(
+	id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	classname VARCHAR(35) NOT NULL,
+	classdescription VARCHAR(500) NOT NULL,
+	classprice VARCHAR(15),
+	classstarttime VARCHAR(20) NOT NULL,
+	classendtime VARCHAR(20) NOT NULL,
+	classparticipants MEDIUMINT NOT NULL,
+	classdisclamer VARCHAR(1000) NOT NULL,
+	service VARCHAR(15) NOT NULL,
+
+	PRIMARY KEY(ID)
+)";
+
+if(!$result = $database->query($create_table_service)){
+	die('Could not create class table [' . $databasee->error . ']');
+	$table->close();
+}
+
+
+
+
+
+
+
+
 ?>
