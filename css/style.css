@@ -435,14 +435,14 @@ color: white;
   display:inline-block;
 }
 
-#classname, #classdescription, #classprice, #classdisclamer, #differentservices, #classstarttime, #classendtime, #classparticipants
+#classname, #classdescription, #classprice, #classdisclamer, #differentservices, #classstarttime, #classendtime, #classparticipants, #classdate
 {
   width:75%;
   font-size: 1.3em;
   padding: 10px 10px 10px 10px;
 }
 
-#classname:focus, #classdescription:focus, #classprice:focus, #classdisclamer:focus, #classstarttime:focus, #classendtime:focus, #classparticipants:focus
+#classname:focus, #classdescription:focus, #classprice:focus, #classdisclamer:focus, #classstarttime:focus, #classendtime:focus, #classparticipants:focus, #classdate:focus
 {
     box-shadow: 0 0 5px #6E52CA;
     border: 1px solid #6E52CA;
@@ -481,14 +481,14 @@ color: white;
   padding:10px 10px 10px 10px;
 }
 
-#classUpdate, #descriptionUpdate, #priceUpdate, #startTimeUpdate, #endTimeUpdate, #participantsUpdate, #disclaimerUpdate, #serviceDropDown
+#classUpdate, #descriptionUpdate, #priceUpdate, #startTimeUpdate, #endTimeUpdate, #participantsUpdate, #disclaimerUpdate, #serviceDropDown, #dateUpdate
 {
   width:75%;
   font-size: 1.3em;
   padding: 10px 10px 10px 10px;
 }
 
-#classUpdate:focus, #descriptionUpdate:focus, #priceUpdate:focus, #startTimeUpdate:focus, #endTimeUpdate:focus, #participantsUpdate:focus, #disclaimerUpdate:focus
+#classUpdate:focus, #descriptionUpdate:focus, #priceUpdate:focus, #startTimeUpdate:focus, #endTimeUpdate:focus, #participantsUpdate:focus, #disclaimerUpdate:focus, #dateUpdate:focus
 {
     box-shadow: 0 0 5px #6E52CA;
     border: 1px solid #6E52CA;

@@ -28,6 +28,7 @@ $create_table_class =
 	classprice VARCHAR(15),
 	classstarttime VARCHAR(20) NOT NULL,
 	classendtime VARCHAR(20) NOT NULL,
+	classdate VARCHAR(20) NOT NULL,
 	classparticipants MEDIUMINT NOT NULL,
 	classdisclamer VARCHAR(1000) NOT NULL,
 	service VARCHAR(15) NOT NULL,

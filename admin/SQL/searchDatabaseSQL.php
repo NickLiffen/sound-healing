@@ -8,7 +8,7 @@ include("../../db/connect_database.php");
 //Brings in the string that they have searhed for.
 $searchString = $_GET['str'];
 //Runs a query to find that product based on the string. SEARCHES UNDER NAME AND DESCRIPTION
-$query = "SELECT id, classname, classdescription, classprice, classstarttime, classendtime, classparticipants, classdisclamer, service FROM class WHERE classname LIKE '%$searchString%' OR classdescription LIKE '%$searchString%' ";
+$query = "SELECT id, classname, classdescription, classprice, classstarttime, classendtime, classdate, classparticipants, classdisclamer, service FROM class WHERE classname LIKE '%$searchString%' OR classdescription LIKE '%$searchString%' ";
 $result = $database->query($query) OR die("Failed query $query");
 echo $database->error;
 //Stores it in an assossciate array
@@ -21,6 +21,7 @@ while($row = mysqli_fetch_assoc($result))
   "classprice" => $row['classprice'],
   "classstarttime" => $row['classstarttime'],
   "classendtime" => $row['classendtime'],
+  "classdate" => $row['classdate'],
   "classparticipants" => $row['classparticipants'],
   "classdisclamer" => $row['classdisclamer'],
   "service" => $row['service']

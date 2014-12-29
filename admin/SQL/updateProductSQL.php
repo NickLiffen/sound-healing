@@ -19,6 +19,7 @@ while($row = mysqli_fetch_assoc($result))
   "classprice" => $row['classprice'],
   "classstarttime" => $row['classstarttime'],
   "classendtime" => $row['classendtime'],
+  "classdate" => $row['classdate'],
   "classparticipants" => $row['classparticipants'],
   "classdisclamer" => $row['classdisclamer'],
   "service" => $row['service']

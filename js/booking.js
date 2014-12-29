@@ -101,7 +101,7 @@ var json_output, output, target;
       "<legend><span>" +json_output[i].classname + "</span></legend>" +
       "<p><span class='bold'> Class Description: </span>" + json_output[i].classdescription + '</p>' +
       "<p><span class='bold'> Class Price: £ </span>" + json_output[i].classprice + '</p>' +
-      "<p><span class='bold'> Class Start & End Time: </span>" + json_output[i].classstarttime + ' - ' + json_output[i].classendtime + '</p>' +
+      "<p><span class='bold'> Class Date: </span>" + json_output[i].classdate + " <span class='bold'>Time: </span> " + json_output[i].classstarttime + ' - ' + json_output[i].classendtime + '</p>' +
       "<p><span class='bold'> Number of spaces left: </span>" + json_output[i].classparticipants + '</p>' +
       "<p><span class='bold'> Class Disclaimer: </span>" + json_output[i].classdisclamer + '</p>' +
       "<p> <input type='button' class='modify' value='Book Now'/> </p>" +

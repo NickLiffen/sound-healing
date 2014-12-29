@@ -14,7 +14,7 @@
 
 
 <section>
-  <!----------DIVS----------->
+  <!---DIVS-->
   <!--Prints out a message saying that the product has been deleted-->
   <div id="productDeleteShow">
     <h3>Deleted!</h3>

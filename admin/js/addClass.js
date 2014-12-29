@@ -12,7 +12,7 @@ Things To Do:
 function sendClassForm(){
 
   //Inititiates all the varibles that we are going to use to validae the form.
-  var classname, classdescription, classprice, classstarttime, classendtime, classparticipants, classdiscalmer, dropDownServices, serviceChosen, formdata;
+  var classname, classdescription, classprice, classstarttime, classdate, classendtime, classparticipants, classdiscalmer, dropDownServices, serviceChosen, formdata;
 
   //Collectting varibles. All using my _ function that collects ID's.
   classname = _("classname").value;
@@ -22,6 +22,7 @@ function sendClassForm(){
   classendtime = _("classendtime").value;
   classparticipants = _("classparticipants").value;
   classdisclamer = _("classdisclamer").value;
+  classdate = _("classdate").value;
   //This gets the chosen Elemnet of the Drop Down box which chooses the services.
   dropDownServices = _("differentServices");
   serviceChosen = dropDownServices.options[dropDownServices.selectedIndex].value;
@@ -36,6 +37,7 @@ function sendClassForm(){
   formdata.append("classstarttime", classstarttime);
   formdata.append("classendtime", classendtime);
   formdata.append("classparticipants", classparticipants);
+  formdata.append("classdate", classdate);
 
   //Calling the AJAX Post function that I have already created
   ajaxPost("SQL/addClassInfoSQL.php", formdata, outputMessage, null, null);
@@ -56,6 +58,7 @@ function outputMessage(){
   classendtime = _("classendtime").value = " ";
   classparticipants = _("classparticipants").value = " ";
   classdiscalmer = _("classdisclamer").value = " ";
+  classdate = _("classdate").value = " ";
 
   //Ouputs the success Message.
   successMessage = _("successMessage");
@@ -69,7 +72,7 @@ function outputMessage(){
 validateForm = function () {
 
   //Inititiates all the varibles that we are going to use to validae the form.
-  var errors, a, b, c, d, e, f, g, h, errorClassName, errorClassDescription, errorcClassPrice, errorClassDisclamer, errorClassStartTime, errorClassEndTime, errorClassParticipants;
+  var errors, a, b, c, d, e, f, g, h, i, errorClassName, errorClassDescription, errorcClassPrice, errorClassDisclamer, errorClassStartTime, errorClassEndTime, errorClassParticipants, errorClassDate;
 
   //Sets errors to 0
   errors = 0;
@@ -134,6 +137,15 @@ validateForm = function () {
         errorClassDisclamer = _('errorclassparticipants');
         errorClassDisclamer.style.color = 'red';
         errorClassDisclamer.innerHTML = "Please enter a Max Num of People";
+        errors = errors + 1;
+      }
+
+         //Checks the Class Date has been entered
+    i = document.forms["addClass"]["classdate"].value;
+    if (i == null || i == "") {
+        errorClassDate = _('errorclassdate');
+        errorClassDate.style.color = 'red';
+        errorClassDate.innerHTML = "Please enter a Date";
         errors = errors + 1;
       }
 

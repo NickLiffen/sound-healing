@@ -43,6 +43,13 @@
     <span class="error"></span>
     </p>
 
+    <!-- Class End Time-->
+    <p class = "adminForm">
+    <input id="classdate" name="classdate" placeholder="Class Date" type="text"> 
+    <span id= "errordate"></span> 
+    <span class="error"></span>
+    </p>
+
     <!-- Class Number of Partisipants-->
     <p class = "adminForm">
     <input id="classparticipants" name="classparticipants" placeholder="Number of Participants" type="text"> 
