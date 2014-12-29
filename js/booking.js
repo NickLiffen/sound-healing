@@ -86,6 +86,7 @@ function outputClassInfo(jsonObj){
 
 var json_output, output, target;
   //Sets the page content to nothing so we don't see multiple of the same products on screen.
+  contactForm = _("contactForm").style.display = "none";
   target = _("classesAvailble");
   target.innerHTML = "";
   json_output = JSON.parse(jsonObj);
