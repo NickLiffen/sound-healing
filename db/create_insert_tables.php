@@ -45,7 +45,7 @@ $create_table_service =
 	id MEDIUMINT NOT NULL AUTO_INCREMENT,
 	servicename VARCHAR(35) NOT NULL,
 	servicedescription VARCHAR(500) NOT NULL,
-
+	CONSTRAINT uc_PersonID UNIQUE (servicename, servicedescription),
 	PRIMARY KEY(ID)
 )";
 if(!$result = $database->query($create_table_service)){
@@ -73,12 +73,6 @@ if(!$result = $database->query($create_table_service)){
 	die('Could not create class table [' . $databasee->error . ']');
 	$table->close();
 }
-
-
-
-
-
-
 
 
 ?>

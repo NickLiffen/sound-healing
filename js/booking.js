@@ -132,16 +132,16 @@ var fetchModifyButton;
             productID = e.id;
             //Removes everything but the numbers.
             newID = productID.replace(/[^0-9.]/g, "");
-            getClassInfoForBooking(newID);
+            getClassInfoForBooking(newID, newID);
         });
     }
 }
 
-function getClassInfoForBooking(newID){
-    ajaxGet("SQL/classInfoForBooking.php?id=" + newID, outputForm, null, null);
+function getClassInfoForBooking(newID, IDtoUpdate){
+    ajaxGet("SQL/classInfoForBooking.php?id=" + newID, outputForm, IDtoUpdate, null);
 }
 
-function outputForm(jsonObj){
+function outputForm(jsonObj, IDtoUpdate){
   var json_output, output, target;
   //Sets the page content to nothing so we don't see multiple of the same products on screen.
   target = _("contactForm");
@@ -188,12 +188,12 @@ function outputForm(jsonObj){
         scrollTop: $("#contactForm").offset().top
         });
 
-      saveToDatabase();
+      saveToDatabase(IDtoUpdate);
     }
   }
 }
 
-function saveToDatabase(){
+function saveToDatabase(IDtoUpdate){
 
   var fetchSubmitButton;
 
@@ -219,11 +219,21 @@ function saveToDatabase(){
       formdata.append("customerTelephone", customerTelephone);
       formdata.append("comment", comment);
 
-      changeScreenLayout();
+      //changeScreenLayout();
+
+      updateTable(IDtoUpdate);
 
       //ajaxPost("SQL/finalBookingSQL.php", formdata, changeScreenLayout, null, null);
     });
   }
+}
+
+function updateTable(IDtoUpdate){
+  var formdata;
+      formdata = new FormData();
+      formdata.append("IDtoUpdate", IDtoUpdate);
+      //Fires off the update to change the number of partisicpants left
+      ajaxPost("SQL/updateTableBooking.php", formdata, changeScreenLayout, null, null);
 }
 
 function changeScreenLayout(jsonObj){
