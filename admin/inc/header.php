@@ -23,6 +23,7 @@
               <li><a href="index.php">Home</a></li> /
               <li><a href="addClass.php">Add Class</a></li> /
               <li><a href="modifyDeleteClass.php">Modify - Delete Class</a></li> /
+              <li><a href="managebookings.php">Manage Bookings</a></li> /
               <li><a href="contactForm.php">Contact Form Info</a></li>
             </ul>
           </nav>

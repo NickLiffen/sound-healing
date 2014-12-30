@@ -220,6 +220,7 @@ function ajaxDelete(productID, str) {
 }
 //Makes the message visible for 1 second.
 function deleteMessage(object, str) {
+  console.log(object);
   var message;
   messsage = _("productDeleteShow").style.display = "block";
   window.setTimeout(vanishText, 1000);

@@ -226,6 +226,9 @@ input
   padding-top:1em;
 }
 
+.underline {
+  text-decoration: underline;
+}
 
 /* This is the CSS for the Admin side of the website*/
 
@@ -259,6 +262,19 @@ input
   white-space: nowrap;
   
 }
+
+
+.customerBooking{
+  width: 49%;
+  padding:5%;
+  display:inline-block;
+}
+
+.customerBooking p{
+  margin: 0 0 0 0;
+  padding: 0;  
+}
+
 
 .bold {
   font-weight: bold;
@@ -538,7 +554,7 @@ width:100%
   text-align: left;
 }
 
-.modify, .delete 
+.modify, .delete, .deleteCustomer
 {
   text-decoration: none;
   box-shadow:none;
@@ -564,6 +580,16 @@ width:100%
 .delete:hover{
   background:#d60303;
 }
+
+.deleteCustomer{
+  background: #ed4242
+}
+
+.deleteCustomer:hover{
+  background:#d60303;
+}
+
+
 
 #contactForm textarea
 {

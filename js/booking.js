@@ -216,6 +216,7 @@ function saveToDatabase(IDtoUpdate){
 
       //FormData is a safe and easy method of posting data.
       formdata = new FormData();
+      formdata.append("IDtoUpdate", IDtoUpdate);
       formdata.append("name", name);
       formdata.append("price", price);
       formdata.append("customerName", customerName);
@@ -225,19 +226,10 @@ function saveToDatabase(IDtoUpdate){
 
       //changeScreenLayout();
 
-      updateTable(IDtoUpdate);
+      ajaxPost("SQL/updateTableBooking.php", formdata, changeScreenLayout, null, null);
 
-      //ajaxPost("SQL/finalBookingSQL.php", formdata, changeScreenLayout, null, null);
     });
   }
-}
-
-function updateTable(IDtoUpdate){
-  var formdata;
-      formdata = new FormData();
-      formdata.append("IDtoUpdate", IDtoUpdate);
-      //Fires off the update to change the number of partisicpants left
-      ajaxPost("SQL/updateTableBooking.php", formdata, changeScreenLayout, null, null);
 }
 
 function changeScreenLayout(jsonObj){
