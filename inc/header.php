@@ -9,25 +9,29 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+
 <script src="inc/inc.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/responsive-nav.js"></script>
 </head>
   <body>
-    <div class = "page-wrap">
-  <!-- This is the header-->
-      <header>
-        <div id = "headerblock">
-          <h1 class="mainTitle">Shakty Sounds - Sound Healing</h1>
 
-      <!-- This is main Navagational Bar in the Header-->
-          <nav>
-            <ul id ="navBtns">
-              <li><a href="/soundhealing/">Home</a></li> /
-              <li><a id ='bookAClass' href="/soundhealing/booking.php">Book A Class</a></li> /
-              <li><a href="/soundhealing/contactpage.php">Contact Us</a></li>
-            </ul>
-          </nav>
-      <!---->
-        </div>
-      </header>
+  <!-- This is the header-->
+  <header>
+    <div id="headerBlock">
+      <a href="/soundhealing/" class="logo" data-scroll>Shakty Sounds</a>
+      <nav class="nav-collapse">
+        <ul>
+          <li class="menu-item"><a href="/soundhealing/" data-scroll>Home</a></li>
+          <li class="menu-item"><a href="booking.php" data-scroll>Book Now</a></li>
+          <li class="menu-item"><a href="contactpage.php" data-scroll>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    </header>
     <!---->
+    <div class = "page-wrap">
