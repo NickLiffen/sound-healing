@@ -27,7 +27,7 @@
 	<div class = "paddingBottom"></div>
 
 	<!-- This is going to print out the contact form where the user books a class-->
-	<div id="contactForm"></div>
+	<div id="contactForm1"></div>
 </div>
 
 <script src="js/booking.js"></script>

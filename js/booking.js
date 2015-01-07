@@ -86,7 +86,7 @@ function outputClassInfo(jsonObj){
 
 var json_output, output, target;
   //Sets the page content to nothing so we don't see multiple of the same products on screen.
-  contactForm = _("contactForm").style.display = "none";
+  contactForm = _("contactForm1").style.display = "none";
   target = _("classesAvailble");
   target.innerHTML = "";
   json_output = JSON.parse(jsonObj);
@@ -145,7 +145,7 @@ function getClassInfoForBooking(newID, IDtoUpdate){
 function outputForm(jsonObj, IDtoUpdate){
   var json_output, output, target;
   //Sets the page content to nothing so we don't see multiple of the same products on screen.
-  target = _("contactForm");
+  target = _("contactForm1");
   target.innerHTML = "";
   target.style.display="block";
   json_output = JSON.parse(jsonObj);
@@ -157,11 +157,11 @@ function outputForm(jsonObj, IDtoUpdate){
     for (var i = 0; i < json_output.length; i++) {
       output = 
 
-      "<h2> Booking Form </h2>" +
+      "<h1 id ='contactwelcome'> Booking Form </h1>" +
 
       "<div id='item" + json_output[i].id + "'>" +
       
-      "<form enctype='multipart/form-data' id='contactFormPost' method='post' name='myForm' onsubmit='return false'>" +
+      "<form enctype='multipart/form-data' id='addClass' method='post' name='myForm' onsubmit='return false'>" +
                   
       "<p>Class Name Your Booking: </p><input id='className' name='className' type='text' value = '" + json_output[i].classname + "'>" +
               
