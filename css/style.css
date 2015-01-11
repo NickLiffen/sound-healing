@@ -394,9 +394,6 @@ form
   }
 }
 
-
-
-
 input
 {
   width:100%;
@@ -603,6 +600,10 @@ input
   color: green;
 }
 
+#formMessage{
+  text-align: center;
+  font-style: oblique;
+}
 
 #productModifyShow{
   display: none;
@@ -614,7 +615,7 @@ input
   color: green;
 }
 
-#productMessage{
+#productMessage, #productDelete{
   display: none;
   position: absolute;
   display: none;
@@ -999,5 +1000,3 @@ width:100%
 {
   font-size:1.3em;
 }
-
-

@@ -57,41 +57,58 @@ validateForm = function () {
   //Sets errors to 0
   errors = 0;
 
+  _('errorfullname').innerHTML = " ";
+  _('erroremail').innerHTML = " ";
+  _('errortelephone').innerHTML = " ";
+  _('errortelephone').innerHTML = " ";
+
   //Checks the First Name value of the form is entered.
     a = document.forms["contactForm"]["fullname"].value;
+    a.innerHTML = " ";
     if (a == null || a == "") {
         errorFirstName = _('errorfullname');
         errorFirstName.style.color ='red';
+        errorFirstName.style.fontWeight ='bold';
+        _('fullname').style.margin = "0px 0px 0px 0px";
         errorFirstName.innerHTML = "Please enter your Name";
         errors = errors + 1;
     }
 
   //Checks to see if the Email has been entered.
     c = document.forms["contactForm"]["email"].value;
+    c.innerHTML = "";
     var atpos = c.indexOf("@");
     var dotpos = c.lastIndexOf(".");
     if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=c.length) {
         errorEmail = _('erroremail');
         errorEmail.style.color ='red';
+        errorEmail.style.fontWeight ='bold';
+        _('email').style.margin = "0px 0px 0px 0px";
         errorEmail.innerHTML = "Please enter a valid email";
         errors = errors + 1;
     }
 
     //Checks the Telephone vaue has been entered.
       d = document.forms["contactForm"]["telephone"].value;
-      if (d == null || d == "" || !isNumber(d)) {
+      d.innerHTML = "";
+      if (d == null || d == "" || !isNumber(d) || d.length > 11) {
           errorTelephone = _('errortelephone');
           errorTelephone.style.color = 'red';
+          errorTelephone.style.fontWeight ='bold';
+          _('telephone').style.margin = "0px 0px 0px 0px";
           errorTelephone.innerHTML = "Please enter a valid phone number";
           errors = errors + 1;
       }
 
       //Checks the Telephone vaue has been entered.
         e = document.forms["contactForm"]["comment"].value;
+        e.innerHTML = "";
         if (e == null || e == "") {
-            errorTelephone = _('errorcomment');
-            errorTelephone.style.color = 'red';
-            errorTelephone.innerHTML = "Please enter a Message";
+            errorMessage = _('errorcomment');
+            errorMessage.style.color = 'red';
+            errorMessage.style.fontWeight ='bold';
+            _('comment').style.margin = "0px 0px 0px 0px";
+            errorMessage.innerHTML = "Please enter a Message";
             errors = errors + 1;
         }
 

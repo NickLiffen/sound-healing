@@ -13,9 +13,6 @@ Things to do:
 
 */
 
-
-
-
 //This outputs the contact information to the screen.
 function getContactInfo(){
     var target;
@@ -47,6 +44,7 @@ function json(jsonObj, target) {
       "<p> Product Comment: " + json_output[i].comment + '</p>' +
       "<p> Date Form was Sent: " + json_output[i].currentDate + '</p>' +
       "<p class='bold'> Have you Responded: " + json_output[i].respondedToEmail + '</p>' +
+      "<p> <input type='button' class='delete' value='Delete Message'/> </p>" +
       "</div>";
       target.innerHTML += output;
 
@@ -54,11 +52,43 @@ function json(jsonObj, target) {
         //Collecting te ID of the Contact Request
         var id = json_output[i].id
 
-        setListeners(id,target);
+        checkDeleteButton(id,target);
     }
   }
 };
 
+
+function checkDeleteButton(id,target){
+  var fetchDelteButton = _c("delete");
+  //Modify Button.
+  for (var i = 0, j = fetchDelteButton.length; i < j; i++) {
+    fetchDelteButton[i].addEventListener("click", function (event) {
+      var e, productID, newID;
+      //Bubbles up and finds the ID of the product they want to modify
+      e = event.target;
+      while (e.id.indexOf('item') == -1) {
+        e = e.parentNode;
+      }
+      productID = e.id;
+      classname = productID.replace("item", "")
+      //Removes everything but the numbers.
+      deleteClass(classname);
+});
+  }
+    setListeners(id,target);
+}
+
+//This deletes the class
+function deleteClass(classname){
+  ajaxGet("SQL/deleteEmailSQL.php?id=" + classname, deleteMessage, null, null);
+}
+
+function deleteMessage(jsonObj){
+  var message;
+  messsage = _("productDelete").style.display = "block";
+  window.setTimeout(vanishText, 3000);
+  getContactInfo();
+}
 
 //Whenever you click on the customer information you want to extend, this collects the ID of the information
 function setListeners(id, target) {
@@ -288,6 +318,7 @@ function changeScreenLayout(jsonObj, newTarget){
 //Makes Text Disapear after 1 second.
 function vanishText(str) {
   _("productMessage").style.display = 'none';
+  _("productDelete").style.display = 'none';
 }
 
 //Event Listner for when the page loads.
