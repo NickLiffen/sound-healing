@@ -27,8 +27,8 @@
       <nav class="nav-collapse">
         <ul>
           <li id="navID" class="menu-item"><a href="/soundhealing/" data-scroll>Home</a></li>
-          <li class="menu-item"><a href="booking.php" data-scroll>Book Now</a></li>
-          <li class="menu-item"><a href="contactpage.php" data-scroll>Contact</a></li>
+          <li id="navID1" class="menu-item"><a href="booking.php" data-scroll>Book Now</a></li>
+          <li id="navID2" class="menu-item"><a href="contactpage.php" data-scroll>Contact</a></li>
         </ul>
       </nav>
     </div>

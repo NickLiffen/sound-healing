@@ -439,6 +439,12 @@ input
   box-shadow: none;
 }
 
+
+.nav-collapse ul li a:hover { 
+    background: #5936c9;
+    
+}
+
 #submitBtnAdmin
 {
   width:75%;
