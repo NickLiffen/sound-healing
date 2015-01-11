@@ -303,6 +303,12 @@ header {
 {
   margin:6em 6em 6em 6em;
 }
+
+#twitterImage, #facebookImage
+{
+  margin:auto;
+  float:right;
+}
 /* END OF FOOTER STYLES */
 
 
@@ -360,7 +366,7 @@ form
 {
   padding-bottom:3em;
   text-align:left;
-  width:30%;
+  width:50%;
   font:17px "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
@@ -370,7 +376,13 @@ form
   padding-top:10px;
   padding-bottom:6px;
   padding-left:5px;
-  font-style:italic;
+  color:#4D4D4D;
+  font-size:1.1em;
+}
+
+#contactForm input
+{
+  margin:0 0 1.2em;
 }
 
 @media screen and (max-width: 1000px)
@@ -391,12 +403,6 @@ input
 
 }
 
-#twitterImage, #facebookImage
-{
-  margin: auto;
-  float: right;
-}
-
 #comment
 {
   width:100%;
@@ -407,17 +413,17 @@ input
   box-shadow:none;
 }
 
-#fullname, #email, #telephone
+#fullname, #email, #telephone, #comment
 {
-
-  font-size:15px;
+  font-size:1em;
   box-shadow:none;
+  padding:0.5em;
 }
 
 #submit {
   font-family: Arial;
   color: #ffffff;
-  font-size: 1.3em;
+  font-size: 1.1em;
   background: #6E52CA;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
@@ -542,6 +548,10 @@ input
   padding: 0;  
 }
 
+.outputContactInfo
+{
+  
+}
 
 .bold {
   font-weight: bold;
@@ -964,7 +974,5 @@ width:100%
 {
   font-size:1.3em;
 }
-
-
 
 
