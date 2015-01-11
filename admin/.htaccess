@@ -1,0 +1,4 @@
+AuthUserFile /usr/pass/.htpasswd
+AuthType Basic
+AuthName "My Files"
+Require valid-user

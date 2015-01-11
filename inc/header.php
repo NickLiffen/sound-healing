@@ -26,7 +26,7 @@
       <a href="/soundhealing/" class="logo" data-scroll>Shakty Sounds</a>
       <nav class="nav-collapse">
         <ul>
-          <li class="menu-item"><a href="/soundhealing/" data-scroll>Home</a></li>
+          <li id="navID" class="menu-item"><a href="/soundhealing/" data-scroll>Home</a></li>
           <li class="menu-item"><a href="booking.php" data-scroll>Book Now</a></li>
           <li class="menu-item"><a href="contactpage.php" data-scroll>Contact</a></li>
         </ul>
