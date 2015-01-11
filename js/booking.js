@@ -98,15 +98,15 @@ var json_output, output, target;
     for (var i = 0; i < json_output.length; i++) {
       output = "<div id='item" + json_output[i].id + "'>" +
       "<div class = 'itemBoxes'>"+
-      "<fieldset>" +
-      "<legend><span>" +json_output[i].classname + "</span></legend>" +
-      "<p><span class='bold'> Class Description: </span>" + json_output[i].classdescription + '</p>' +
-      "<p><span class='bold'> Class Price: £ </span>" + json_output[i].classprice + '</p>' +
-      "<p><span class='bold'> Class Date: </span>" + json_output[i].classdate + " <span class='bold'>Time: </span> " + json_output[i].classstarttime + ' - ' + json_output[i].classendtime + '</p>' +
-      "<p><span class='bold'> Number of spaces left: </span>" + json_output[i].classparticipants + '</p>' +
-      "<p><span class='bold'> Class Disclaimer: </span>" + json_output[i].classdisclamer + '</p>' +
+      "<h3 class ='itemTitle'>" +json_output[i].classname + "</h3>" +
+      "<p class = 'itemDesc'>" + json_output[i].classdescription + '</p>' +
+      "<div class ='itemInfo'>" +
+      "<p class = 'itemDetails'><img src = 'img/glyphicons-268-credit-card.png'</img> £" + json_output[i].classprice + '</p>' +
+      "<p class =' itemDetails'><img src = 'img/glyphicons-46-calendar.png'</img> " + json_output[i].classdate +'</p>' + 
+      "<p class = 'itemDetails'><img src = 'img/glyphicons-55-clock.png'</img> " + json_output[i].classstarttime + ' - ' + json_output[i].classendtime + '</p>' +
+      "<p class = 'itemDetails'><img src = 'img/glyphicons-44-group.png'</img> " + json_output[i].classparticipants + ' remaining spaces</p>' + 
+      "</div>" +
       "<p> <input type='button' class='modify' value='Book Now'/> </p>" +
-      "</fieldset>" +
       "</div>" +
       "</div>";
       target.innerHTML += output;
@@ -162,7 +162,7 @@ function outputForm(jsonObj, IDtoUpdate){
 
       "<div id='item" + json_output[i].id + "'>" +
       
-      "<form enctype='multipart/form-data' id='addClass' method='post' name='myForm' onsubmit='return false'>" +
+      "<form enctype='multipart/form-data' id='bookingForm' method='post' name='myForm' onsubmit='return false'>" +
                   
       "<p>Class Name Your Booking: </p><input id='className' name='className' type='text' value = '" + json_output[i].classname + "'>" +
               
