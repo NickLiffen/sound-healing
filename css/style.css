@@ -83,7 +83,7 @@ a:hover {
   user-select: none;
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 1050px) {
   .js .nav-collapse {
     position: relative;
   }
@@ -152,7 +152,7 @@ header {
   opacity: 1;
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 1050px) {
   .mask {
     display: none !important;
     opacity: 0 !important;
@@ -185,7 +185,7 @@ header {
   float: left;
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 1050px) {
   .nav-collapse {
     float: right;
     width: auto;
@@ -197,7 +197,7 @@ header {
   width: 100%;
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 1050px) {
   .nav-collapse li {
     width: auto;
   }
@@ -218,7 +218,7 @@ header {
   background: #6E52CA;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 1050px) {
   .nav-collapse a {
     padding: 1.02em 2em;
     text-align: center;
@@ -233,7 +233,7 @@ header {
   padding-left: 2em;
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 1050px) {
   .nav-collapse ul ul a {
     display: none;
   }
@@ -451,6 +451,22 @@ input
   display:inline-block;
 }
 
+@media screen and (max-width: 768px)
+{
+  .contactID
+  {
+    width:50%;
+  }
+}
+
+@media screen and (max-width: 480px)
+{
+  .contactID
+  {
+    width:100%;
+  }
+}
+
 .contactID p{
   margin: 0 0 0 0;
   padding: 0;
@@ -463,9 +479,25 @@ input
 
 .item{
   width: 33%;
-  padding:5%;
   display:inline-block;
 }
+
+@media screen and (max-width: 768px)
+{
+  .item
+  {
+    width:50%;
+  }
+}
+
+@media screen and (max-width: 480px)
+{
+  .item
+  {
+    width:100%;
+  }
+}
+
 
 .item p{
   margin: 0 0 0 0;
@@ -478,9 +510,25 @@ input
 
 
 .customerBooking{
-  width: 49%;
-  padding:5%;
+  width: 33%;
   display:inline-block;
+}
+
+
+@media screen and (max-width: 768px)
+{
+  .customerBooking
+  {
+    width:50%;
+  }
+}
+
+@media screen and (max-width: 480px)
+{
+  .customerBooking
+  {
+    width:100%;
+  }
 }
 
 .customerBooking p{
@@ -578,6 +626,26 @@ width: 100%;
   max-width: 1200px;
   list-style: none;
 }
+
+@media screen and (max-width:850px)
+{
+  #adminboxes
+  {
+    display:inherit;
+    padding:2em;
+  }
+}
+
+@media screen and (max-width:480px)
+{
+  #adminboxes
+  {
+    display:inherit;
+    padding:0px;
+  }
+}
+
+
 
 .tabs
 {
@@ -880,7 +948,7 @@ width:100%
 
 @media screen and (max-width:768px)
 {
-  #servicesOptions ,#classesAvailble, .itemBoxes
+  #servicesOptions ,#classesAvailble
   {
     width:100%;
   }
@@ -890,5 +958,7 @@ width:100%
 {
   font-size:1.3em;
 }
+
+
 
 

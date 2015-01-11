@@ -20,7 +20,7 @@ function json(jsonObj){
     for (var i = 0; i < json_output.length; i++) {
 
       output = "<div id='item" + json_output[i].classname + "' class='contactID'>" +
-      "<h3> Class Name: " + json_output[i].classname + '</h3>' +
+      "<h3> " + json_output[i].classname + '</h3>' +
       "<p> <input type='button' class='modify' value='People In Class'/> </p>" +
       "<p> <input type='button' class='delete' value='Delete Class'/> </p>" +
       "</div>";
@@ -95,7 +95,7 @@ function printDetails(jsonObj){
       "<p><span class='underline'> Customer Email: </span> " + json_output[i].customeremail + '</p>' +
       "<p><span class='underline'> Customer Telephone: </span>" + json_output[i].customerphone + '</p>' +
       "<p><span class='underline'> Customer Comment: </span>" + json_output[i].customercomment + '</p>' +
-      "<p> <input type='button' class='deleteCustomer' value='Delete Customer'/> </p>" +
+      "<p> <input type='button' class='deleteCustomer' value='Remove Customer'/> </p>" +
       "</div>" +
       "</div>";
 

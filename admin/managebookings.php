@@ -1,7 +1,7 @@
 <?php $title="ManageBookings - Admin" ; include( "inc/header.php"); ?>
 
 
-<h1> Bookings </h1>
+<h1 id ="contactwelcome"> Bookings </h1>
 
 <!--Prints out a message saying that the product has been successfully modified-->
   <div id="successMessage">
