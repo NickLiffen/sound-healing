@@ -116,6 +116,7 @@ var json_output, output, target;
   }
 }
 
+
 //This gets the ID of the class
 function getID(){
 var fetchModifyButton;
@@ -167,13 +168,13 @@ function outputForm(jsonObj, IDtoUpdate){
               
       "<p>To Confirm, the Price: </p><input id='classPrice' name='classPrice' type='text' value = '" + json_output[i].classprice + "'>" +
 
-      "<p>Your Name: </p><input id='customerName' name='name'><span id='errorname'></span><span class='error'></span>" +
+      "<p>Your Name: </p><input id='customerName' name='name'><span id='errorname'></span><span class='error'></span> <span id='errorfullname'></span> <span class='error'></span>" +
 
-      "<p>Your Email: </p><input id='customerEmail' name='email'><span id='erroremail'></span><span class='error'></span>" +
+      "<p>Your Email: </p><input id='customerEmail' name='email'><span id='erroremail'></span><span class='error'></span><span id='erroremail'></span> <span class='error'></span>" +
 
-      "<p>Telephone: </p><input id='customerTelephone' name='telephone'><span id='errortelephone'></span><span class='error'></span>" +
+      "<p>Telephone: </p><input id='customerTelephone' name='telephone'><span id='errortelephone'></span><span class='error'></span> <span id='errorTelephone'></span> <span class='error'></span>" +
 
-      "<p>Any Comments: </p><textarea id='comment' rows='5'></textarea><span id='errorcomment'></span><span class='error'></span>" +
+      "<p>Any Comments: </p><textarea id='comment' rows='5'></textarea><span id='errorcomment'></span><span class='error'></span><span id='errorMessage'></span> <span class='error'></span>" +
 
       "<p> Any price will be payed in cash/cheque on the day of the class. We will send you a confirmation email to confirm you have been booked on. If you do not receve this please contact us through the contact form section on this website - thank you.</p>" +
 
@@ -186,17 +187,17 @@ function outputForm(jsonObj, IDtoUpdate){
 
       //This scrolls down to the part where the contact form is printed out.
       $('html,body').animate({
-        scrollTop: $("#contactForm").offset().top
+        scrollTop: $("#addClass").offset().top
         });
 
-      saveToDatabase(IDtoUpdate);
+      validateForm(IDtoUpdate);
     }
   }
 }
 
-function saveToDatabase(IDtoUpdate){
+function validateForm(IDtoUpdate){
 
-  _('className').readOnly = true;
+ _('className').readOnly = true;
   _('classPrice').readOnly = true;
 
   var fetchSubmitButton;
@@ -204,6 +205,63 @@ function saveToDatabase(IDtoUpdate){
   fetchSubmitButton = _("submit");
   if(fetchSubmitButton){
     fetchSubmitButton.addEventListener("click", function(){
+
+//Inititiates all the varibles that we are going to use to validae the form.
+  var errors, a, b, c, d, e, errorFirstName, errorLastName, errorEmail, errorTelephone, errorMessage = " ";
+
+  //Sets errors to 0
+  errors = 0;
+
+  //Checks the First Name value of the form is entered.
+    a = document.forms["addClass"]["customerName"].value;
+    if (a == null || a == "") {
+        errorFirstName = _('errorfullname');
+        errorFirstName.style.color ='red';
+        errorFirstName.innerHTML = "Please enter your Name";
+        errors = errors + 1;
+    }
+
+  //Checks to see if the Email has been entered.
+    c = document.forms["addClass"]["customerEmail"].value;
+    var atpos = c.indexOf("@");
+    var dotpos = c.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=c.length) {
+        errorEmail = _('erroremail');
+        errorEmail.style.color ='red';
+        errorEmail.innerHTML = "Please enter a valid email";
+        errors = errors + 1;
+    }
+
+    //Checks the Telephone vaue has been entered.
+      d = document.forms["addClass"]["customerTelephone"].value;
+      if (d == null || d == "" || !isNumber(d)) {
+          errorTelephone = _('errortelephone');
+          errorTelephone.style.color = 'red';
+          errorTelephone.innerHTML = "Please enter a valid phone number";
+          errors = errors + 1;
+      }
+
+      //Checks the Telephone vaue has been entered.
+        e = document.forms["addClass"]["comment"].value;
+        if (e == null || e == "") {
+            errorTelephone = _('errorcomment');
+            errorTelephone.style.color = 'red';
+            errorTelephone.innerHTML = "Please enter a Message";
+            errors = errors + 1;
+        }
+
+  //If there are any errors are found it returns false but if not it proccedds.
+    if (errors > 0) {
+        return false;
+    } else {
+        saveToDatabase(IDtoUpdate);
+    }
+      });
+  }
+}
+
+function saveToDatabase(IDtoUpdate){
+
 
       var name, customerEmail, price, customerName, customerTelephone, comment, formdata;
 
@@ -228,19 +286,18 @@ function saveToDatabase(IDtoUpdate){
 
       ajaxPost("SQL/updateTableBooking.php", formdata, changeScreenLayout, null, null);
 
-    });
-  }
+  
 }
 
 function changeScreenLayout(jsonObj){
   var message, display, contactForm;
   messsage = _("successMessage").style.display = "block";
   display = _('changeDisplay').style.display = 'none';
-  contactForm = _("contactForm").style.display = "none";
+  contactForm = _("contactForm1").style.display = "none";
   window.setTimeout(vanishText, 5000);
   //This scrolls down to the part where the contact form is printed out.
       $('html,body').animate({
-        scrollTop: $("#bookAClass").offset().top
+        scrollTop: $("#navID").offset().top
         });
 }
 //Makes both the display of Modify and Delete Messages none.

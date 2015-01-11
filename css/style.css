@@ -391,6 +391,12 @@ input
 
 }
 
+#twitterImage, #facebookImage
+{
+  margin: auto;
+  float: right;
+}
+
 #comment
 {
   width:100%;
