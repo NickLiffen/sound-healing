@@ -92,13 +92,14 @@ var json_output, output, target;
   json_output = JSON.parse(jsonObj);
   //Checks to see if anything has come back from the search. If nothing has. Prints out message.
   if (isEmpty(json_output)) {
-    target.innerHTML = "<div class='noResults'><p>FUCK somethings gone wrong!<p></div>";
+    target.innerHTML = "<div class='noResults'><p>No Classes avaible at this moment in time - Sorry!<p></div>";
   } else {
     //Starts the loop
     for (var i = 0; i < json_output.length; i++) {
       output = "<div id='item" + json_output[i].id + "'>" +
       "<div class = 'itemBoxes'>"+
       "<h3 class ='itemTitle'>" +json_output[i].classname + "</h3>" +
+      "<div class = 'paddingBottom'></div>" +
       "<p class = 'itemDesc'>" + json_output[i].classdescription + '</p>' +
       "<div class ='itemInfo'>" +
       "<p class = 'itemDetails'><img src = 'img/glyphicons-268-credit-card.png'</img> £" + json_output[i].classprice + '</p>' +
@@ -207,48 +208,45 @@ function validateForm(IDtoUpdate){
     fetchSubmitButton.addEventListener("click", function(){
 
 //Inititiates all the varibles that we are going to use to validae the form.
-  var errors, a, b, c, d, e, errorFirstName, errorLastName, errorEmail, errorTelephone, errorMessage = " ";
+  var errors, a, b, c, d,  errorFirstName, errorLastName, errorEmail, errorTelephone = " ";
 
   //Sets errors to 0
   errors = 0;
 
   //Checks the First Name value of the form is entered.
-    a = document.forms["addClass"]["customerName"].value;
+    a = document.forms["bookingForm"]["customerName"].value;
     if (a == null || a == "") {
         errorFirstName = _('errorfullname');
         errorFirstName.style.color ='red';
+        errorFirstName.style.fontWeight ='bold';
+        _('customerName').style.margin = "0px 0px 0px 0px";
         errorFirstName.innerHTML = "Please enter your Name";
         errors = errors + 1;
     }
 
   //Checks to see if the Email has been entered.
-    c = document.forms["addClass"]["customerEmail"].value;
+    c = document.forms["bookingForm"]["customerEmail"].value;
     var atpos = c.indexOf("@");
     var dotpos = c.lastIndexOf(".");
     if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=c.length) {
         errorEmail = _('erroremail');
         errorEmail.style.color ='red';
+        errorEmail.style.fontWeight ='bold';
+        _('customerEmail').style.margin = "0px 0px 0px 0px";
         errorEmail.innerHTML = "Please enter a valid email";
         errors = errors + 1;
     }
 
     //Checks the Telephone vaue has been entered.
-      d = document.forms["addClass"]["customerTelephone"].value;
-      if (d == null || d == "" || !isNumber(d)) {
+      d = document.forms["bookingForm"]["customerTelephone"].value;
+      if (d == null || d == "" || !isNumber(d) || d.length > 11 || d.length < 11) {
           errorTelephone = _('errortelephone');
           errorTelephone.style.color = 'red';
-          errorTelephone.innerHTML = "Please enter a valid phone number";
+          errorTelephone.style.fontWeight ='bold';
+          _('customerTelephone').style.margin = "0px 0px 0px 0px";
+          errorTelephone.innerHTML = "Please enter a valid phone number (11 Digits please)";
           errors = errors + 1;
       }
-
-      //Checks the Telephone vaue has been entered.
-        e = document.forms["addClass"]["comment"].value;
-        if (e == null || e == "") {
-            errorTelephone = _('errorcomment');
-            errorTelephone.style.color = 'red';
-            errorTelephone.innerHTML = "Please enter a Message";
-            errors = errors + 1;
-        }
 
   //If there are any errors are found it returns false but if not it proccedds.
     if (errors > 0) {
@@ -291,9 +289,17 @@ function saveToDatabase(IDtoUpdate){
 
 function changeScreenLayout(jsonObj){
   var message, display, contactForm;
-  messsage = _("successMessage").style.display = "block";
+
+  message = _('bookingConfirmation');
   display = _('changeDisplay').style.display = 'none';
   contactForm = _("contactForm1").style.display = "none";
+
+  message.style.color ='green';
+  message.style.fontWeight ='bold';
+  message.style.textAlign="center";
+  message.innerHTML = "Thank you - Your place has been booked - you will receciver a confirmation email"
+
+
   window.setTimeout(vanishText, 5000);
   //This scrolls down to the part where the contact form is printed out.
       $('html,body').animate({
@@ -302,7 +308,7 @@ function changeScreenLayout(jsonObj){
 }
 //Makes both the display of Modify and Delete Messages none.
 function vanishText() {
-  _("successMessage").style.display = 'none';
+  _("bookingConfirmation").style.display = 'none';
 }
 
 

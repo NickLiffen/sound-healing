@@ -35,9 +35,9 @@
                     <!-- Submit Button.-->
                     <input id="submit" name="submit" type="button" value="Submit">
                     </div>
-
+                     <div id='formSuccess'></div>
                   </form>
-                  <span id='successMessage'></span>
+                 
 </p>
     <!--This is the AJAX function that adds the contact information to the database.-->
     <script src="js/addContactInfo.js"></script>
