@@ -7,22 +7,6 @@
 
 */
 
-//This function clears the textboxes and ten ouputs a successMessage
-function outputMessage(data){
-      //Inititiates all the varibles that we are going to use to validae the form.
-      var fullname, email, telephone, email, comment, successMessage;
-
-      //Sets all the feilds in the Form to Blank.
-      fullname = _("fullname").value=" ";
-      email = _("email").value = " ";
-      telephone = _("telephone").value = " ";
-      comment = _("comment").value = " ";
-
-      //Ouputs the success Message.
-      successMessage = _("successMessage");
-      successMessage.innerHTML = 'Your Form has been successfull sent - Thank You :)';
-      successMessage.style.color = 'green';
-}
 
 //This function sends the data from the form to the database through AJAX request
 function sendContactForm(){
@@ -48,6 +32,28 @@ function sendContactForm(){
   ajaxPost("SQL/addConactInfoSQL.php", formdata, outputMessage, null, null);
 }
 
+//This function clears the textboxes and ten ouputs a successMessage
+function outputMessage(data){
+      //Inititiates all the varibles that we are going to use to validae the form.
+      var fullname, email, telephone, email, comment, successMessage, fetchbutton;
+
+      //Sets all the feilds in the Form to Blank.
+      fullname = _("fullname").value=" ";
+      email = _("email").value = " ";
+      telephone = _("telephone").value = " ";
+      comment = _("comment").value = " ";
+
+
+      //Ouputs the success Message.
+      successMessage = _("formSuccess");
+      successMessage.style.color = 'green';
+      successMessage.style.fontWeight ='bold';
+      successMessage.style.margin = "0px 0px 0px 0px";
+      successMessage.innerHTML = 'Your Form has been successfull sent - Thank You!';
+      //Disables the submit button
+      fetchbutton = _("submit").disabled = "true";
+}
+
 //Validates the Form that allows the user to enter a product to the database.
 validateForm = function () {
 
@@ -60,11 +66,10 @@ validateForm = function () {
   _('errorfullname').innerHTML = " ";
   _('erroremail').innerHTML = " ";
   _('errortelephone').innerHTML = " ";
-  _('errortelephone').innerHTML = " ";
+  _('errorcomment').innerHTML = " ";
 
   //Checks the First Name value of the form is entered.
     a = document.forms["contactForm"]["fullname"].value;
-    a.innerHTML = " ";
     if (a == null || a == "") {
         errorFirstName = _('errorfullname');
         errorFirstName.style.color ='red';
@@ -76,7 +81,6 @@ validateForm = function () {
 
   //Checks to see if the Email has been entered.
     c = document.forms["contactForm"]["email"].value;
-    c.innerHTML = "";
     var atpos = c.indexOf("@");
     var dotpos = c.lastIndexOf(".");
     if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=c.length) {
@@ -90,8 +94,7 @@ validateForm = function () {
 
     //Checks the Telephone vaue has been entered.
       d = document.forms["contactForm"]["telephone"].value;
-      d.innerHTML = "";
-      if (d == null || d == "" || !isNumber(d) || d.length > 11) {
+      if (d == null || d == "" || !isNumber(d) || d.length > 11 || d.length < 11) {
           errorTelephone = _('errortelephone');
           errorTelephone.style.color = 'red';
           errorTelephone.style.fontWeight ='bold';
@@ -102,7 +105,6 @@ validateForm = function () {
 
       //Checks the Telephone vaue has been entered.
         e = document.forms["contactForm"]["comment"].value;
-        e.innerHTML = "";
         if (e == null || e == "") {
             errorMessage = _('errorcomment');
             errorMessage.style.color = 'red';
