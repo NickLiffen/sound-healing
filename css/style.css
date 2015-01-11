@@ -21,9 +21,9 @@ html, body {
   height: 100%;
 }
 
-input:focus {
-    outline:none;
-}
+input:focus, textarea:focus {
+    outline: none !important;
+  }
 
 /* HEADER STYLES */
 
@@ -378,6 +378,7 @@ form
   padding-left:5px;
   color:#4D4D4D;
   font-size:1.1em;
+  text-decoration: bold;
 }
 
 #contactForm input
@@ -406,7 +407,7 @@ input
 #comment
 {
   width:100%;
-  height: 10em;
+  height: 7em;
   max-width: 100%;
   max-height:10em;
   font-size:20px;
@@ -418,25 +419,34 @@ input
   font-size:1em;
   box-shadow:none;
   padding:0.5em;
+  border:1px solid #6E52CA;
+  
 }
 
+#fullname:focus, #email:focus, #telephone:focus, #comment:focus{
+  border:1px solid #6E52CA;
+  box-shadow: 0 0 5px #6E52CA;
+}
 #submit {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
   font-family: Arial;
-  color: #ffffff;
-  font-size: 1.1em;
-  background: #6E52CA;
-  padding: 10px 20px 10px 20px;
+  color: #5936C9;
+  font-size: 20px;
+  padding: 20px 40px 20px 40px;
+  border: solid #5936C9 2px;
   text-decoration: none;
-  box-shadow: none;
-  border:none;
   width:100%;
-
+  background-color:white;
 }
 
 #submit:hover {
-  background: #5936c9;
+  background: #5936C9;
   text-decoration: none;
-  box-shadow: none;
+  color:white;
+}
+
 }
 
 
@@ -974,6 +984,14 @@ width:100%
   #servicesOptions ,#classesAvailble
   {
     width:100%;
+  }
+}
+
+@media screen and (max-width:400px)
+{
+  #servicesOptions ,#classesAvailble
+  {
+    font-size: 0.7em;
   }
 }
 
