@@ -10,7 +10,7 @@
 <p>
                 <form enctype="multipart/form-data" id="contactForm" method="post"
                 name="myForm" onsubmit="return false">
-
+                    <p> Please feel free to contact me on: test@test.com.</p>
                     <!-- First Name Field -->
                     <p>Full Name </p><input id="fullname" name=
                     "fullname" type="text" autofocus> <span id=

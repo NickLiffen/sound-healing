@@ -822,7 +822,8 @@ width:100%
 }
 
 
-#submitNew {
+#submitNew, #backButton
+{
   font-family: Arial;
   color: #ffffff;
   font-size: 1.3em;
@@ -835,7 +836,7 @@ width:100%
 
 }
 
-#submitNew:hover {
+#submitNew:hover, #backButton:hover {
   background: #5936c9;
   text-decoration: none;
   box-shadow: none;
