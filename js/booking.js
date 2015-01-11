@@ -187,7 +187,7 @@ function outputForm(jsonObj, IDtoUpdate){
 
       //This scrolls down to the part where the contact form is printed out.
       $('html,body').animate({
-        scrollTop: $("#addClass").offset().top
+        scrollTop: $("#contactForm1").offset().top
         });
 
       validateForm(IDtoUpdate);

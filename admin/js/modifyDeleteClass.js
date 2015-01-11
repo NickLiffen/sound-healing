@@ -21,6 +21,8 @@ function searchAJAX(str) {
     return;
   }
   target = _("collectInfo");
+  target.innerHTML = " ";
+  target.style.display = "block";
   ajaxGet("SQL/searchDatabaseSQL.php?str=" + str, json, target, str);
 }
 //This function sends through the letters to the AJAX function.
@@ -36,6 +38,7 @@ function json(jsonObj, target, str) {
   var json_output, output;
   //Sets the page content to nothing so we don't see multiple of the same products on screen.
   target.innerHTML = "";
+  target.style.display = "block";
   json_output = JSON.parse(jsonObj);
   //Checks to see if anything has come back from the search. If nothing has. Prints out message.
   if (isEmpty(json_output)) {
@@ -45,7 +48,7 @@ function json(jsonObj, target, str) {
     for (var i = 0; i < json_output.length; i++) {
       output = "<div id='item" + json_output[i].id + "' class='item'>" +
       "<div class = 'itemBoxes'>"+
-      '<p> Class Name: ' + json_output[i].classname + '</p>' +
+      '<p class="center">' + json_output[i].classname + '</p>' +
       '<p> Class Description: ' + json_output[i].classdescription + '</p>' +
       '<p> Class Price: £ ' + json_output[i].classprice + '</p>' +
       "<p><span class='bold'> Class Date: </span>" + json_output[i].classdate + " <span class='bold'>Time: </span> " + json_output[i].classstarttime + ' - ' + json_output[i].classendtime + '</p>' +
@@ -150,14 +153,35 @@ function updateProduct(jsonObj, target, str) {
     "<br />" +
     "<div id ='submitBtn'>" +
     "<input name='submitNew' id='submitNew' type='button' value='Update Class'/>" +
+    "<input name='backButton' id='backButtonPress' type='button' value='Back'/>" +
     "</div>" +
     "</form>" +
     "<div id='statusUpdate'></div>";
     //This outputs the array
     newTarget.innerHTML += output;
   }
+  backButton(str, newTarget);
+}
+
+
+//Closes the Focus through pressing the back button.
+function backButton(str, newTarget){
+  var backButtonPressed;
+  backButtonPressed = _("backButtonPress");
+  if(backButtonPressed){
+    backButtonPressed.addEventListener("click", function() {
+
+      _("collectInfo").style.display = "block";
+      _("modifyResult").style.display = "none";
+      _("modifyResult").innerHTML = "";
+
+      searchAJAX(str)
+    });
+  }
   finalUpdate(str, newTarget);
 }
+
+
 //Sends through the final information to be updated.
 function finalUpdate(str, newTarget) {
   var fetchSubmitButton;

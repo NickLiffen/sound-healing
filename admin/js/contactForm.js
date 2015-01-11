@@ -40,11 +40,12 @@ function json(jsonObj, target) {
 
 
       output = "<div id='item" + json_output[i].id + "' class='contactID'>" +
+      "<h3 class='center'> Email Message </h3>" +
       "<p> Person's Name: " + json_output[i].fullname + '</p>' +
       "<p> Person's Email: " + json_output[i].email + '</p>' +
       "<p> Person's Telephone: " + json_output[i].telephone + '</p>' +
       "<p> Product Comment: " + json_output[i].comment + '</p>' +
-      "<p class='bold'> Date Form was Sent: " + json_output[i].currentDate + '</p>' +
+      "<p> Date Form was Sent: " + json_output[i].currentDate + '</p>' +
       "<p class='bold'> Have you Responded: " + json_output[i].respondedToEmail + '</p>' +
       "</div>";
       target.innerHTML += output;
