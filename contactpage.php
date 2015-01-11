@@ -31,7 +31,7 @@
 
                     <!-- Comments Field-->
                     <p>Query/Question/Comment </p>
-                    <textarea id="comment" rows="5"></textarea>
+                    <textarea id="comment" rows="3"></textarea>
                     <span id="errorcomment"></span>
                     <span class="error"></span>
 
