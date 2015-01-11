@@ -34,9 +34,6 @@
 </ul>
 </section>
 </div>
-
-
-<div class='paddingBottom'></div>
 <section>
 
 <div id='allClasses'></div>

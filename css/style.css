@@ -106,7 +106,8 @@ a:hover {
 
 header {
   background: #6E52CA;
-  position: fixed;
+  position: absolute;
+  /* changed to absolute from fixed*/
   z-index: 3;
   width: 100%;
   left: 0;
