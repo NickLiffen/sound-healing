@@ -412,6 +412,15 @@ input
   box-shadow:none;
 }
 
+#bookingForm input 
+{
+  font-size:1em;
+  box-shadow:none;
+  padding:0.5em;
+  border:1px solid #6E52CA;
+}
+
+
 #fullname, #email, #telephone, #comment
 {
   font-size:1em;
