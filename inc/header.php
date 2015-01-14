@@ -15,7 +15,6 @@
     <![endif]-->
 
 <script src="inc/inc.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/responsive-nav.js"></script>
 </head>
   <body>
@@ -27,7 +26,7 @@
       <nav class="nav-collapse">
         <ul>
           <li id="navID" class="menu-item"><a href="/soundhealing/" data-scroll>Home</a></li>
-          <li id="navID1" class="menu-item"><a href="booking.php" data-scroll>Book Now</a></li>
+          <li id="navID1" class="menu-item"><a href="booking.php" data-scroll>Classes &#38; Booking</a></li>
           <li id="navID2" class="menu-item"><a href="contactpage.php" data-scroll>Contact</a></li>
         </ul>
       </nav>

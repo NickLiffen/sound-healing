@@ -39,6 +39,80 @@ a:hover {
 @viewport { width: device-width; }
 
 
+
+.circular {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background: url(http://lorempixel.com/300/300/people/10/) no-repeat;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  margin-left: 30px;
+  float: left;
+  -webkit-filter: brightness(1.0) drop-shadow(5px 5px 5px grey) grayscale(0.2);
+  position: absolute;
+  }
+
+
+
+  .circularOne {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background: url(http://lorempixel.com/400/400/people/9) no-repeat;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  margin-right: 30px;
+  float: right;
+  -webkit-filter: brightness(1.0) drop-shadow(5px 5px 5px grey) grayscale(0.2);
+  }
+
+
+  .headerTwo{
+    margin-left: 340px;
+    padding-bottom: 20px;
+  }
+
+.textNextToPicture{
+  padding-bottom: 110px;
+  margin-right: 20px;
+  padding-left: 350px;
+}
+
+.textNextToPictureOne{
+  padding-bottom: 110px;
+  margin-left: 20px;
+  padding-right: 350px;
+}
+
+.column-left{ 
+  float: left; 
+  width: 33%; 
+  padding-left: 33px;
+  font-style: oblique;
+  color: #73777A;
+}
+.column-right{ 
+  float: right; 
+  width: 33%; 
+  padding-left: 33px;
+  font-style: oblique;
+  color: #73777A;
+}
+
+.column-center{ 
+  display: inline-block;
+  width: 33%; 
+  padding-left: 33px;
+  font-style: oblique;
+  color: #73777A;
+}
 /* ------------------------------------------
   RESPONSIVE NAV STYLES
 --------------------------------------------- */
@@ -780,6 +854,17 @@ color: white;
   text-align:center;
   color: #5936c9;
   font-weight:normal;
+}
+
+.centerLine{
+  text-align:center;
+  color: #5936c9;
+  font-weight:normal;
+  border-top: solid 2px #e6e6e6;
+  padding-top:30px;
+
+
+
 }
 
 #subwriting
