@@ -13,7 +13,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <link rel="stylesheet" href="css/ie.css">
     <![endif]-->
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="inc/inc.js"></script>
 <script src="js/responsive-nav.js"></script>
 </head>
