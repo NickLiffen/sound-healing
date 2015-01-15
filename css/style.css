@@ -381,6 +381,7 @@ header {
   min-height: 100%;
   /* equal to footer height */
   margin-bottom: -10em;
+  padding-top:2em;
 }
 
 .page-wrap:after {
@@ -470,6 +471,7 @@ form
   color: #5936c9;
   padding-bottom:0.5em;
   font:30px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top:3em;
 }
 
 #contactForm, #bookingForm
