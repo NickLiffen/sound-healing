@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title><?php echo $title; ?></title>
 <meta name="keywords" content="Sound, Healing, Relax">
-<meta name="description" content="Sound Healing to help cure the body of it's problems">
+<<meta name="description" content="Shakty Sounds offers Sound Healing with qualified Sound Healer Cherly Torrance, healing with Sound and Sound Therapy, and Sound Healing Training for you to learn Healing with the Voice." >
 <meta name="author" content="Nick Liffen, Lewis Wrightson">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <link rel="stylesheet" type="text/css" href="css/style.css">

@@ -1,5 +1,10 @@
-<?php $title="Contact Us" ; include( "inc/header.php"); ?>
+<?php $title="Shakty Sounds Contact Form" ; include( "inc/header.php"); ?>
 
+
+    <div class = "paddingBottom"></div>
+    <div class = "paddingBottom"></div>
+    <div class = "paddingBottom"></div>
+    <div class = "paddingBottom"></div>
 
               <h1 id="contactwelcome">Contact Me</h1>
 

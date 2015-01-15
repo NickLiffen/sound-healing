@@ -12,7 +12,7 @@
 /* Everything inside the body of the web page has these genreal settings.*/
 body {
   color: black;
-  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 17px;
 }
 
@@ -119,13 +119,13 @@ a:hover {
 
 
 #banner {
-  height: 475px;
+  height: 540px;
   background: url(../img/banner.jpg);
   width: 100%;
  
 }
   #banner h1 {
-    margin: 130px auto;
+    margin: 0 auto;
     color: #fff;
     width: 800px;
     font-size: 50px; line-height: 60px; text-align: center;
@@ -381,7 +381,6 @@ header {
   min-height: 100%;
   /* equal to footer height */
   margin-bottom: -10em;
-  margin-top:100px;
 }
 
 .page-wrap:after {

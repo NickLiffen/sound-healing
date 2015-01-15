@@ -8,7 +8,7 @@ include("../db/connect_database.php");
 //Finds a product based on the ID.
 $name = $_GET['id'];
 
-$query = "SELECT * FROM class WHERE service = '$name'";
+$query = "SELECT * FROM class WHERE service = '$name' AND classparticipants > 0 ";
 
 $result = $database->query($query) OR die("Failed query $query");
 echo $database->error;
