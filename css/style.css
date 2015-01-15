@@ -45,13 +45,10 @@ a:hover {
   border-radius: 150px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
-  background: url(http://lorempixel.com/300/300/people/10/) no-repeat;
-  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  background: url(http://placemi.com/400x400) no-repeat;
   margin-left: 30px;
   float: left;
-  -webkit-filter: brightness(1.0) drop-shadow(5px 5px 5px grey) grayscale(0.2);
+  -webkit-filter: brightness(1.0) grayscale(0.2);
   position: absolute;
   }
 
@@ -63,13 +60,10 @@ a:hover {
   border-radius: 150px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
-  background: url(http://lorempixel.com/400/400/people/9) no-repeat;
-  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  background: url(http://placemi.com/400x400) no-repeat;
   margin-right: 30px;
   float: right;
-  -webkit-filter: brightness(1.0) drop-shadow(5px 5px 5px grey) grayscale(0.2);
+  -webkit-filter: brightness(1.0) grayscale(0.2);
   }
 
 
@@ -120,7 +114,7 @@ a:hover {
 
 #banner { 
   width: 100%;
-  max-height:100%;
+  height:550px;
   background: url(../img/banner.jpg);
 
  
@@ -404,14 +398,28 @@ header {
 
 .footerBox
 {
-  margin:6em 6em 6em 6em;
+  text-align: center;
+  margin:6em 6em 0em 6em;
 }
 
-#twitterImage, #facebookImage
+#copyFooter
 {
-  margin:auto;
-  float:right;
+  width:100%;
+  margin:0 auto;
+  height:3em;
+  padding:1em;
 }
+
+#socialFooter
+{
+  width:100%;
+  margin: 0 auto;
+  height:7em;
+  padding:2em;
+}
+
+
+
 /* END OF FOOTER STYLES */
 
 #errorPageNotFound{
