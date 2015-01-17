@@ -177,7 +177,11 @@ function outputForm(jsonObj, IDtoUpdate){
 
       "<p>Any Comments: </p><textarea id='comment' rows='5'></textarea><span id='errorcomment'></span><span class='error'></span><span id='errorMessage'></span> <span class='error'></span>" +
 
-      "<p> Any price will be payed in cash/cheque on the day of the class. We will send you a confirmation email to confirm you have been booked on. If you do not receve this please contact us through the contact form section on this website - thank you.</p>" +
+      "<div class = 'paddingBottom'></div>" +
+
+      "<input type='checkbox' name='termsAndCondition' value='termsAndCondition' id='termsAndCondition'> Please Accept the <a id='termsButton'>Terms and Conditions</a>.<span id='errorTerms'></span><span class='error'></span> <span id='errorTerms'></span> <span class='error'></span>"  +
+
+      "<p class='oblique'>Any Class will be paid in cash or bank transfer. You will recevier further information through a confirmation email. Please note your booking & attendance is only confirmed once payment is made & you receive email confirmation</p>" +
 
       "<div id ='submitBtn'><input id='submit' name='submit' type='button' value='Submit'></div>" +
 
@@ -196,22 +200,43 @@ function outputForm(jsonObj, IDtoUpdate){
   }
 }
 
+
 function validateForm(IDtoUpdate){
 
- _('className').readOnly = true;
-  _('classPrice').readOnly = true;
+var termsButton, fetchSubmitButton;
 
-  var fetchSubmitButton;
+//Makes the Class Name and Price Read Only
+_('className').readOnly = true;
+_('classPrice').readOnly = true;
+
+//This Checks the Terms and Conditions
+termsButton = _("termsButton");
+termsButton.style.textDecoration = "underline";
+termsButton.style.fontWeight = "900";
+if(termsButton){
+    termsButton.addEventListener("click", function(){
+        var windowObjectReference, strWindowFeatures;
+        strWindowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+        windowObjectReference = window.open("termsandconditions.php", "Terms And Conditions", strWindowFeatures);
+    });
+  }
+
+
 
   fetchSubmitButton = _("submit");
   if(fetchSubmitButton){
     fetchSubmitButton.addEventListener("click", function(){
 
 //Inititiates all the varibles that we are going to use to validae the form.
-  var errors, a, b, c, d,  errorFirstName, errorLastName, errorEmail, errorTelephone = " ";
+  var errors, a, b, c, d,  errorFirstName, errorLastName, errorEmail, errorTelephone, errorTerms = " ";
 
   //Sets errors to 0
   errors = 0;
+
+  _('errorfullname').innerHTML = " ";
+  _('erroremail').innerHTML = " ";
+  _('errortelephone').innerHTML = " ";
+  _('errorTerms').innerHTML = " ";
 
   //Checks the First Name value of the form is entered.
     a = document.forms["bookingForm"]["customerName"].value;
@@ -247,6 +272,20 @@ function validateForm(IDtoUpdate){
           errorTelephone.innerHTML = "Please enter a valid phone number (11 Digits please)";
           errors = errors + 1;
       }
+
+      if (_('termsAndCondition').checked) {
+            //Do Nothing
+        } else {
+        errorTerms = _('errorTerms');
+        errorTerms.style.color ='red';
+        errorTerms.style.fontWeight ='bold';
+        _('termsAndCondition').style.margin = "0px 0px 0px 0px";
+        errorTerms.innerHTML = "Please Accept Terms and Conditions";
+        errors = errors + 1;
+            
+        }
+
+
 
   //If there are any errors are found it returns false but if not it proccedds.
     if (errors > 0) {

@@ -12,6 +12,7 @@
     		<a href="http://www.facebook.com/"><img src="img/facebook29.svg" width="75" height="75" alt="Link the Facebook" id='facebookImage' align="middle"></a>
             </div>
             <div id ="copyFooter">
+                <p><a href="termsandconditions.php" data-scroll>Terms And Conditions</a></p>
                 <p> &#169; Copyright Shakty Sounds</p>
             </div>
 

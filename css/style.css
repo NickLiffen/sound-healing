@@ -45,7 +45,7 @@ a:hover {
   border-radius: 150px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
-  background: url(http://placemi.com/400x400) no-repeat;
+  background: url(../img/error.png) no-repeat;
   margin-left: 30px;
   float: left;
   -webkit-filter: brightness(1.0) grayscale(0.2);
@@ -60,7 +60,7 @@ a:hover {
   border-radius: 150px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
-  background: url(http://placemi.com/400x400) no-repeat;
+  background: url(../img/banner.png) no-repeat;
   margin-right: 30px;
   float: right;
   -webkit-filter: brightness(1.0) grayscale(0.2);
@@ -91,6 +91,10 @@ a:hover {
   font-style: oblique;
   color: #73777A;
 }
+
+.oblique{
+   font-style: oblique;
+}
 .column-right{ 
   float: right; 
   width: 33%; 
@@ -109,6 +113,11 @@ a:hover {
 
 .nav-collapse ul li a:hover{
   background-color: #5936C9;
+}
+
+#termsButton { 
+  cursor: pointer; 
+  cursor: hand; 
 }
 
 
@@ -1165,3 +1174,4 @@ width:100%
 {
   font-size:1.3em;
 }
+
