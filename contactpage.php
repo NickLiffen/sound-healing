@@ -23,7 +23,7 @@
 
                     <!-- Telephone Field-->
                     <p>Telephone:</p>
-                    <input type="text" id="telephone" name="telephone">
+                    <input type="number" id="telephone" name="telephone">
                     <span id="errortelephone" ></span> 
 
                     <!-- Comments Field-->

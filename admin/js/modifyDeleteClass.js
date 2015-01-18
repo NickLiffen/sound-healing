@@ -134,11 +134,11 @@ function updateProduct(jsonObj, target, str) {
     "<input type = 'hidden'  id='idUpdate' name = 'id' value = " + json_output[i].id + " > " +
     "<p>Update the Class Name: <br/><input type='text' id='classUpdate' name='classUpdate' value = '" + json_output[i].classname + "' > </p>" +
     "<p>Update the Class Description: <br/><input type='text' id='descriptionUpdate' name='descriptionUpdate' value = '" + json_output[i].classdescription + "' > </p>" +
-    "<p>Update the Class Start Time: <br/><input type='text' id='startTimeUpdate' name='startTimeUpdate' value = '" + json_output[i].classstarttime + "' > </p>" +
-    "<p>Update the Class End Time: <br/><input type='text' id='endTimeUpdate' name='endTimeUpdate' value = '" + json_output[i].classendtime+ "' > </p>" +
-    "<p>Update the Class Date: <br/><input type='text' id='dateUpdate' name='dateUpdate' value = '" + json_output[i].classdate + "' > </p>" +
-    "<p>Update the Class Participants: <br/><input type='text' id='participantsUpdate' name='participantsUpdate' value = '" + json_output[i].classparticipants + "' > </p>" +
-    "<p>Update the Class Price: <br/><input type='text' id='priceUpdate' name='priceUpdate' value = '" + json_output[i].classprice + "' > </p>" +
+    "<p>Update the Class Start Time: <br/><input type='time' id='startTimeUpdate' name='startTimeUpdate' value = '" + json_output[i].classstarttime + "' > </p>" +
+    "<p>Update the Class End Time: <br/><input type='time' id='endTimeUpdate' name='endTimeUpdate' value = '" + json_output[i].classendtime+ "' > </p>" +
+    "<p>Update the Class Date: <br/><input type='date' id='dateUpdate' name='dateUpdate' value = '" + json_output[i].classdate + "' > </p>" +
+    "<p>Update the Class Participants: <br/><input type='number' id='participantsUpdate' name='participantsUpdate' value = '" + json_output[i].classparticipants + "' > </p>" +
+    "<p>Update the Class Price: <br/><input type='number' id='priceUpdate' name='priceUpdate' value = '" + json_output[i].classprice + "' > </p>" +
     "<p>Update the Class Disclaimer: <br/><input type='text' id='disclaimerUpdate' name='disclaimerUpdate' value = '" + json_output[i].classdisclamer + "' > </p>" +
     "<p>Enter a Service:<br/><select id='serviceDropDown'>" +
     "<option value=  '" + json_output[i].service + "' > '" + json_output[i].service +  "' </option>" +

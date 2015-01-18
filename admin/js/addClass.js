@@ -60,10 +60,12 @@ function outputMessage(){
   classdiscalmer = _("classdisclamer").value = " ";
   classdate = _("classdate").value = " ";
 
+ 
   //Ouputs the success Message.
-  successMessage = _("successMessage");
-  successMessage.innerHTML = 'Your Class has been added :)';
+  successMessage = _("successMessageForm");
   successMessage.style.color = 'green';
+  successMessage.style.fontWeight ='bold';
+  successMessage.innerHTML = 'Your Class has been added :)';
 
 }
 
