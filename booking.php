@@ -1,4 +1,4 @@
-<?php $title="Shakty Sounds Booking Form" ; include( "inc/header.php"); ?>
+<?php $title="Cheryl Torrance | Booking Form" ; include( "inc/header.php"); ?>
 
 <!--Prints out a message saying that the product has been successfully modified-->
 <div id="bookingConfirmation"></div>

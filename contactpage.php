@@ -1,4 +1,4 @@
-<?php $title="Shakty Sounds Contact Form" ; include( "inc/header.php"); ?>
+<?php $title="Cheryl Torrance | Contact Form" ; include( "inc/header.php"); ?>
 
 
               <h1 id="contactwelcome">Contact Me</h1>

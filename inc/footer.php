@@ -8,8 +8,8 @@
         <div id = "footerContainer">
     	<div class ="footerBox">
     		  <div id = "socialFooter">
-    		<a href="http://www.twitter.com/"><img src="img/twitter21.svg" width="30" height="30" alt="Link to Twitter" id='twitterImage' align="middle"></a>
-    		<a href="http://www.facebook.com/"><img src="img/facebook31.svg" width="30" height="30" alt="Link the Facebook" id='facebookImage' align="middle"></a>
+    		<a href="http://www.twitter.com/"><img src="img/twitter.svg" width="30" height="30" alt="Link to Twitter" id='twitterImage' align="middle"></a>
+    		<a href="http://www.facebook.com/"><img src="img/facebook.svg" width="30" height="30" alt="Link the Facebook" id='facebookImage' align="middle"></a>
             </div>
             <div id ="copyFooter">
                 <p><a href="termsandconditions.php" data-scroll>Terms And Conditions</a></p>

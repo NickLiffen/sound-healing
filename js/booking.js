@@ -65,7 +65,7 @@ function outputInfo(jsonObj, id){
 
 //Starts the loop -- THIS IS HOW I OUTPUT THE DATA ON THE PAGE
     for (var i = 0; i < json_output.length; i++) {
-      output = "<div id='serviceInfo" + json_output[i].id + "' class='center'>" +
+      output = "<div id='serviceInfo" + json_output[i].id + "' class='classDescriptionBooking'>" +
       "<p>" + json_output[i].servicedescription + '</p>' +
       "</div>";
       newTarget.innerHTML += output;
@@ -74,7 +74,6 @@ function outputInfo(jsonObj, id){
     }
 
     collectClasses(serviceName);
-          console.log(serviceName);
 }
 
 //This function goes and collects the classes avaible for the service
@@ -334,13 +333,15 @@ function changeScreenLayout(jsonObj){
   display = _('changeDisplay').style.display = 'none';
   contactForm = _("contactForm1").style.display = "none";
 
+  message.style.display = 'block';
   message.style.color ='green';
   message.style.fontWeight ='bold';
   message.style.textAlign="center";
   message.innerHTML = "Thank you - Your place has been booked - you will receciver a confirmation email"
 
-
   window.setTimeout(vanishText, 5000);
+
+
   //This scrolls down to the part where the contact form is printed out.
       $('html,body').animate({
         scrollTop: $("#navID").offset().top

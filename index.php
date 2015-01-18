@@ -1,4 +1,4 @@
-<?php $title="Shakty Sounds Home Page" ; include( "inc/header.php"); ?>
+<?php $title="Cheryl Torrance | Sound Healing" ; include( "inc/header.php"); ?>
 
 <!--<h1 class='center'>Sound Healing - Shakty Sounds</h1>-->
 

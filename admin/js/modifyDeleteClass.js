@@ -155,6 +155,7 @@ function updateProduct(jsonObj, target, str) {
     "<div id='statusUpdate'></div>";
     //This outputs the array
     newTarget.innerHTML += output;
+    _('classUpdate').readOnly = true;
   }
   backButton(str, newTarget);
 }
@@ -215,13 +216,27 @@ function finalUpdate(str, newTarget) {
       formdata.append("disclaimerUpdate", disclaimerUpdate);
       formdata.append("serviceUpdate", serviceUpdate);
       //Calling the AJAX Post function that I have already created
-      ajaxPost("SQL/updatedProductInfoSQL.php", formdata, modifyMessage, newTarget, str);
+      ajaxPost("SQL/updatedProductInfoSQL.php", formdata, updateClassMembers, str, classUpdate);
     });
   }
 }
+
+function updateClassMembers(jsonObj, str, className){
+  ajaxGet("SQL/getEmailOfClientsSQL.php?str=" + className, emailPeople, str, null);
+}
+
+function emailPeople(jsonObj, str){
+  json_output = JSON.parse(jsonObj);
+  for (var i = 0; i < json_output.length; i++) {
+    var email = json_output[i].customeremail;
+      modifyMessage(str);
+}
+}
+
 //Shows the user the modified message.
-function modifyMessage(jsonObj, newTarget, str) {
-  var message;
+function modifyMessage(str) {
+  var message, newTarget;
+  newTarget = _("modifyResult");
   newTarget.style.display = "none";
   messsage = _("productModifyShow").style.display = "block";
   window.setTimeout(vanishText, 1000);
