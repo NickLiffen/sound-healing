@@ -3,7 +3,7 @@
 <!--<h1 class='center'>Sound Healing - Shakty Sounds</h1>-->
 
 <div id="banner">
-		<h1>Sound Healing - Shakty Sounds</h1>
+		<h1>Cherly Torrance</h1>
 	</div>
 
 <div id = "homeContainer">
