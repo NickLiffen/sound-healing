@@ -31,7 +31,7 @@
   <!-- This is the header-->
   <header>
     <div id="headerBlock">
-      <a href="/soundhealing/" class="logo" data-scroll>Shakty Sounds</a>
+      <a href="/soundhealing/" class="logo" data-scroll>Cheryl Torrance</a>
       <nav class="nav-collapse">
         <ul>
           <li id="navID" class="menu-item"><a href="/soundhealing/" data-scroll>Home</a></li>

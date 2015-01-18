@@ -18,7 +18,7 @@ function output(jsonObj, target){
     //Starts the loop -- THIS IS HOW I OUTPUT THE DATA ON THE PAGE
     for (var i = 0; i < json_output.length; i++) {
       output = "<div id='service" + json_output[i].id + "' class='center'>" +
-      "<button type='button' class='replyContactForm'  >" + json_output[i].servicename + "</button>" +
+      "<button type='button' class='bookingServices'  >" + json_output[i].servicename + "</button>" +
       "</div>";
       target.innerHTML += output;
         //Collecting te ID of the Contact Request

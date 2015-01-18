@@ -21,7 +21,7 @@
 	<div class = "paddingBottom"></div>
 	<div class = "paddingBottom"></div>
 	<div class = "paddingBottom"></div>
-	<h1 class="center">Classes Available</h1>
+	<h1 class="">Classes Available</h1>
 	<!-- This is going to print out the number of classes avaible under a Service -->
 
 	<div id="classesAvailble"></div>
