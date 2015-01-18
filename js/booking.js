@@ -12,7 +12,7 @@ function output(jsonObj, target){
     json_output = JSON.parse(jsonObj);
 
     if (isEmpty(json_output)) {
-        target.innerHTML = "<div class='noResults'><p>No classes are available at the moment - please check again soon<p></div>";
+        target.innerHTML = "<div class='noResults'><p>No Services are available at the moment - please check again soon<p></div>";
     }
     else {
     //Starts the loop -- THIS IS HOW I OUTPUT THE DATA ON THE PAGE
@@ -74,6 +74,7 @@ function outputInfo(jsonObj, id){
     }
 
     collectClasses(serviceName);
+          console.log(serviceName);
 }
 
 //This function goes and collects the classes avaible for the service

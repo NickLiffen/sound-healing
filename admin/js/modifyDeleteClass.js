@@ -3,11 +3,6 @@
 
 This page handles the JavaScipt for the modidyDeleteClass.php page. The admin can search for a class and then either modidy or delete it by pressing a button.
 
-Things to do:
-
-1. Make the output of the search look more proffesional.
-2. Make the output of when the admin presses 'modify' a little more proffesiaonl and consitant to the other forms.
-
 */
 
 
@@ -147,8 +142,9 @@ function updateProduct(jsonObj, target, str) {
     "<p>Update the Class Disclaimer: <br/><input type='text' id='disclaimerUpdate' name='disclaimerUpdate' value = '" + json_output[i].classdisclamer + "' > </p>" +
     "<p>Enter a Service:<br/><select id='serviceDropDown'>" +
     "<option value=  '" + json_output[i].service + "' > '" + json_output[i].service +  "' </option>" +
-    "<option value='ShaktySounds' id='shaktySounds'>Shakty Sounds</option>" +
+    "<option value='SoundHealing' id='soundHealing'>Sound Healing</option>" +
     "<option value='CrystalHealing' id ='crystalHealing'>Crystal Healing</option>" +
+    "<option value='SacredFeminine' id ='sacredFeminine'>Sacred Feminine</option>" +
     "</select></p>" +
     "<br />" +
     "<div id ='submitBtn'>" +

@@ -67,8 +67,9 @@
     <!-- Choose a service for the class to fal under-->
     <p class = "adminForm">
     <select name="differentServices" id="differentServices">
-      <option value="ShaktySounds" id="shaktySounds">Shakty Sounds</option>
+      <option value="SoundHealing" id="soundHealing">Sound Healing</option>
       <option value="CrystalHealing" id ="crystalHealing">Crystal Healing</option>
+      <option value="SacredFeminine" id ="sacredFeminine">Sacred Feminine</option>
     </select>
     </p>
     <!-- Submit Button -->
