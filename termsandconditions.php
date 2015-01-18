@@ -7,7 +7,7 @@
 
 <h1 class='center'>Terms And Conditions</h1>
 <div class = "paddingBottom"></div>
-
+<div id ="termsBlock">
 <p>I take full responsibility for any clearing I may go through with regard to sound healing, 
 
 crystal healing, any intuitive guidance I receive and any issues which may come up as a result 
@@ -31,11 +31,10 @@ treat any disease, disorder or condition.  Services are not intended to be used 
 
 substitute for professional medical advice, treatment and care.
 </p>
+
 <div class = "paddingBottom"></div>
 <p>Please note your booking and attendance is only confirmed once payment is made and you receive email confirmation.</p>
-
-
-
+</div>
 
 
 
