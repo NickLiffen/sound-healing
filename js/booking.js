@@ -103,11 +103,11 @@ var json_output, output, target;
       "<p class = 'itemDesc'>" + json_output[i].classdescription + '</p>' +
       "<div class ='itemInfo'>" +
       "<p class = 'itemDetails'><img src = 'img/glyphicons-268-credit-card.png'</img> £" + json_output[i].classprice + '</p>' +
-      "<p class =' itemDetails'><img src = 'img/glyphicons-46-calendar.png'</img> " + json_output[i].classdate +'</p>' + 
+      "<p class = 'itemDetails'><img src = 'img/glyphicons-46-calendar.png'</img> " + json_output[i].classdate +'</p>' + 
       "<p class = 'itemDetails'><img src = 'img/glyphicons-55-clock.png'</img> " + json_output[i].classstarttime + ' - ' + json_output[i].classendtime + '</p>' +
       "<p class = 'itemDetails'><img src = 'img/glyphicons-44-group.png'</img> " + json_output[i].classparticipants + ' remaining spaces</p>' + 
       "</div>" +
-      "<p> <input type='button' class='modify' value='Book Now'/> </p>" +
+      "<p id ='bookingBox'> <input type='button' class='bookingSubmit' value='Book Now'/> </p>" +
       "</div>" +
       "</div>";
       target.innerHTML += output;
