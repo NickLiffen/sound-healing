@@ -18,7 +18,7 @@ if(!$result = $database->query($create_table_contact_form)){
 	die('Could not create product table [' . $database->error . ']');
 	$result->close();
 }
-
+//-------------------------------------------
 
 $create_table_class =
 "CREATE TABLE IF NOT EXISTS class (
@@ -30,31 +30,31 @@ $create_table_class =
 	classendtime VARCHAR(20) NOT NULL,
 	classdate VARCHAR(20) NOT NULL,
 	classparticipants MEDIUMINT NOT NULL,
-	classdisclamer VARCHAR(1000) NOT NULL,
+	classdisclamer VARCHAR(20) NOT NULL,
 	service VARCHAR(15) NOT NULL,
 
 	PRIMARY KEY(ID)
 )";
+
 if(!$result = $database->query($create_table_class)){
-	die('Could not create class table [' . $databasee->error . ']');
+	die('Could not create class table [' . $database->error . ']');
 	$table->close();
 }
 
-
+//-------------------------------------------
 $create_table_service =
 "CREATE TABLE IF NOT EXISTS service (
 	id MEDIUMINT NOT NULL AUTO_INCREMENT,
 	servicename VARCHAR(35) NOT NULL,
-	servicedescription VARCHAR(500) NOT NULL,
-	CONSTRAINT uc_PersonID UNIQUE (servicename, servicedescription),
+	servicedescription VARCHAR(254) NOT NULL,
 	PRIMARY KEY(ID)
 )";
 if(!$result = $database->query($create_table_service)){
-	die('Could not create class table [' . $databasee->error . ']');
+	die('Could not create service table [' . $database->error . ']');
 	$table->close();
 }
 
-
+//-------------------------------------------
 $create_table_bookings =
 "CREATE TABLE IF NOT EXISTS bookings(
 	id MEDIUMINT NOT NULL AUTO_INCREMENT,
@@ -62,13 +62,13 @@ $create_table_bookings =
 	customername VARCHAR(15),
 	customeremail VARCHAR(20) NOT NULL,
 	customerphone VARCHAR(20) NOT NULL,
-	customercomment VARCHAR(1000) NOT NULL,
+	customercomment VARCHAR(254) NOT NULL,
 
 	PRIMARY KEY(ID)
 )";
 
 if(!$result = $database->query($create_table_bookings)){
-	die('Could not create class table [' . $databasee->error . ']');
+	die('Could not create bookings table [' . $database->error . ']');
 	$table->close();
 }
 

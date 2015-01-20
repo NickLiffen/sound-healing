@@ -31,10 +31,10 @@
   <!-- This is the header-->
   <header>
     <div id="headerBlock">
-      <a href="/soundhealing/" class="logo" data-scroll>Cheryl Torrance</a>
+      <a href="index.php" class="logo" data-scroll>Cheryl Torrance</a>
       <nav class="nav-collapse">
         <ul>
-          <li id="navID" class="menu-item"><a href="/soundhealing/" data-scroll>Home</a></li>
+          <li id="navID" class="menu-item"><a href="index.php" data-scroll>Home</a></li>
           <li id="navID1" class="menu-item"><a href="booking.php" data-scroll>Classes &#38; Booking</a></li>
           <li id="navID2" class="menu-item"><a href="contactpage.php" data-scroll>Contact</a></li>
         </ul>
