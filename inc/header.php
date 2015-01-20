@@ -3,6 +3,7 @@
 <head>
 <title><?php echo $title; ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name = "viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="Sound Healing" />
 <meta property="og:url" content="http://www.shaktysounds.com" />
 <meta property="og:image" content="../img/logo.png" />

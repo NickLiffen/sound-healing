@@ -37,19 +37,11 @@ a:hover {
 @-o-viewport { width: device-width; }
 @viewport { width: device-width; }
 
-
-
-.circular {
-  width: 230px;
-  height: 300px;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  background: url(../img/sacred.png) no-repeat;
-  -webkit-filter: brightness(1.0) grayscale(0.2);
-  }
-
-
+#homeContainer
+{
+  width:80%;
+  margin:0 auto;
+}
 
   .circularOne {
   width: 230px;
@@ -62,62 +54,97 @@ a:hover {
   }
 
 
-  .headerTwo{
-    margin-left: 340px;
-    padding-bottom: 20px;
-  }
-
-#pictureBox{
- width:75%;
- position:relative;
- float:right;
+#textBox{
+ width:65%;
+ float:left;
+ font-size:1em;
+ margin:4em 0em 4em 0em;
 }
 
-#pictureBox1{
-  width:75%;
-  position:relative;
+#textBox1{
+  width:25%;
   float:left;
 }
+
+.homepicture
+{
+   float:left;
+   margin:2em;
+   width:25%;
+   display:block;
+   position:relative;
+}
+
+#homeImage
+{
+  
+ width:250px;
+  
+  height:350px;
+
+}
+
+
+.container
+{
+  display: inline-block;
+  font-size:1em;
+}
+
+
+
+
+
 
 .column-left{ 
   float: left; 
   width: 33%; 
-  padding-left: 33px;
+  padding:1em;
   font-style: oblique;
   color: #73777A;
 }
 
-.homePicture
-{
-  width:25%;
-  position:relative;
-  float:left;
-}
-
-.homePicture1
-{
-  width:25%;
-  position:relative;
-  float:right;
-}
 .oblique{
    font-style: oblique;
 }
 .column-right{ 
-  float: right; 
+  float: left; 
   width: 33%; 
-  padding-left: 33px;
+  padding:1em;
   font-style: oblique;
   color: #73777A;
 }
 
 .column-center{ 
-  display: inline-block;
+  float:left;
   width: 33%; 
-  padding-left: 33px;
+  padding:1em;
   font-style: oblique;
   color: #73777A;
 }
+
+
+@media screen and (max-width: 768px)
+{
+  .column-left, .column-right, .column-center
+  {
+    display:block;
+    width:100%;
+    float:none;
+    padding-bottom:2em;
+    padding-left:0px;
+    text-align:center;
+  }
+}
+
+@media screen and (max-width: 480px)
+{
+  .column-right
+  {
+    display:none;
+  }
+}
+
 
 
 #termsButton { 
@@ -142,11 +169,7 @@ a:hover {
     margin-left: 100px;
   }
 
-#homeContainer
-{
-  width:80%;
-  margin:0 auto;
-}
+
 
 /* ------------------------------------------
   RESPONSIVE NAV STYLES
@@ -906,13 +929,6 @@ color: white;
 .centerLine{
   text-align:center;
   color: #5936c9;
-  font-weight:normal;
-  border-top: solid 2px #e6e6e6;
-  padding-top:1em;
-  padding-bottom: 1em;
-
-
-
 }
 
 #subwriting

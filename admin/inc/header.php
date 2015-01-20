@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title><?php echo $title; ?></title>
 <meta name="keywords" content="Sound, Healing, Relax">
+<meta name = "viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Sound Healing to help cure the body of it's problems">
 <meta name="author" content="Nick Liffen, Lewis Wrightson">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
