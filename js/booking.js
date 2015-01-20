@@ -122,7 +122,7 @@ var json_output, output, target;
 function getID(){
 var fetchModifyButton;
     //Gets the button that says 'Modify'
-    fetchModifyButton = _c("modify");
+    fetchModifyButton = _c("bookingSubmit");
     //Remove Button.
     for (var i = 0, j = fetchModifyButton.length; i < j; i++) {
         fetchModifyButton[i].addEventListener("click", function () {
@@ -153,7 +153,7 @@ function outputForm(jsonObj, IDtoUpdate){
   json_output = JSON.parse(jsonObj);
   //Checks to see if anything has come back from the search. If nothing has. Prints out message.
   if (isEmpty(json_output)) {
-    target.innerHTML = "<div class='noResults'><p>FUCK somethings gone wrong!<p></div>";
+    target.innerHTML = "<div class='noResults'><p>OOPS :(!<p></div>";
   } else {
     //Starts the loop
     for (var i = 0; i < json_output.length; i++) {
