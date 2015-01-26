@@ -1,6 +1,7 @@
 <?php $title="Cheryl Torrance | Sound Healing" ; include( "inc/header.php"); ?>
 
 <div id="banner">
+	<img src = "img/lotusImage.jpg" id = "bannerImage"  ></img>
 		<h1>Cheryl Torrance</h1>
 	</div>
 
