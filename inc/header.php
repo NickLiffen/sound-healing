@@ -11,8 +11,9 @@
 <meta property="og:description" content="Shakty Sounds offers Sound Healing with qualified Sound Healer Cherly Torrance, healing with Sound and Sound Therapy, and Sound Healing Training for you to learn Healing with the Voice."/>
 <meta name="keywords" content="Sound, Healing, Relax">
 <meta name="author" content="Nick Liffen, Lewis Wrightson">
-
-
+<!--[if lt IE 9]>
+    <script src="../dist/html5shiv-printshiv.min.js"></script>
+<![endif]-->
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -20,10 +21,6 @@
 <script src="inc/inc.js"></script>
 <script src="js/responsive-nav.js"></script>
 
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <link rel="stylesheet" href="css/ie.css">
-    <![endif]-->
 
 
 </head>

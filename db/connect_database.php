@@ -10,7 +10,7 @@ if($database->connect_errno > 0){
 }
 
 //Selects the database I want to use (Don't know how this works, it really shouldn't!)
-$selectDatabase = $database->select_db("cherylto_soundhealing");
+$selectDatabase = $database->select_db("soundhealing");
 if ($result = $database->query($selectDatabase)) {
     die('Could not select database [' . $database->error . ']');
     $result->close();
