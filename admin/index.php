@@ -1,5 +1,8 @@
 <?php $title="Admin Page" ; include( "inc/header.php"); ?>
 
+<div class = 'paddingBottom'></div>
+<div class = 'paddingBottom'></div>
+
 <h1 id="contactwelcome">Manage Your Content </h1>
 
 <div class='paddingBottom'></div>

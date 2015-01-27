@@ -1,4 +1,4 @@
-<?php $title="Error" ; include( "../inc/header.php"); ?>
+<?php $title="Error" ; include( "../../inc/header.php"); ?>
 <div class = 'paddingBottom'></div>
 <div class = 'paddingBottom'></div>
 <div class = 'paddingBottom'></div>
@@ -11,4 +11,4 @@
 <div class = 'paddingBottom'></div>
 <p class='middleTop'> Sorry, but the page you are looking for has not been found. Try Checking the URL for errors and refresh the page - if not use the navigation above.</p>
 
-<?php include( "../inc/footer.php"); ?>
+<?php include( "../../inc/footer.php"); ?>

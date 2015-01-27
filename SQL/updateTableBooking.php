@@ -33,4 +33,14 @@ include("../db/connect_database.php");
       echo $database->error."<p>";
       echo $result;
 
+
+      $to = $customerEmail;
+      $subject = "Booking - Confirmation";
+      $txt = "Thank you very much for your booking. It has been confirmed. Any questions please contact: cheryl@cheryltorrance.co.uk";
+      $headers = 'From: cheryl@cheryltorrance.co.uk' . "\r\n" .
+                  'Reply-To: cheryl@cheryltorrance.co.uk' . "\r\n" .
+                  'X-Mailer: PHP/' . phpversion();
+      mail($to,$subject,$txt,$headers);
+
+
 ?>

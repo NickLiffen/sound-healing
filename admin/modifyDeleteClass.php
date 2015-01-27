@@ -1,5 +1,8 @@
 <?php $title="Modify/Delete - Admin" ; include( "inc/header.php"); ?>
 
+<div class = 'paddingBottom'></div>
+<div class = 'paddingBottom'></div>
+
 <h1 id='contactwelcome'> Modify / Delete Products</h2>
   <div class='paddingBottom'></div>
 <!--Search bar thats searches for products in the database and this allows them to delete/modify products.-->

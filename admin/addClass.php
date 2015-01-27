@@ -1,5 +1,8 @@
 <?php $title="Add a Class - Admin" ; include( "inc/header.php"); ?>
 
+<div class = 'paddingBottom'></div>
+<div class = 'paddingBottom'></div>
+
 <h1 id="contactwelcome">Add a Class</h1>
 <div id ="searchbox"> 
     <!-- This is the form that adds a Class Under a certain Service. There
