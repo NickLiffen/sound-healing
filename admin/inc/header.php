@@ -12,9 +12,8 @@
 <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 <script src="inc/inc.js"></script>
 <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <link rel="stylesheet" href="css/ie.css">
-    <![endif]-->
+    <script src="../dist/html5shiv-printshiv.min.js"></script>
+<![endif]-->
 <script src="js/responsive-nav.js"></script>
 </head>
   <body>

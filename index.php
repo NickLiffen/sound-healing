@@ -1,5 +1,6 @@
 <?php $title="Cheryl Torrance | Sound Healing" ; include( "inc/header.php"); ?>
 
+<<<<<<< HEAD
 	<picture alt="Banner Photo">
 		    <source srcset="img/bannerNew.jpg" width="100%" height= auto media="(max-width:800px)">
 		    <img srcset="img/smallBanner.jpg" width="100%" height= auto>
@@ -8,6 +9,12 @@
     	</noscript>
 	</picture>
 
+=======
+<div id="banner">
+	<img src = "img/lotusImage.jpg" id = "bannerImage"  ></img>
+		<h1>Cheryl Torrance</h1>
+	</div>
+>>>>>>> b2bcf9fe4e7b6a54736e2ade93ee6f11cb4ad5a8
 
 <!-- FIRST SECTION -->
 

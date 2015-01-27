@@ -154,10 +154,22 @@ a:hover {
   cursor: hand; 
 }
 
-#banner { 
-  width: 100%;
-  height: auto;
+
+.banner { 
+  max-width:100%;
+ 
 }
+  #banner h1 {
+    margin: 0 auto;
+    color: #fff;
+    font-size: 50px; line-height: 60px; text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-top: 200px;
+    margin-left: 100px;
+  }
+
+>>>>>>> b2bcf9fe4e7b6a54736e2ade93ee6f11cb4ad5a8
 
 
 /* ------------------------------------------
@@ -411,7 +423,7 @@ color:#543d9f;
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -7em;
+  margin-bottom: -4em;
   padding-top:2em;
 }
 
@@ -421,7 +433,7 @@ color:#543d9f;
 }
 
 .site-footer, .page-wrap:after {
-  height: 7em;
+  height: 4em;
 }
 
 .site-footer {
@@ -430,28 +442,92 @@ color:#543d9f;
 
 .footerBox
 {
-  text-align: center;
-  margin:6em 6em 0em 6em;
+  width:80%;
+  margin:0 auto;
+  vertical-align:middle;
 }
 
 #copyFooter
 {
-  width:100%;
-  margin:0 auto;
-  height:3em;
-  padding:1em;
+  width:60%;
+  float:left;
+  text-decoration:none;
+  line-height: 68px;
 }
 
 #socialFooter
 {
-  width:100%;
-  margin: 0 auto;
-  height:3em;
-  padding:2em;
+  width:20%;
+  float:right;
+  text-align:center;
+  line-height: 55px;
+  
+}
+
+#copyFooter > p
+{
+  
+  display: inline-block;
+  
+  
+}
+
+.termsLink > a
+{
+  text-decoration:none;
+  text-decoration:underline;
+  color:black;
 }
 
 
+@media screen and (max-width: 480px)
+{
+  #copyFooter
+  {
+    width:100%;
+    float:none;
+    text-align:center;
+    height:2em;
+    font-size:0.75em;
+  }
+}
 
+@media screen and (max-width: 480px)
+{
+  #socialFooter
+  {
+    width:100%;
+    float:none;
+    text-align:center;
+    height:2em;
+  }
+}
+
+@media screen and (max-width: 480px)
+{
+  .footerBox
+  {
+    width:100%;
+  }
+}
+
+
+@media screen and (max-width: 480px)
+{
+  .page-wrap
+  {
+    margin-bottom:-6em;
+  }
+}
+
+
+@media screen and (max-width: 480px)
+{
+  .site-footer, .page-wrap:after 
+  {
+    height:6em;
+  }
+}
 /* END OF FOOTER STYLES */
 
 #errorPageNotFound{

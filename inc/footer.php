@@ -21,10 +21,12 @@
     		<a href="http://www.twitter.com/"><img src="img/twitter.svg" width="30" height="30" alt="Link to Twitter" id='twitterImage' align="middle"></a>
     		<a href="http://www.facebook.com/"><img src="img/facebook.svg" width="30" height="30" alt="Link the Facebook" id='facebookImage' align="middle"></a>
             </div>
+
             <div id ="copyFooter">
-                <p><a href="termsandconditions.php" data-scroll>Terms And Conditions</a></p>
-                <p> &#169; Copyright Shakty Sounds</p>
-            </div>
+                
+                <p>  &copy; <script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script> Cheryl Torrance / </p>
+            <p class ="termsLink"><a href="termsandconditions.php" data-scroll>Terms And Conditions</a></p>
+          </div>
 
     </div>
 </div>
