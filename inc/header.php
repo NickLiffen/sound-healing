@@ -12,7 +12,7 @@
 <meta name="keywords" content="Sound, Healing, Relax">
 <meta name="author" content="Nick Liffen, Lewis Wrightson">
 <!--[if lt IE 9]>
-    <script src="../dist/html5shiv-printshiv.min.js"></script>
+    <script src="../dist/html5shiv.js"></script>
 <![endif]-->
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <link rel="stylesheet" type="text/css" href="css/style.css">

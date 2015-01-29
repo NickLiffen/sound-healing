@@ -33,7 +33,10 @@
                     <span id="errorcomment"></span>
 
                    <div id="example3"></div>
+
+                   <div id="aroundRobot">
                    <span id="errorRobot"></span>
+                   </div>
 
                     <div id ="submitBtn">
                     <!-- Submit Button.-->

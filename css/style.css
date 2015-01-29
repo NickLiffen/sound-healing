@@ -84,6 +84,11 @@ a:hover {
 
 }
 
+.bannerPhoto{
+  width: 100%;
+  height: auto;
+}
+
 
 .container
 {
@@ -1334,4 +1339,23 @@ width:100%
 #twitterImage, #facebookImage
 {
   color:#FFF; !important!
+}
+
+#example3 div div {
+  margin: 0 auto;
+  float: none;
+}
+
+#example3{
+  padding-bottom:1em;
+  padding-top:1.5em;
+  margin:0 auto;
+}
+
+#aroundRobot{
+  text-align: center;
+}
+
+#termsAndCondition input { 
+  margin: 0 auto;
 }

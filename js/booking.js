@@ -179,7 +179,7 @@ function outputForm(jsonObj, IDtoUpdate){
 
       "<div class = 'paddingBottom'></div>" +
 
-      "<input type='checkbox' name='termsAndCondition' value='termsAndCondition' id='termsAndCondition'> Please Accept the <a id='termsButton'>Terms and Conditions</a>.<span id='errorTerms'></span><span class='error'></span> <span id='errorTerms'></span> <span class='error'></span>"  +
+      "<input type='checkbox' name='termsAndCondition' value='termsAndCondition' id='termsAndCondition'>Please Accept the <a id='termsButton'>Terms and Conditions</a><.<span id='errorTerms'></span><span class='error'></span> <span id='errorTerms'></span> <span class='error'></span>"  +
 
       "<p class='oblique'>Any Class will be paid in cash or bank transfer. You will recevier further information through a confirmation email. Please note your booking & attendance is only confirmed once payment is made & you receive email confirmation</p>" +
 

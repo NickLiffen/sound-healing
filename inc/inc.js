@@ -60,3 +60,11 @@ function createCORSRequest(method, url){
     }
     return xhr;
 }
+
+function mobileImg(targetClass, imageSrc) {
+    var width = window.innerWidth; 
+
+    if(width < 1000) {
+        $(targetClass).attr("src", imageSrc);
+    }
+}
