@@ -1,5 +1,7 @@
 <?php $title="ManageBookings - Admin" ; include( "inc/header.php"); ?>
 
+<div class = 'paddingBottom'></div>
+<div class = 'paddingBottom'></div>
 
 <h1 id ="contactwelcome"> Bookings </h1>
 

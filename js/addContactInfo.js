@@ -57,6 +57,10 @@ function outputMessage(data){
 //Validates the Form that allows the user to enter a product to the database.
 validateForm = function () {
 
+
+  errorSpan = _("errorRobot");
+  errorSpan.innerHTML ="";
+
   //Inititiates all the varibles that we are going to use to validae the form.
   var errors, a, b, c, d, e, errorFirstName, errorLastName, errorEmail, errorTelephone, errorMessage = " ";
 
@@ -122,12 +126,66 @@ validateForm = function () {
     }
 }
 //Waits and Checks to see when the submit button has been pressed.
-pageLoaded = function () {
+function pageLoaded(){
   var fetchButton;
     fetchbutton = _("submit");
     if (fetchbutton) {
         fetchbutton.addEventListener("click", validateForm);
     }
 }
-//Event Listner for when the page loads.
-window.addEventListener("load", pageLoaded);
+
+var verifyCallback = function(response) {
+  var response = response;
+  formdata = new FormData();
+  formdata.append("response", response);
+  ajaxPost("SQL/recapture.php", formdata, googleResponce, null, null);
+
+};
+
+function googleResponce (jsonObj) {
+
+console.log(jsonObj);
+
+  if(jsonObj == "noResponce"){
+      var erorrSpan;
+        errorSpan = _("errorRobot");
+        errorSpan.style.color = 'orange';
+        errorSpan.style.fontWeight ='bold';
+        errorSpan.innerHTML = "Please confirm you're not a robot.";
+  }
+  else if(jsonObj = "ewrthgbfhfyrhtbgnfkdhdvfbt"){
+       errorSpan = _("errorRobot");
+        errorSpan.style.color = 'green';
+        errorSpan.style.fontWeight ='bold';
+        errorSpan.innerHTML = "Thank-you";
+        pageLoaded();
+  }
+  else{
+    console.log("problem");
+  }
+}
+
+onloadCallback = function() {
+ grecaptcha.render('example3', {
+          'sitekey' : '6LctwQATAAAAAEs9c-7a2hMzJel7GH4c2TC9qhnj',
+          'callback' : verifyCallback,
+          'theme' : 'light'
+        });
+}
+
+var failOnClick = function(){
+
+  var fetchButton;
+    fetchbutton = _("submit");
+    if (fetchbutton) {
+        fetchbutton.addEventListener("click", googleResponce("noResponce"));
+    }
+}
+
+
+
+
+window.addEventListener("load", failOnClick);
+window.addEventListener("load", onloadCallback);
+
+

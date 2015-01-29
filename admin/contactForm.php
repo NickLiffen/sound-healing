@@ -1,5 +1,8 @@
 <?php $title="Contact Page - Admin" ; include( "inc/header.php"); ?>
 
+<div class = 'paddingBottom'></div>
+<div class = 'paddingBottom'></div>
+
     <h1 id='contactwelcome'>Contact Form Information</h1>
 
 <p id="subwriting"> Please click on any of the contact information to bring up more information and reply to them</p>

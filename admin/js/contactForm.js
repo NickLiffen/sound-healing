@@ -253,7 +253,7 @@ function replyContactForm(jsonObj, target, newID){
     "<input type = 'hidden'  id='idUpdate' value = " + json_output[i].id + " > " +
     "<p>Customer Name: </p><input id='name' name= 'fullname' type='text' value = '" + json_output[i].fullname + "' autofocus> <span id='errorfullname'></span> <span class='error'></span>" +
     "<p>Customer Email: </p> <input id='customerEmail' name='email'  type='email' value = '" + json_output[i].email + "' > <span id='erroremail'></span> <span class='error'></span>" +
-    "<p>Your Email Address: </p><input id='yourEmail' name='telephone' value='Your Email will go here'><span id='errortelephone'></span> <span class='error'></span>" +
+    "<p>Your Email Address: </p><input id='yourEmail' name='telephone' value='cheryl@cheryltorrance.co.uk'><span id='errortelephone'></span> <span class='error'></span>" +
     "<p>Please Enter your Message: </p><textarea id='messsage' rows='5'></textarea><span id='errorcomment'></span><span class='error'></span>" +
     "<div id ='submitBtn'><input id='submit' name='submit' type='button' value='Submit'></div>" +
     "<div class='paddingBottom'></div>" +
@@ -265,7 +265,7 @@ function replyContactForm(jsonObj, target, newID){
 sendEmail(newTarget, newID);
 }
 
-//This is the function that will send the email off to the customer - THIS DOESNT WORK YET AS LOCALHOST CAN'T SEND EMAILS
+//This is the function that will send the email off to the customer 
 function sendEmail(newTarget, newID){
 
   var fetchSubmitButton;
@@ -281,16 +281,20 @@ function sendEmail(newTarget, newID){
       yourEmail = _('yourEmail').value;
       messsage = _('messsage').value;
 
+      formdata = new FormData();
+      formdata.append("name", name);
+      formdata.append("customerEmail", customerEmail);
+      formdata.append("yourEmail", yourEmail);
+      formdata.append("messsage", messsage);
+
     //ALL THE ABOVE VALUES ARE CORRECT I HAVE CHECKED
-
-      updateContactTable(newTarget, newID)
-
+    ajaxPost("SQL/emailResponse.php", formdata,  updateContactTable, newTarget, newID);
     });
   }
 }
 
 //This updated the table 'contactForm' in the database. Changes the RespondedToEmail to 1
-function updateContactTable(newTarget, newID){
+function updateContactTable(jsonObj, newTarget, newID){
 
     var updateIDNew, updateRespondedToEmail, formdata;
 

@@ -21,7 +21,7 @@
   <!-- This is the header-->
       <header>
         <div id ="headerBlock">
-          <a href="/soundhealing/admin/" class="logo" data-scroll>Shakty Sounds</a>
+          <a href="/admin" class="logo" data-scroll>Shakty Sounds</a>
       <!-- This is main Navagational Bar in the Header-->
             <nav class ="nav-collapse">
               <li class = "menu-item"><a href="index.php" data-scroll>Home</a></li>
