@@ -1,8 +1,8 @@
 <?php
 //Defines Host, User and Pass to correct information to be able to connect to database
 define('HOST', 'localhost');
-define('USER', 'cherylto_admin');
-define('PASS', 'test1234!');
+define('USER', 'root');
+define('PASS', 'root');
 //Creates a connection with database
 $database = new mysqli(HOST, USER, PASS);
 if($database->connect_errno > 0){
