@@ -1,4 +1,4 @@
-<?php $title="Shakty Sounds Booking Form" ; include( "inc/header.php"); ?>
+<?php $title="Cheryl Torrance | Terms And Conditions" ; include( "inc/header.php"); ?>
 
 <div class = "paddingBottom"></div>
 <div class = "paddingBottom"></div>

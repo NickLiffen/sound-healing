@@ -42,59 +42,153 @@ a:hover {
   width:80%;
   margin:0 auto;
 }
-
-  .circularOne {
-  width: 230px;
-  height: 250px;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  background: url(../img/myimg.jpg) no-repeat;
-  -webkit-filter: brightness(1.0) grayscale(0.2);
-  }
-
+.sectionContainer
+{
+  display:inline;
+}
 
 #textBox{
  width:65%;
- float:left;
+ float:right;
  font-size:1em;
- margin:4em 0em 4em 0em;
+ padding:6em 0em 0em 0em;
+ overflow:auto;
+ display:block;
 }
 
-#textBox1{
-  width:25%;
-  float:left;
+
+#abouttextBox{
+ width:65%;
+ float:left;
+ font-size:1em;
+ padding:3em 0em 0em 0em;
+ overflow:auto;
+ display:block;
+
 }
 
 .homepicture
 {
    float:left;
    margin:2em;
-   width:25%;
    display:block;
    position:relative;
 }
 
+
+
+.aboutPicture
+{
+  float:right;
+  margin:2em;
+  position:relative;
+}
+
+.homeSection
+{
+  display:block;
+  height:500px;
+}
+@media screen and (max-width: 800px)
+{
+  #textBox,#abouttextBox
+  {
+    width:100%;
+    padding:0em;
+    padding-bottom:2em;
+    text-align:center;
+  }
+}
+
+@media screen and (max-width: 480px)
+{
+  #textBox,#abouttextBox
+  {
+    width:100%;
+    padding:0em;
+    padding-bottom:2em;
+    text-align:center;
+  }
+}
+
+
+@media screen and (max-width: 480px)
+{
+  .homeSection
+  {
+   height:50em;
+  }
+}
+
+
+@media screen and (min-width: 801px) and (max-width: 1150px)
+{
+  #textBox
+  {
+    width:50%;
+    padding-top:3em;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1150px)
+{
+  #abouttextBox
+  {
+    width:55%;
+    padding-top:3em;
+  }
+}
+
+@media screen and (max-width: 480px)
+{
+  .homepicture, .aboutPicture
+  {
+    float:none;
+    text-align:center;
+    margin:0;
+
+  }
+}
+
+@media screen and (max-width: 800px)
+{
+  .homepicture, .aboutPicture
+  {
+    float:none;
+    text-align:center;
+    margin-bottom:2em;
+
+  }
+}
+
+
+
+
+
+#textBox1{
+  width:25%;
+  float:left;
+}
+
+
 #homeImage
 {
-  
- width:250px;
-  
+  width:250px;
   height:350px;
-
 }
 
-.bannerPhoto{
-  width: 100%;
-  height: auto;
+#cherylPic
+{
+  width:218px;
+  height:239px;
 }
-
 
 .container
 {
   display: inline-block;
   font-size:1em;
 }
+
 
 .column-left{ 
   float: left; 
@@ -145,36 +239,12 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 900px)
-{
-  .circularOne{
-    display: block;
-      margin-left: auto;
-      margin-right: auto;
-  }
-}
+
 
 #termsButton { 
   cursor: pointer; 
   cursor: hand; 
 }
-
-
-.banner { 
-  max-width:100%;
- 
-}
-  #banner h1 {
-    margin: 0 auto;
-    color: #fff;
-    font-size: 50px; line-height: 60px; text-align: left;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    padding-top: 200px;
-    margin-left: 100px;
-  }
-
->>>>>>> b2bcf9fe4e7b6a54736e2ade93ee6f11cb4ad5a8
 
 
 /* ------------------------------------------
@@ -567,6 +637,7 @@ form
   color: #5936c9;
   padding-bottom:0.5em;
   font:30px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top:0.5em;
 }
 
 #contactForm, #bookingForm
@@ -1028,17 +1099,31 @@ color: white;
 }
 
 .bookingServices{
-  background: #6E52CA;
+  box-shadow:none;
+  border:3px solid #6E52CA;
+  background:white;
   text-decoration: none;
   box-shadow:none;
-  width:25%;
-  color: #ffffff;
+  width:27%;
+  color: #6E52CA;
   font-size:1em;
-  border:none;
   padding:1em;
+
 }
 
-.bookingServices:hover,.replyContactForm:hover, #backButtonPress:hover{
+.bookingServices:hover
+{
+  background:#6E52CA;
+  color:white;
+}
+
+.bookingServices:focus 
+{
+  outline:0;
+}
+
+
+.replyContactForm:hover, #backButtonPress:hover{
   background: #5936c9;
 }
 
@@ -1169,40 +1254,58 @@ width:100%
   width:100%;
 }
 
-@media screen and (max-width:768px)
-{
-  .itemDetails
-  {
-    width:50%;
-  }
-}
-
-@media screen and (max-width:400px)
-{
-  .itemDetails
-  {
-    width:100%;
-  }
-}
-
 .itemInfo
 {
   display:block;
   text-align:center;
-  margin:1.5em;
   border-top: solid 2px;
   border-bottom: solid 2px;
   padding: 1em;
 
 }
 
-.itemDetails
+.bookingItems
 {
-  width:25%;
-  display:inline;
-  margin:1em;
+  width:20%;
+  display:inline-block;
 
 }
+
+@media screen and (min-width:480px) and (max-width:800px)
+{
+  .classesAvailble
+  {
+    width:100%;
+  }
+}
+
+
+
+@media screen and (min-width:480px) and (max-width:800px)
+{
+  .bookingItems
+  {
+    width:24%;
+    font-size:65%;
+  }
+}
+
+@media screen and (max-width:480px)
+{
+  .itemBoxes
+  {
+    width:100%;
+  }
+}
+
+@media screen and (max-width:480px)
+{
+  .bookingItems
+  {
+    width:24%;
+  }
+}
+
 
 .delete, .deleteCustomer
 {
@@ -1299,15 +1402,30 @@ width:100%
   display: inline;
 }
 
-#servicesOptions div:nth-child(1), #servicesOptions div:nth-child(2)
+@media screen and (max-width:480px)
 {
-  padding-right:1em;
+  #servicesOptions > .center
+  {
+    display:block;
+    margin-bottom:1em;
+  }
 }
 
-#servicesOptions div:nth-child(n+2)
+@media screen and (max-width:480px)
 {
-  padding-left:1em;
+  .bookingServices
+  {
+    width:100%;
+  }
 }
+
+#servicesOptions div
+{
+  padding-right:1em;
+  padding-left:1em;
+  text-align:center;
+}
+
 
 @media screen and (max-width:768px)
 {
@@ -1342,8 +1460,8 @@ width:100%
 }
 
 #example3 div div {
-  margin: 0 auto;
-  float: none;
+    margin: 0 auto;
+    float: none;
 }
 
 #example3{
@@ -1352,10 +1470,28 @@ width:100%
   margin:0 auto;
 }
 
+span#errorRobot
+{
+  margin:auto 0;
+}
+
+/* BANNER STYLES */
+.bannerPhoto{
+  width: 100%;
+  height: auto;
+}
+
 #aroundRobot{
   text-align: center;
 }
 
-#termsAndCondition input { 
-  margin: 0 auto;
-}
+
+
+
+
+
+
+
+
+
+

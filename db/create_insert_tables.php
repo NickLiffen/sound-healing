@@ -46,7 +46,7 @@ $create_table_service =
 "CREATE TABLE IF NOT EXISTS service (
 	id MEDIUMINT NOT NULL AUTO_INCREMENT,
 	servicename VARCHAR(35) NOT NULL,
-	servicedescription VARCHAR(254) NOT NULL,
+	servicedescription VARCHAR(1500) NOT NULL,
 	PRIMARY KEY(ID)
 )";
 if(!$result = $database->query($create_table_service)){
@@ -73,3 +73,5 @@ if(!$result = $database->query($create_table_bookings)){
 }
 
 ?>
+
+To be in your Divine Feminine energy and live as a Sacred Woman means to honour your unique gifts, your deep inner wisdom, creativity, nurturing, love, patience, intuition and tenderness. To reconnect with your cycles and that of Gaia and the Cosmos. To come together with other women in cooperation, harmony and support. You are UNIQUE. Embrace the TRUTH of who you really are. Celebrate the BEAUTY that lies deep within, embracing and reclaiming your inner GODDESS so you may shine your light out into the world.

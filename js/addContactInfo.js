@@ -151,7 +151,7 @@ console.log(jsonObj);
         errorSpan = _("errorRobot");
         errorSpan.style.color = 'orange';
         errorSpan.style.fontWeight ='bold';
-        errorSpan.innerHTML = "Please confirm your not a robot.";
+        errorSpan.innerHTML = "Please confirm you’re not a robot.";
   }
   else if(jsonObj = "ewrthgbfhfyrhtbgnfkdhdvfbt"){
        errorSpan = _("errorRobot");

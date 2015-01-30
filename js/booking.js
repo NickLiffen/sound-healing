@@ -17,8 +17,9 @@ function output(jsonObj, target){
     else {
     //Starts the loop -- THIS IS HOW I OUTPUT THE DATA ON THE PAGE
     for (var i = 0; i < json_output.length; i++) {
+
       output = "<div id='service" + json_output[i].id + "' class='center'>" +
-      "<button type='button' class='bookingServices'  >" + json_output[i].servicename + "</button>" +
+      "<button type='button' class='bookingServices'  >" + json_output[i].servicename.replace(/([a-z])([A-Z])/, '$1 $2') + "</button>" +
       "</div>";
       target.innerHTML += output;
         //Collecting te ID of the Contact Request
@@ -101,12 +102,14 @@ var json_output, output, target;
       "<h3 class ='itemTitle'>" +json_output[i].classname + "</h3>" +
       "<div class = 'paddingBottom'></div>" +
       "<p class = 'itemDesc'>" + json_output[i].classdescription + '</p>' +
+      "<div class='paddingBottom'></div>" +
       "<div class ='itemInfo'>" +
-      "<p class = 'itemDetails'><img src = 'img/glyphicons-268-credit-card.png'</img> £" + json_output[i].classprice + '</p>' +
-      "<p class = 'itemDetails'><img src = 'img/glyphicons-46-calendar.png'</img> " + json_output[i].classdate +'</p>' + 
-      "<p class = 'itemDetails'><img src = 'img/glyphicons-55-clock.png'</img> " + json_output[i].classstarttime + ' - ' + json_output[i].classendtime + '</p>' +
-      "<p class = 'itemDetails'><img src = 'img/glyphicons-44-group.png'</img> " + json_output[i].classparticipants + ' remaining spaces</p>' + 
+      "<div class ='bookingItems'> <img src = 'img/glyphicons-268-credit-card.png'</img> <p class = 'itemDetails'>£" + json_output[i].classprice + "</p></div> "+
+      "<div class ='bookingItems'> <img src = 'img/glyphicons-46-calendar.png'</img> <p class = 'itemDetails'>" + json_output[i].classdate + "</p></div>" +
+      "<div class ='bookingItems'> <img src = 'img/glyphicons-55-clock.png'</img><p class = 'itemDetails'>"+ json_output[i].classstarttime + " - " + json_output[i].classendtime +"</p></div>" +
+      "<div class ='bookingItems'> <img src = 'img/glyphicons-44-group.png'</img><p class = 'itemDetails'>" + json_output[i].classparticipants + " spaces </p></div>" +
       "</div>" +
+      "<div class='paddingBottom'></div>" +
       "<p id ='bookingBox'> <input type='button' class='bookingSubmit' value='Book Now'/> </p>" +
       "</div>" +
       "</div>";
@@ -125,7 +128,7 @@ var fetchModifyButton;
     fetchModifyButton = _c("bookingSubmit");
     //Remove Button.
     for (var i = 0, j = fetchModifyButton.length; i < j; i++) {
-        fetchModifyButton[i].addEventListener("click", function () {
+        fetchModifyButton[i].addEventListener("click", function (event) {
           var e, productID, newID;
             //Bubbles up and finds the ID of the product they want to modify
             e = event.target;
@@ -179,9 +182,9 @@ function outputForm(jsonObj, IDtoUpdate){
 
       "<div class = 'paddingBottom'></div>" +
 
-      "<input type='checkbox' name='termsAndCondition' value='termsAndCondition' id='termsAndCondition'>Please Accept the <a id='termsButton'>Terms and Conditions</a><.<span id='errorTerms'></span><span class='error'></span> <span id='errorTerms'></span> <span class='error'></span>"  +
+      "<input type='checkbox' name='termsAndCondition' value='termsAndCondition' id='termsAndCondition'> Please Accept the <a id='termsButton'>Terms and Conditions</a>.<span id='errorTerms'></span><span class='error'></span> <span id='errorTerms'></span> <span class='error'></span>"  +
 
-      "<p class='oblique'>Any Class will be paid in cash or bank transfer. You will recevier further information through a confirmation email. Please note your booking & attendance is only confirmed once payment is made & you receive email confirmation</p>" +
+      "<p class='oblique'>Any Class will be paid in cash or bank transfer. You will receive further information through a confirmation email. Please note your booking & attendance is only confirmed once payment is made & you receive email confirmation</p>" +
 
       "<div id ='submitBtn'><input id='submit' name='submit' type='button' value='Submit'></div>" +
 
@@ -337,7 +340,7 @@ function changeScreenLayout(jsonObj){
   message.style.color ='green';
   message.style.fontWeight ='bold';
   message.style.textAlign="center";
-  message.innerHTML = "Thank you - Your place has been booked - you will receciver a confirmation email"
+  message.innerHTML = "Thank you - Your place has been booked - you will receive a confirmation email"
 
   window.setTimeout(vanishText, 5000);
 

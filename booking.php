@@ -1,5 +1,8 @@
 <?php $title="Cheryl Torrance | Booking Form" ; include( "inc/header.php"); ?>
 
+
+<div class="paddingBottom"></div>
+<div class="paddingBottom"></div>
 <!--Prints out a message saying that the product has been successfully modified-->
 <div id="bookingConfirmation"></div>
 

@@ -34,13 +34,31 @@ include("../db/connect_database.php");
       echo $result;
 
 
-      $to = $customerEmail;
-      $subject = "Booking - Confirmation";
-      $txt = "Thank you very much for your booking. It has been confirmed. Any questions please contact: cheryl@cheryltorrance.co.uk";
-      $headers = 'From: cheryl@cheryltorrance.co.uk' . "\r\n" .
-                  'Reply-To: cheryl@cheryltorrance.co.uk' . "\r\n" .
-                  'X-Mailer: PHP/' . phpversion();
-      mail($to,$subject,$txt,$headers);
+      $to = $email;
+      $subject = "Contact Form - Confirmation";
+      // message
+      $message = "
+                  <html>
+                  <head>
+                    <title>Booking - Confirmation</title>
+                  </head>
+                  <body>
+                    <p>
+                      Dear: $customerName,
+                        Thank you for booking with Thank you for booking this event with me!  Please note, this email reserves your space.  Payment methods will be sent to you and your booking will be confirmed by email once your payment is received,
+                        Your class Name is as followed: <b>Class Name:</b> $name, if you have any questions please email me at cheryl@cheryltorrance.co.uk or visit the website.
+                        Blessings,
+                        Cheryl.
+                      </p>
+                  </body>
+                  </html>
+      ";
 
+
+      $headers  = 'From: Cheryl Torrance <cheryl@cheryltorrance.co.uk>' . "\r\n";
+      $headers .= 'MIME-Version: 1.0' . "\r\n";
+      $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+      mail($to,$subject,$message,$headers);
 
 ?>

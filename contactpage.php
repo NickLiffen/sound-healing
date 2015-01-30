@@ -10,7 +10,7 @@
                 in the error* part of that section E.G errorfirstname.-->
 <p>
                 <form enctype="multipart/form-data" id="contactForm" method="post" name="myForm" onsubmit="return false">
-                    <p id='formMessage'> Please feel free to contact me on: test@test.com.</p>
+                    <p id='formMessage'> Please feel free to contact me on: cheryl@cheryltorrance.co.uk.</p>
                     <!-- First Name Field -->
                     <p>Full Name: </p>
                     <input type="text" id="fullname" name="fullname"> 

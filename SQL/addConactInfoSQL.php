@@ -24,15 +24,34 @@ include("../db/connect_database.php");
       echo $database->error."<p>";
       echo $result;
 
-
-
+//--------------------------------
       $to = $email;
       $subject = "Contact Form - Confirmation";
-      $txt = "Thank you very much for your contact form request - we will get back to you shortly";
-      $headers = 'From: cheryl@cheryltorrance.co.uk' . "\r\n" .
-                  'Reply-To: cheryl@cheryltorrance.co.uk';
-      mail($to,$subject,$txt,$headers);
+      // message
+      $message = "
+                  <html>
+                  <head>
+                    <title>Contact Form - Confirmation</title>
+                  </head>
+                  <body>
+                    <p>
+                      Dear: $fullname,
+                        Thank you for submitting your form through my website. I will get back to you as soon as I can. If you have any questions, in the mean time please email me at: Cheryl@cheryltorrance.co.uk,
+                        Blessings,
+                        Cheryl.
+                      </p>
+                  </body>
+                  </html>
+      ";
 
+
+      $headers  = 'From: Cheryl Torrance <cheryl@cheryltorrance.co.uk>' . "\r\n";
+      $headers .= 'MIME-Version: 1.0' . "\r\n";
+      $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+      mail($to,$subject,$message,$headers);
+
+//--------------------------------
 
       $to = 'cheryl@cheryltorrance.co.uk';
       $subject = 'Contact form Filled out';

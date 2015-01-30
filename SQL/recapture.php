@@ -43,9 +43,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
           $verified = $cap->VerifyCaptcha($response);
  
           if($verified) {
-           echo $message = "ewrthgbfhfyrhtbgnfkdhdvfbt";
+           echo $message = TRUE;
           } else {
-           echo $message = "FALSE";
+           echo $message = FALSE;
           }
     }
 }
